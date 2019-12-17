@@ -1,0 +1,7 @@
+export Cta from './Cta/Cta'
+export Footer from './Footer/Footer'
+export Header from './Header/Header'
+export Hero from './Hero/Hero'
+export Home from './Home/Home'
+export LatestArticles from './LatestArticles/LatestArticles'
+export Projects from './Projects/Projects'
