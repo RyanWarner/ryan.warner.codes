@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Jost';
+  src: local('Jost* Book'),
+       local('Jost-Book'),
+       url('../assets/fonts/Jost-400-Book.woff2') format('woff2'),
+       url('../assets/fonts/Jost-400-Book.woff') format('woff'),
+       url('../assets/fonts/Jost-400-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: local('Jost* Medium'),
+       local('Jost-Medium'),
+       url('../assets/fonts/Jost-500-Medium.woff2') format('woff2'),
+       url('../assets/fonts/Jost-500-Medium.woff') format('woff'),
+       url('../assets/fonts/Jost-500-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Jost* Bold'),
+       local('Jost-Bold'),
+       url('../assets/fonts/Jost-700-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Jost-700-Bold.woff') format('woff'),
+       url('../assets/fonts/Jost-700-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: bold;
+}

@@ -4,7 +4,6 @@ import * as S from './styles'
 import {
   Cta,
   Footer,
-  Header,
   Hero,
   LatestArticles,
   Projects
@@ -13,7 +12,6 @@ import {
 export default () =>
   <S.Home>
     <S.Container>
-      <Header />
       <Hero />
       <LatestArticles />
       <Projects />
