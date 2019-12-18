@@ -4,10 +4,9 @@ import * as S from './styles'
 
 export default () =>
   <S.ArticleSnippet>
-    <S.Header>
-      <S.Title>Latest Articles</S.Title>
-      <S.AllArticles>
-        All articles
-      </S.AllArticles>
-    </S.Header>
+    <S.Icon />
+    <S.Content>
+      <S.Title>Title</S.Title>
+      <S.Date datetime='2019-12-07'>December 7 2019</S.Date>
+    </S.Content>
   </S.ArticleSnippet>

@@ -5,14 +5,28 @@ import { Link } from '../'
 
 export const ArticleSnippet = styled.div`
   padding: 20px 0;
-`
-
-export const Header = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 `
 
-export const Title = styled.h3``
+export const Content = styled.div``
+
+export const Icon = styled.div`
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+`
+
+export const Title = styled.h4`
+  margin: 2px 0;
+  font-size: 18px;
+`
+
+export const Date = styled.time`
+  font-size: 12px;
+  color: ${Colors.blue50};
+`
 
 export const AllArticles = styled(Link)``
