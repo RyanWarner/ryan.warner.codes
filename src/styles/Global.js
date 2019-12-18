@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100vw;
     overflow-x: hidden;
     background-color: ${Colors.blue10};
+    background: linear-gradient(145.87deg, #1C2A34 10.36%, #111A20 49.58%, #111A20 49.58%);
     color: ${Colors.text10};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -22,7 +23,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: ${Colors.glow20};
+    background: ${Colors.blue40};
+    color: ${Colors.text10};
   }
 
   #app {

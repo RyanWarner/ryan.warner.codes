@@ -1,6 +1,6 @@
 import { css, createGlobalStyle } from 'styled-components'
 
-// import { Breakpoints, Colors } from 'app/styles'
+import { Colors } from '../styles'
 
 const sansSerifFallback = "'-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Roboto', 'sans-serif'"
 export const fontFace = `'Jost', ${sansSerifFallback}`
@@ -40,7 +40,7 @@ export const GlobalType = createGlobalStyle`
     transition: color 300ms ease;
 
     &:hover {
-      ${'' /* color: ${Colors.glow20}; */}
+      color: ${Colors.glow20};
     }
   }
 `

@@ -24,6 +24,8 @@ const nav = {
 export default () =>
   <S.Nav>
     {Object.values(nav).map(item => (
-      <S.NavItem>{item.title}</S.NavItem>
+      <S.NavItem href={item.url}>
+        {item.title}
+      </S.NavItem>
     ))}
   </S.Nav>
