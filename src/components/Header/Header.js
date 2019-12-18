@@ -1,12 +1,14 @@
 import React from 'react'
 
 import * as S from './styles'
-import { Nav } from '../'
+import { Nav, Width } from '../'
 
 export default () =>
-  <S.Header>
-    <S.Name>
-      Ryan Warner
-    </S.Name>
-    <Nav />
-  </S.Header>
+  <Width>
+    <S.Header>
+      <S.Name>
+        Ryan Warner
+      </S.Name>
+      <Nav />
+    </S.Header>
+  </Width>

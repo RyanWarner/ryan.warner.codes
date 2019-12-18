@@ -6,16 +6,17 @@ import {
   Footer,
   Hero,
   LatestArticles,
-  Projects
+  Projects,
+  Width
 } from '../../components'
 
 export default () =>
   <S.Home>
-    <S.Container>
+    <Width>
       <Hero />
       <LatestArticles />
       <Projects />
       <Cta />
       <Footer />
-    </S.Container>
+    </Width>
   </S.Home>

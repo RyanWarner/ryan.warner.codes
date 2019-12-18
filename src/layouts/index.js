@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from '../components/Header/Header'
 import '../styles/FontFaces.css'
+import * as S from './styles'
 import { GlobalType } from '../styles/Type'
 import { GlobalStyle } from '../styles/Global'
 
@@ -22,8 +23,10 @@ const Layout = ({ children }) => (
       <>
         <GlobalStyle />
         <GlobalType />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        {children}
+        <S.Wrap>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          {children}
+        </S.Wrap>
       </>
     )}
   />
