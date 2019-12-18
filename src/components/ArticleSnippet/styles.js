@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { Colors } from '../../styles'
 import { Link } from '../'
 
-export const LatestArticles = styled.div`
-  margin-top: 106px;
+export const ArticleSnippet = styled.div`
+  padding: 20px 0;
 `
 
 export const Header = styled.div`

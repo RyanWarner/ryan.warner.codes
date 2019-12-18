@@ -22,13 +22,25 @@ export const header1 = css`
   font-weight: ${fontWeights.bold};
 `
 
+export const header3 = css`
+  font-size: 24px;
+  line-height: 152%;
+  font-weight: ${fontWeights.bold};
+  margin: 0;
+`
+
 
 export const GlobalType = createGlobalStyle`
   body {
     font-family: ${fontFace};
   }
+
   h1 {
     ${header1};
+  }
+
+  h3 {
+    ${header3};
   }
 
   p {
