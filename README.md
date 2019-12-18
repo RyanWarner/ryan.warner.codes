@@ -1,27 +1,15 @@
-# Gatsby Starter MDX Basic
+# Ryan Warner's Website
 
-View this starter [live on Netlify](https://gatsby-starter-mdx-basic.netlify.com/)
+[https://warner.ryan.codes](https://warner.ryan.codes)
 
-This starter build MDX support into the
-[gatsby-default-starter](https://github.com/gatsbyjs/gatsby-starter-default). Its
-README also applies here.
+### Running locally
 
-1. Create a new Gatsby site using this starter
+1. `git clone git@github.com:RyanWarner/portfolio.git`
+1. `npm install`
+1. `npm start`
 
-```sh
-gatsby new my-site https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic
-```
+### Tech stack
 
-2. Install dependencies
-
-```sh
-yarn
-```
-
-3. Run the develop script
-
-```sh
-yarn develop
-```
-
-4. Edit Page 2 in `src/pages/page-2.mdx`
+- Gatsby (React, Webpack, Babel)
+- MDX
+- Styled Components
