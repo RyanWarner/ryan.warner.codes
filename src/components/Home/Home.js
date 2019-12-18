@@ -12,10 +12,12 @@ import {
 
 export default () =>
   <S.Home>
-    <Header />
-    <Hero />
-    <LatestArticles />
-    <Projects />
-    <Cta />
-    <Footer />
+    <S.Container>
+      <Header />
+      <Hero />
+      <LatestArticles />
+      <Projects />
+      <Cta />
+      <Footer />
+    </S.Container>
   </S.Home>

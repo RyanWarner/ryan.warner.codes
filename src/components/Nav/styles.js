@@ -6,4 +6,8 @@ export const Nav = styled.nav`
 
 `
 
-export const NavItem = styled.div``
+export const NavItem = styled.a`
+  padding: 10px;
+  color: ${Colors.text10};
+  font-size: 16px;
+`
