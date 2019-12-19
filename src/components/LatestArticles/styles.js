@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-import { Colors } from '../../styles'
 import { Link } from '../'
 
 export const LatestArticles = styled.div`

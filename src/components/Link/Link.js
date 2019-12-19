@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import * as S from './styles'
-
 export default ({ to, as, children }) =>
   as === 'a'
     ? <a

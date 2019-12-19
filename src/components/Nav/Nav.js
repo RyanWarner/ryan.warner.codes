@@ -4,8 +4,8 @@ import * as S from './styles'
 
 const nav = {
   blog: {
-    title: 'Blog',
-    url: '/blog'
+    title: 'Posts',
+    url: '/posts'
   },
   snippets: {
     title: 'Snippets',
