@@ -1,4 +1,4 @@
-const paths = require('../config/paths')
+// const paths = require('../config/paths')
 const argv = require('yargs').argv
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
@@ -17,7 +17,7 @@ const token = FIREBASE_DEPLOY_TOKEN ? `--token ${FIREBASE_DEPLOY_TOKEN}` : ''
 const firebase = './node_modules/.bin/firebase'
 
 const DEPLOY_ENV = firebaseProject || process.argv[2] || process.env.DEPLOY_ENV
-require('dotenv').config({ path: `${paths.dotenv}.${DEPLOY_ENV}` })
+// require('dotenv').config({ path: `${paths.dotenv}.${DEPLOY_ENV}` })
 
 const firebaseUse = async () => {
   const message = `Using Firebase project: ${DEPLOY_ENV}`
