@@ -20,7 +20,7 @@ jobs:
             - v1-dependencies-
 
       - run: npm install
-      - run: cd functions && npm install
+
       - run:
           name: Build
           command: |
@@ -29,9 +29,6 @@ jobs:
               fi
               if [ $CIRCLE_BRANCH = 'staging' ]; then
                 npm run build:staging
-              fi
-              if [ $CIRCLE_BRANCH = 'develop' ]; then
-                npm run build:develop
               fi
 
       - save_cache:
@@ -61,7 +58,6 @@ workflows:
           filters:
             branches:
               only:
-                - develop
                 - staging
                 - master
 
@@ -71,6 +67,5 @@ workflows:
           filters:
             branches:
               only:
-                - develop
                 - staging
                 - master
