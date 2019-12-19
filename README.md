@@ -13,3 +13,4 @@
 - Gatsby (React, Webpack, Babel)
 - MDX
 - Styled Components
+- Hosted on Firebase
