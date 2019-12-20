@@ -1,13 +1,22 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from "@mdx-js/react"
+
+import { Width } from 'components'
+
+const components = {
+  h1: props => <h1 {...props} />
+}
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
-    <div>
+    <Width>
       <h1>{mdx.frontmatter.title}</h1>
-      <MDXRenderer>{mdx.body}</MDXRenderer>
-    </div>
+      <MDXProvider components={components}>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
+      </MDXProvider>
+    </Width>
   )
 }
 
