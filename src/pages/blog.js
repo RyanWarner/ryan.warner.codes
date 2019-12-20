@@ -18,22 +18,22 @@ const BlogIndex = ({ data }) => {
     </div>
   )
 }
-export const pageQuery = graphql`
-  query blogIndex {
-    allMdx {
-      edges {
-        node {
-          id
-          excerpt
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query blogIndex {
+//     allMdx {
+//       edges {
+//         node {
+//           id
+//           excerpt
+//           frontmatter {
+//             title
+//           }
+//           fields {
+//             slug
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 export default BlogIndex

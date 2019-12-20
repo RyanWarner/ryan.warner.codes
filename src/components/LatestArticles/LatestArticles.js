@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import * as S from './styles'
 import { ArticleSnippet } from '../'
@@ -16,21 +17,21 @@ export default () =>
     <ArticleSnippet />
   </S.LatestArticles>
 
-export const pageQuery = graphql`
-  query blogIndex {
-    allMdx {
-      edges {
-        node {
-          id
-          excerpt
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query latestArticles {
+//     allMdx {
+//       edges {
+//         node {
+//           id
+//           excerpt
+//           frontmatter {
+//             title
+//           }
+//           fields {
+//             slug
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
