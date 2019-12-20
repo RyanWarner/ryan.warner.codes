@@ -15,3 +15,22 @@ export default () =>
     <ArticleSnippet />
     <ArticleSnippet />
   </S.LatestArticles>
+
+export const pageQuery = graphql`
+  query blogIndex {
+    allMdx {
+      edges {
+        node {
+          id
+          excerpt
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
