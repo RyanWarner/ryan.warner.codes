@@ -3,6 +3,17 @@
 const { createFilePath } = require('gatsby-source-filesystem')
 const path = require('path')
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      alias: {
+        '@': path.resolve(__dirname, 'src')
+      }
+    },
+  })
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   // you only want to operate on `Mdx` nodes. If you had content from a
@@ -41,16 +52,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }
   `)
+
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
+
   // Create blog post pages.
   const posts = result.data.allMdx.edges
-  // you'll call `createPage` for each result
+
   posts.forEach(({ node }, index) => {
     createPage({
-      // This is the slug you created before
-      // (or `node.frontmatter.slug`)
       path: node.fields.slug,
       // This component will wrap our MDX content
       component: path.resolve(`./src/components/PostLayout/PostLayout.js`),
