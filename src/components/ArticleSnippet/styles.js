@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Colors } from '../../styles'
 import { Link } from '../'
 
-export const ArticleSnippet = styled.div`
+export const ArticleSnippet = styled(Link)`
   padding: 20px 0;
   display: flex;
 `

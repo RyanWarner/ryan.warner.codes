@@ -2,11 +2,13 @@ import React from 'react'
 
 import * as S from './styles'
 
-export default () =>
-  <S.ArticleSnippet>
+export default ({ article }) => 
+  <S.ArticleSnippet to={article.fields.slug}>
     <S.Icon />
     <S.Content>
-      <S.Title>Title</S.Title>
-      <S.Date datetime='2019-12-07'>December 7 2019</S.Date>
+      <S.Title>{article.frontmatter.title}</S.Title>
+      <S.Date datetime={article.frontmatter.date}>
+        {article.frontmatter.date}
+      </S.Date>
     </S.Content>
   </S.ArticleSnippet>
