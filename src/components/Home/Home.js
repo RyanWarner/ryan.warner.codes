@@ -16,7 +16,9 @@ export default () =>
       <Hero />
       <LatestArticles />
       <Projects />
-      <Cta />
+    </Width>
+    <Cta />
+    <Width>
       <Footer />
     </Width>
   </S.Home>
