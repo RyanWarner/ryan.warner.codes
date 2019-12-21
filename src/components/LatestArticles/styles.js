@@ -4,7 +4,7 @@ import { Link } from '../'
 import { Colors } from 'styles'
 
 export const LatestArticles = styled.div`
-  margin-top: 106px;
+  margin: 106px 0;
 `
 
 export const Header = styled.div`

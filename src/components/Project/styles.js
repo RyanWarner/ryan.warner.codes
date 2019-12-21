@@ -1,26 +1,38 @@
 import styled from 'styled-components'
 
-import { Colors } from '../../styles'
+import { Colors, Type } from 'styles'
 
 export const Project = styled.div`
   position: relative;
+  background-color: ${Colors.blue20};
+  border-radius: 6px;
+  padding: 35px 44px;
+  overflow: hidden;
+  grid-column: span ${props => props.span};
   
   &:before {
     content: '';
     display: block;
-    width: 4px;
+    width: 6px;
     height: 100%;
-    background-color: ${Colors.glow10};
+    background-color: ${props => props.color};
     position: absolute;
+    left: 0;
+    top: 0;
   }
 `
 
 export const Title = styled.h4`
-  
+  font-size: 24px;
+  font-weight: ${Type.fontWeights.medium};
+  margin: 0 0 14px 0;
 `
 
 export const Description = styled.p`
-  
+  color: ${Colors.text20};
+  font-size: 16px;
+  margin-bottom: 35px;
 `
+
 export const StyledButton = styled.div`
 `

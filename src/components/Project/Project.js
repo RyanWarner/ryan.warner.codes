@@ -2,9 +2,9 @@ import React from 'react'
 
 import * as S from './styles'
 
-export default () =>
-  <S.Project>
-    <S.Title>Project</S.Title>
-    <S.Description>Description</S.Description>
-    <S.StyledButton>View</S.StyledButton>
+export default ({ title, description, url, color, ...rest }) =>
+  <S.Project color={color} {...rest}>
+    <S.Title>{title}</S.Title>
+    <S.Description>{description}</S.Description>
+    <S.StyledButton to={url}>View</S.StyledButton>
   </S.Project>
