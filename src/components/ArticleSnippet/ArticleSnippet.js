@@ -2,7 +2,7 @@ import React from 'react'
 
 import * as S from './styles'
 
-export default ({ article }) => 
+export default ({ article }) =>
   <S.ArticleSnippet to={article.fields.slug}>
     <S.Icon />
     <S.Content>
