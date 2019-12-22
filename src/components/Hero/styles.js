@@ -5,7 +5,7 @@ import Link from '../Link/Link'
 
 export const Hero = styled.div``
 
-const maxWidth = '652px'
+const maxWidth = '602px'
 
 export const H1 = styled.h1`
   background: linear-gradient(${Colors.glow10}, ${Colors.glow20});
@@ -17,7 +17,8 @@ export const H1 = styled.h1`
 export const SubHeader = styled.p`
   font-size: 18px;
   font-weight: ${Type.fontWeights.medium};
-  max-width: ${maxWidth};
+  max-width: 600px;
+  line-height: 180%;
 `
 
 const underline = `

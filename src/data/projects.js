@@ -16,7 +16,7 @@ export default {
   },
   at: {
     title: 'All Turtles',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit imperdiet lectus in pharetra. ',
+    description: 'An AI startup studio. I lead web development creating AI powered applications.',
     url: 'https://all-turtles.com',
     color: Colors.allTurtles
   }

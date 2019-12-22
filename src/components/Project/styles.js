@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-import { Colors, Type } from 'styles'
+import { Buttons, Colors, Type } from 'styles'
+import { Link } from 'components'
 
 export const Project = styled.div`
   position: relative;
@@ -9,6 +10,9 @@ export const Project = styled.div`
   padding: 35px 44px;
   overflow: hidden;
   grid-column: span ${props => props.span};
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   
   &:before {
     content: '';
@@ -34,5 +38,6 @@ export const Description = styled.p`
   margin-bottom: 35px;
 `
 
-export const StyledButton = styled.div`
+export const Button = styled(Link)`
+  ${Buttons.primary};
 `
