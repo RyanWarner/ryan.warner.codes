@@ -16,3 +16,7 @@ export const blue50 = '#5E8CA7'
 export const yawnch = '#CCA9F4'
 export const stockstreamtv = '#5CD47D'
 export const allTurtles = '#D9534D'
+
+export const twitter = '#1DA1F2'
+export const github = '#BBC6CC'
+export const dribbble = '#EA4C89'

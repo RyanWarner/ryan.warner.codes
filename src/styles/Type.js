@@ -46,8 +46,8 @@ export const GlobalType = createGlobalStyle`
   p {
     margin: 0;
   }
-  a {
 
+  a {
     text-decoration: none;
     transition: color 300ms ease;
 

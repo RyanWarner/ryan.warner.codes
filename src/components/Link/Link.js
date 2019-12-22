@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-export default ({ to, as, children, ...rest }) =>
-  as === 'a'
+export default ({ to, el, children, href, ...rest }) =>
+  el === 'a'
     ? <a
-        href={to}
-        target='blank'
+        href={href}
+        target='_blank'
         rel='noopener noreferrer'
         {...rest}
       >
