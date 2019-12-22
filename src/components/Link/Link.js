@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 export default ({ to, el, children, href, ...rest }) =>
   el === 'a'
     ? <a
-        href={href}
+        href={to}
         target='_blank'
         rel='noopener noreferrer'
         {...rest}

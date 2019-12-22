@@ -10,13 +10,13 @@ export default {
   },
   sstv: {
     title: 'Stockstream.tv',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit imperdiet lectus in pharetra. ',
+    description: 'On a mission to democratize investing knowledge. My partner, Laith, and I bootstrapped this company with zero funding',
     url: 'https://stockstream.tv',
     color: Colors.stockstreamtv
   },
   at: {
     title: 'All Turtles',
-    description: 'An AI startup studio. I lead web development creating AI powered applications.',
+    description: 'I lead web development full time at All Turtles, an AI startup studio.',
     url: 'https://all-turtles.com',
     color: Colors.allTurtles
   }

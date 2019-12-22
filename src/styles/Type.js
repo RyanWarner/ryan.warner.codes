@@ -50,6 +50,7 @@ export const GlobalType = createGlobalStyle`
   a {
     text-decoration: none;
     transition: color 300ms ease;
+    color: ${Colors.text10};
 
     &:hover {
       color: ${Colors.glow20};

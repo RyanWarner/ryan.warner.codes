@@ -40,4 +40,5 @@ export const Description = styled.p`
 
 export const Button = styled(Link)`
   ${Buttons.primary};
+  margin-top: auto;
 `
