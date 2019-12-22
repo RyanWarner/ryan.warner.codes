@@ -1,10 +1,11 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+
 const BlogIndex = ({ data }) => {
   const { edges: posts } = data.allMdx
   return (
     <div>
-      <h1>Awesome MDX Blog</h1>
+      <h1>Articles</h1>
       <ul>
         {posts.map(({ node: post }) => (
           <li key={post.id}>
