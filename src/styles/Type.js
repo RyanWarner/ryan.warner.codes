@@ -51,6 +51,7 @@ export const GlobalType = createGlobalStyle`
     text-decoration: none;
     transition: color 300ms ease;
     color: ${Colors.text10};
+    cursor: pointer;
 
     &:hover {
       color: ${Colors.glow20};

@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
+import { Width } from 'components'
+
 const BlogIndex = ({ data }) => {
   const { edges: posts } = data.allMdx
   return (
-    <div>
+    <Width>
       <h1>Articles</h1>
       <ul>
         {posts.map(({ node: post }) => (
@@ -16,7 +18,7 @@ const BlogIndex = ({ data }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </Width>
   )
 }
 
