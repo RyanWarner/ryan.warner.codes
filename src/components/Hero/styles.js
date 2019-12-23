@@ -27,7 +27,7 @@ const underline = `
   width: 100%;
   height: 2px;
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   transition: background 300ms ease;
 `
