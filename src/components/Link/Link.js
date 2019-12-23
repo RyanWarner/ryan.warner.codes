@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-export default ({ to, el, children, href, ...rest }) =>
+export default ({ to, el, children, ...rest }) =>
   el === 'a'
     ? <a
         href={to}

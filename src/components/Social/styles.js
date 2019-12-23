@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { Buttons, Colors, Type } from 'styles'
 import { GitHub, Twitter, Dribbble } from 'components/Icons'
@@ -6,10 +6,19 @@ import { Link } from 'components'
 
 export const Social = styled.div`
   display: flex;
+  align-items: center;
+`
+
+const icon = css`
+  padding: 5px;
+
+  path {
+    transition: fill 300ms ease;
+  }
 `
 
 export const StyledGitHub = styled(GitHub)`
-  padding: 5px;
+  ${icon};
 
   &:hover path {
     fill: ${Colors.github};
@@ -17,7 +26,7 @@ export const StyledGitHub = styled(GitHub)`
 `
 
 export const StyledTwitter = styled(Twitter)`
-  padding: 5px;
+  ${icon};
 
   &:hover path {
     fill: ${Colors.twitter};
@@ -25,7 +34,7 @@ export const StyledTwitter = styled(Twitter)`
 `
 
 export const StyledDribbble = styled(Dribbble)`
-  padding: 5px;
+  ${icon};
 
   &:hover path {
     fill: ${Colors.dribbble};
@@ -34,4 +43,5 @@ export const StyledDribbble = styled(Dribbble)`
 
 export const StyledLink = styled(Link)`
   margin-right: 19px;
+  line-height: 0;
 `

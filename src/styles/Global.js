@@ -5,8 +5,6 @@ import { Colors, Type } from './'
 export const GlobalStyle = createGlobalStyle`
   html, body {
     min-height: 100vh;
-    ${Type.body};
-    font-family: ${Type.fontFace};
     margin: 0;
     padding: 0;
     max-width: 100vw;
@@ -25,9 +23,5 @@ export const GlobalStyle = createGlobalStyle`
   ::selection {
     background: ${Colors.blue40};
     color: ${Colors.text10};
-  }
-
-  #app {
-    min-height: 100%;
   }
 `

@@ -3,7 +3,8 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from "@mdx-js/react"
 
-import { Width } from 'components'
+import * as S from './styles'
+import { Width, Footer } from 'components'
 
 const components = {
   h1: props => <h1 {...props} />
@@ -12,10 +13,13 @@ const components = {
 export default function PageTemplate({ data: { mdx } }) {
   return (
     <Width>
-      <h1>{mdx.frontmatter.title}</h1>
-      <MDXProvider components={components}>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
-      </MDXProvider>
+      <S.Content>
+        <h1>{mdx.frontmatter.title}</h1>
+        <MDXProvider components={components}>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </MDXProvider>
+      </S.Content>
+      <Footer />
     </Width>
   )
 }

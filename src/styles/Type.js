@@ -13,7 +13,7 @@ export const fontWeights = {
 }
 
 export const body = css`
-  font-size: 14px;
+  font-size: 16px;
 `
 
 export const header1 = css`
@@ -32,6 +32,7 @@ export const header3 = css`
 
 export const GlobalType = createGlobalStyle`
   body {
+    ${body};
     font-family: ${fontFace};
   }
 

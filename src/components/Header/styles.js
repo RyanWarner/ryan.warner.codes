@@ -9,8 +9,14 @@ export const Header = styled.header`
   justify-content: space-between;
 `
 
+export const Wordmark = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 export const Name = styled(Link)`
   font-weight: bold;
   font-size: 18px;
   color: ${Colors.text10};
+  margin-left: 20px;
 `
