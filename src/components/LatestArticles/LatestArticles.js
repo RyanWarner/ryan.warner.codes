@@ -21,7 +21,10 @@ const LatestArticles = ({ data }) => {
           All articles
         </S.AllArticles>
       </S.Header>
-      {posts.map(item => <ArticleSnippet article={item.node} />)}
+      {posts.map(item => {
+        console.log('item', item.node.frontmatter)
+        return <ArticleSnippet article={item.node} key={item.node.id} />
+      })}
     </S.LatestArticles>
   )
 }
@@ -36,6 +39,7 @@ export const latestArticlesQuery = graphql`
           frontmatter {
             title
             date
+            icon
           }
           fields {
             slug

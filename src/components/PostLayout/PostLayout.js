@@ -31,6 +31,8 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        date
+        tags
       }
     }
   }
