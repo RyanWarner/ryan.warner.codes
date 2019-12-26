@@ -5,9 +5,11 @@ import { MDXProvider } from "@mdx-js/react"
 
 import * as S from './styles'
 import { Width, Footer } from 'components'
+import CodeBlock from './CodeBlock'
 
 const components = {
-  h1: props => <h1 {...props} />
+  pre: props => <div {...props} />,
+  code: CodeBlock
 }
 
 export default function PageTemplate({ data: { mdx } }) {
