@@ -6,24 +6,41 @@ import { ReactLogo, Heart, Amplitude } from 'components/Icons'
 
 export const ArticleSnippet = styled(Link)`
   padding: 6px 16px;
+  width: 100%;
   display: flex;
-  border-radius: 0 6px 6px 0;
+  border-radius: 6px;
+  overflow: hidden;
   cursor: pointer;
   transition: background .2s ease-in-out;
   margin-bottom: 16px;
+  left: -16px;
+  position: relative;
 
   &:hover {
     background-color: ${Colors.glowOpacity};
+
+    &:after {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 100%;
+      background-color: #DEFFE7;
+      position: absolute;
+      left: 0;
+      top: 0;
+      box-shadow: 3px 0 22px rgba(14, 255, 77, .5);
+    }
   }
 `
 
 export const Content = styled.div``
 
 export const Title = styled.h4`
-  margin: 2px 0;
+  margin: 0;
   font-size: 18px;
   color: ${Colors.text10};
   font-weight: ${Type.fontWeights.medium};
+  height: 30px;
 `
 
 export const Date = styled.time`
@@ -35,13 +52,13 @@ export const Icon = styled.div`
   width: 30px;
   height: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `
 
 export const StyledReactLogo = styled(ReactLogo)`
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
 `
 
 export const StyledHeart = styled(Heart)`
