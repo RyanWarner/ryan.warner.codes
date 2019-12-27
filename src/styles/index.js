@@ -1,3 +1,4 @@
+export * as Breakpoints from './Breakpoints'
 export * as Colors from './Colors'
 export * as Type from './Type'
 export * as Sizes from './Sizes'

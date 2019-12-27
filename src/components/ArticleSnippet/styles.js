@@ -40,7 +40,7 @@ export const Title = styled.h4`
   font-size: 18px;
   color: ${Colors.text10};
   font-weight: ${Type.fontWeights.medium};
-  height: 30px;
+  min-height: 30px;
 `
 
 export const Date = styled.time`

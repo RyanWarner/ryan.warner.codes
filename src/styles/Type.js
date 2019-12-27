@@ -1,6 +1,6 @@
 import { css, createGlobalStyle } from 'styled-components'
 
-import { Colors } from '../styles'
+import { Breakpoints, Colors } from './'
 
 const sansSerifFallback = "'-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Roboto', 'sans-serif'"
 export const fontFace = `'Jost', ${sansSerifFallback}`
@@ -13,13 +13,21 @@ export const fontWeights = {
 }
 
 export const body = css`
-  font-size: 16px;
+  font-size: 14px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    font-size: 16px;
+  }
 `
 
 export const header1 = css`
   font-size: 43px;
   line-height: 152%;
   font-weight: ${fontWeights.bold};
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    font-size: 28px;
+  }
 `
 
 export const header3 = css`

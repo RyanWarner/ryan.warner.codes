@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Colors } from 'styles'
+import { Colors, Type } from 'styles'
 
 export const Cta = styled.div`
   width: 100vw;
@@ -22,4 +22,11 @@ export const Description = styled.p`
   max-width: 460px;
 `
 
-export const Button = styled.div``
+export const Button = styled.div`
+  border-radius: 6px;
+  background-color: ${Colors.glow20};
+  padding: 8px 15px;
+  color: ${Colors.blue10};
+  font-weight: ${Type.fontWeights.bold};
+  margin-top: 30px;
+`
