@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from "@mdx-js/react"
 
 import * as S from './styles'
-import { Width, Footer } from 'components'
+import { Width, Footer, Seo } from 'components'
 import CodeBlock from './CodeBlock'
 
 const components = {
@@ -15,6 +15,7 @@ const components = {
 export default function PageTemplate({ data: { mdx } }) {
   return (
     <Width>
+      <Seo title={mdx.frontmatter.title} />
       <S.Content>
         <h1>{mdx.frontmatter.title}</h1>
         <MDXProvider components={components}>

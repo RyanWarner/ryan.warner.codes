@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from '../components/Header/Header'
+import { Seo } from 'components'
 import '../styles/FontFaces.css'
 import * as S from './styles'
 import { GlobalType } from '../styles/Type'
@@ -21,10 +22,11 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Seo title={data.site.siteMetadata.title} />
         <GlobalStyle />
         <GlobalType />
         <S.Wrap>
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header />
           {children}
         </S.Wrap>
       </>

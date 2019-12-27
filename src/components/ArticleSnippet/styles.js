@@ -54,6 +54,7 @@ export const Icon = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-shrink: 0;
 `
 
 export const StyledReactLogo = styled(ReactLogo)`
