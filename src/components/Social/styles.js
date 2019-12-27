@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { Buttons, Colors, Type } from 'styles'
+import { Colors } from 'styles'
 import { GitHub, Twitter, Dribbble } from 'components/Icons'
 import { Link } from 'components'
 
