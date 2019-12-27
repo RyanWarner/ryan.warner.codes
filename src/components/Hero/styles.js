@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Colors, Type } from 'styles'
+import { Breakpoints, Colors, Type } from 'styles'
 import Link from '../Link/Link'
 
 export const Hero = styled.div``
@@ -19,6 +19,11 @@ export const SubHeader = styled.p`
   font-weight: ${Type.fontWeights.medium};
   max-width: 600px;
   line-height: 180%;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    font-size: 16px;
+    line-height: 180%;
+  }
 `
 
 const underline = `

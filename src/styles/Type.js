@@ -27,6 +27,7 @@ export const header1 = css`
 
   @media(max-width: ${Breakpoints.mobile}) {
     font-size: 28px;
+    line-height: 138%;
   }
 `
 

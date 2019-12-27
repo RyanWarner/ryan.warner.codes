@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Buttons, Colors, Type } from 'styles'
+import { Breakpoints, Buttons, Colors, Type } from 'styles'
 import { Link } from 'components'
 
 export const Project = styled.div`
@@ -13,6 +13,10 @@ export const Project = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    grid-column: 1;
+  }
   
   &:before {
     content: '';
