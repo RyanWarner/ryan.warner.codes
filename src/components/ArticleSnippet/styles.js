@@ -9,7 +9,6 @@ export const ArticleSnippet = styled(Link)`
   width: 100%;
   display: flex;
   border-radius: 6px;
-  overflow: hidden;
   cursor: pointer;
   transition: background .2s ease-in-out;
   margin-bottom: 16px;
@@ -29,6 +28,7 @@ export const ArticleSnippet = styled(Link)`
       left: 0;
       top: 0;
       box-shadow: 3px 0 22px rgba(14, 255, 77, .5);
+      border-radius: 6px 0 0 6px;
     }
   }
 `

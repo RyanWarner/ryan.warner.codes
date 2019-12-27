@@ -17,14 +17,13 @@ const LatestArticles = ({ data }) => {
     <S.LatestArticles>
       <S.Header>
         <S.Title>Latest Articles</S.Title>
-        <S.AllArticles>
+        <S.AllArticles to='/articles'>
           All articles
         </S.AllArticles>
       </S.Header>
-      {posts.map(item => {
-        console.log('item', item.node.frontmatter)
-        return <ArticleSnippet article={item.node} key={item.node.id} />
-      })}
+      {posts.map(item =>
+        <ArticleSnippet article={item.node} key={item.node.id} />
+      )}
     </S.LatestArticles>
   )
 }
