@@ -9,7 +9,7 @@ export default () =>
     <S.Header>
       <S.Wordmark>
         <Heart />
-        <S.Name>
+        <S.Name to='/'>
           Ryan Warner
         </S.Name>
       </S.Wordmark>

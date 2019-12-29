@@ -4,16 +4,16 @@ import { Link } from 'gatsby'
 export default ({ to, el, children, ...rest }) =>
   el === 'a'
     ? <a
-        href={to}
-        target='_blank'
-        rel='noopener noreferrer'
-        {...rest}
+      href={to}
+      target='_blank'
+      rel='noopener noreferrer'
+      {...rest}
       >
-        {children}
+      {children}
       </a>
     : <Link
-        to={to}
-        {...rest}
+      to={to}
+      {...rest}
       >
-        {children}
+      {children}
       </Link>
