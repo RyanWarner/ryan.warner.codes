@@ -1,15 +1,19 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import * as S from './styles'
-
-export default ({ to, as, children }) =>
-  as === 'a'
+export default ({ to, el, children, ...rest }) =>
+  el === 'a'
     ? <a
-        href={to}
-        target='blank'
-        rel='noopener noreferrer'
+      href={to}
+      target='_blank'
+      rel='noopener noreferrer'
+      {...rest}
       >
-        {children}
+      {children}
       </a>
-    : <Link to={to}>{children}</Link>
+    : <Link
+      to={to}
+      {...rest}
+      >
+      {children}
+      </Link>

@@ -1,6 +1,7 @@
 import { css, createGlobalStyle } from 'styled-components'
 
-import { Colors } from '../styles'
+import * as Breakpoints from './Breakpoints'
+import * as Colors from './Colors'
 
 const sansSerifFallback = "'-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Roboto', 'sans-serif'"
 export const fontFace = `'Jost', ${sansSerifFallback}`
@@ -8,18 +9,27 @@ export const monospace = "Menlo, Monaco, 'Courier New', monospace"
 
 export const fontWeights = {
   regular: 400,
-  medium: 600,
+  medium: 500,
   bold: 'bold'
 }
 
 export const body = css`
   font-size: 14px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    font-size: 16px;
+  }
 `
 
 export const header1 = css`
   font-size: 43px;
   line-height: 152%;
   font-weight: ${fontWeights.bold};
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    font-size: 28px;
+    line-height: 138%;
+  }
 `
 
 export const header3 = css`
@@ -32,6 +42,7 @@ export const header3 = css`
 
 export const GlobalType = createGlobalStyle`
   body {
+    ${body};
     font-family: ${fontFace};
   }
 
@@ -46,10 +57,12 @@ export const GlobalType = createGlobalStyle`
   p {
     margin: 0;
   }
-  a {
 
+  a {
     text-decoration: none;
     transition: color 300ms ease;
+    color: ${Colors.text10};
+    cursor: pointer;
 
     &:hover {
       color: ${Colors.glow20};

@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "warner-codes-staging",
+    "production": "warner-codes"
+  }
+}
