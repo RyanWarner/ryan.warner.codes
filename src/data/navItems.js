@@ -11,8 +11,8 @@ export default {
     title: 'About',
     url: '/about'
   },
-  contact: {
-    title: 'Contact',
-    url: '/contact'
-  }
+  // contact: {
+  //   title: 'Contact',
+  //   url: '/contact'
+  // }
 }

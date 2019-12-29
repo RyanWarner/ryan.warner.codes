@@ -22,7 +22,7 @@ This approach is not the "100% most optimal" however because there are other thi
 
 ## The library
 
-**Use [@loadable/components](https://github.com/smooth-code/loadable-components)**. This library is recommended by the React team, is actively maintained, and supports all the features we need (namely SSR).
+Use **[@loadable/components](https://github.com/smooth-code/loadable-components)**. This library is recommended by the React team, is actively maintained, and supports all the features we need (namely SSR).
 
 [react-loadable](https://github.com/jamiebuilds/react-loadable) is no longer maintained, despite the myriad of tutorials that exist for it. I started implementing this lib before realizing this.
 
@@ -55,7 +55,10 @@ Configure the plugins.
 ```js
 const LoadablePlugin = require('@loadable/webpack-plugin')
 
-new LoadablePlugin({ filename: 'loadable.json', writeToDisk: { filename: `${paths.serverBuild}` } })
+new LoadablePlugin({
+  filename: 'loadable.json',
+  writeToDisk: { filename: `${paths.serverBuild}` }
+})
 ```
 
 ## Server setup
@@ -64,7 +67,7 @@ _TODO: Link to full examples_
 
 Extract the JavaScript chunks.
 
-```js
+```jsx
 // server/render.js
 import { ChunkExtractor } from '@loadable/server'
 
@@ -96,14 +99,14 @@ const scriptTags = extractor.getScriptTags()
 ```
 
 Add the script tags to your HTML.
-```js
+```jsx
 // server/components/HTML.js
 <div dangerouslySetInnerHTML={{ __html: scriptTags }} />
 ```
 
 ## Client setup
 
-```js
+```jsx
 import { loadableReady } from '@loadable/component'
 
 loadableReady(() => {
