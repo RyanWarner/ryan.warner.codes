@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ChevronsRight } from 'react-feather'
 
 import { Link } from '../'
 import { Colors } from 'styles'
@@ -19,4 +20,11 @@ export const Title = styled.h3`
 
 export const AllArticles = styled(Link)`
   color: ${Colors.text10};
+  display: flex;
+  align-items: center;
+`
+
+export const Chevrons = styled(ChevronsRight)`
+  width: 16px;
+  margin-left: 14px;
 `

@@ -7,6 +7,14 @@ export const Content = styled.div`
 
   img {
     max-width: 100%;
-    margin: 50px 0;
+  }
+
+  h2 {
+    margin-top: 4rem;
+  }
+
+  p {
+    font-size: 19px;
+    margin-bottom: 2rem;
   }
 `

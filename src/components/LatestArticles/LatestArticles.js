@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import * as S from './styles'
 import { ArticleSnippet } from '../'
+import { Colors } from 'styles'
 
 export default () => (
   <StaticQuery
@@ -19,6 +20,7 @@ const LatestArticles = ({ data }) => {
         <S.Title>Latest Articles</S.Title>
         <S.AllArticles to='/articles'>
           All articles
+          <S.Chevrons color={Colors.blue50} />
         </S.AllArticles>
       </S.Header>
       {posts.map(item =>
