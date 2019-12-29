@@ -5,7 +5,7 @@ module.exports = {
     title: 'Ryan Warner',
     description:
       'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@ryanwarnercodes',
+    author: '@ryanwarnercodes'
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -43,10 +43,10 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
-      },
-    },
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-  ],
+  ]
 }

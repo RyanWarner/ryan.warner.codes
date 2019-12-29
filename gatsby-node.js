@@ -2,15 +2,20 @@
 
 const { createFilePath } = require('gatsby-source-filesystem')
 const path = require('path')
+const paths = require('./src/config/paths')
 
 exports.onCreateWebpackConfig = ({ actions }) => {
+  require('dotenv').config({
+    path: `${paths.dotenv}.${process.env.DEPLOY_ENV || 'staging'}`
+  })
+
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
       alias: {
         '@': path.resolve(__dirname, 'src')
       }
-    },
+    }
   })
 }
 
