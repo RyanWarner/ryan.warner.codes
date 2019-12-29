@@ -52,8 +52,8 @@ typings/
 *.tgz
 
 # dotenv environment variables file
-**/.env.*
-!**/.env.example
+# **/.env.*
+# !**/.env.example
 
 # gatsby files
 .cache/
