@@ -10,6 +10,7 @@
     "babel-plugin-styled-components": "1.10.6",
     "gatsby": "2.18.16",
     "gatsby-image": "2.2.37",
+    "gatsby-plugin-amplitude-analytics": "^2.0.0",
     "gatsby-plugin-layout": "1.1.18",
     "gatsby-plugin-manifest": "2.2.34",
     "gatsby-plugin-mdx": "1.0.64",
@@ -45,6 +46,7 @@
     "@babel/plugin-proposal-export-namespace-from": "7.7.4",
     "@babel/plugin-syntax-dynamic-import": "7.7.4",
     "chalk": "3.0.0",
+    "cross-env": "^6.0.3",
     "dotenv": "^8.2.0",
     "firebase-tools": "7.11.0",
     "prettier": "1.19.1"
