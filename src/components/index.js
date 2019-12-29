@@ -1,5 +1,5 @@
-export Cta from './Cta/Cta'
 export Link from './Link/Link'
+export Cta from './Cta/Cta'
 export Social from './Social/Social'
 export Footer from './Footer/Footer'
 export Header from './Header/Header'
