@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import dayjs from 'dayjs'
 
 import { Width } from 'components'
 
@@ -14,6 +15,9 @@ const BlogIndex = ({ data }) => {
             <Link to={post.fields.slug}>
               <h2>{post.frontmatter.title}</h2>
             </Link>
+            <p>
+              {dayjs.unix(post.frontmatter.date).format('MMMM DD, YYYY')}
+            </p>
             <p>{post.excerpt}</p>
           </li>
         ))}
@@ -24,13 +28,20 @@ const BlogIndex = ({ data }) => {
 
 export const pageQuery = graphql`
   query blogIndex {
-    allMdx {
+    allMdx(
+      sort: {
+        fields: [frontmatter___date]
+        order: DESC
+      }
+    ) {
       edges {
         node {
           id
           excerpt
           frontmatter {
             title
+            date
+            tags
           }
           fields {
             slug

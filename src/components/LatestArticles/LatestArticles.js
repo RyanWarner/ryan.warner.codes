@@ -32,7 +32,13 @@ const LatestArticles = ({ data }) => {
 
 export const latestArticlesQuery = graphql`
   query latestArticles {
-    allMdx {
+    allMdx(
+      limit: 3
+      sort: {
+        fields: [frontmatter___date]
+        order: DESC
+      }
+    ) {
       edges {
         node {
           id
