@@ -10,7 +10,7 @@ export default {
   },
   sstv: {
     title: 'Stockstream.tv',
-    description: 'On a mission to democratize investing knowledge. My partner, Laith, and I bootstrapped this company with zero funding',
+    description: 'On a mission to democratize investing knowledge. My partner and I bootstrapped this company with zero funding.',
     url: 'https://stockstream.tv',
     color: Colors.stockstreamtv
   },

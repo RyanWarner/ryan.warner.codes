@@ -7,7 +7,7 @@ export const Project = styled.div`
   position: relative;
   background-color: ${Colors.blue20};
   border-radius: 6px;
-  padding: 35px 44px;
+  padding: 32px 38px;
   overflow: hidden;
   grid-column: span ${props => props.span};
   display: flex;
