@@ -1,7 +1,7 @@
 import { css, createGlobalStyle } from 'styled-components'
 
-import Breakpoints from './Breakpoints'
-import Colors from './Colors'
+import * as Breakpoints from './Breakpoints'
+import * as Colors from './Colors'
 
 const sansSerifFallback = "'-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Roboto', 'sans-serif'"
 export const fontFace = `'Jost', ${sansSerifFallback}`
