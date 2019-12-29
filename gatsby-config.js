@@ -1,5 +1,3 @@
-const path = require('path')
-
 const paths = require('./src/config/paths')
 require('dotenv').config({
   path: `${paths.dotenv}.${process.env.DEPLOY_ENV || 'staging'}`
@@ -14,7 +12,7 @@ module.exports = {
   siteMetadata: {
     title: 'Ryan Warner',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+      'I specialize in rapidly prototyping software companies and web applications.',
     author: '@ryanwarnercodes'
   },
   plugins: [
