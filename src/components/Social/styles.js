@@ -42,6 +42,6 @@ export const StyledDribbble = styled(Dribbble)`
 `
 
 export const StyledLink = styled(Link)`
-  margin-right: 19px;
+  margin-left: 19px;
   line-height: 0;
 `

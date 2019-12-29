@@ -3,7 +3,10 @@ import { Link } from 'gatsby'
 
 import { Colors, Type } from '../../styles'
 
-export const Nav = styled.nav``
+export const Nav = styled.nav`
+  position: relative;
+  right: -10px;
+`
 
 export const NavItem = styled(Link)`
   padding: 10px;

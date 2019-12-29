@@ -26,5 +26,5 @@ export const AllArticles = styled(Link)`
 
 export const Chevrons = styled(ChevronsRight)`
   width: 16px;
-  margin-left: 14px;
+  margin-left: 10px;
 `
