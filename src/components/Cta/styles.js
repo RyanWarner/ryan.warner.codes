@@ -32,4 +32,10 @@ export const Button = styled(Link)`
   color: ${Colors.blue10};
   font-weight: ${Type.fontWeights.bold};
   margin-top: 45px;
+  transition: all 200ms ease;
+
+  &:hover {
+    color: ${Colors.blue10};
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.6);
+  }
 `
