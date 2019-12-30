@@ -22,7 +22,7 @@ export const Name = styled(Link)`
   font-weight: bold;
   font-size: 16px;
   color: ${Colors.text10};
-  margin-left: 20px;
+  margin-left: 22px;
 
   @media(min-width: ${Breakpoints.mobile}) {
     font-size: 18px;

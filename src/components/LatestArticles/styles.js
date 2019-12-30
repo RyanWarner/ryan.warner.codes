@@ -12,19 +12,28 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 32px;
 `
 
 export const Title = styled.h3`
-  margin-bottom: 20px;
+  margin: 0;
+  color: ${Colors.text10};
+`
+
+export const Chevrons = styled(ChevronsRight)`
+  width: 16px;
+  margin-left: 8px;
+  transition: all 200ms ease;
 `
 
 export const AllArticles = styled(Link)`
   color: ${Colors.text10};
   display: flex;
   align-items: center;
-`
 
-export const Chevrons = styled(ChevronsRight)`
-  width: 16px;
-  margin-left: 10px;
+  &:hover {
+    ${Chevrons} {
+      transform: translateX(2px)
+    }
+  }
 `

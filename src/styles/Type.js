@@ -22,7 +22,7 @@ export const body = css`
 `
 
 export const header1 = css`
-  font-size: 43px;
+  font-size: 48px;
   line-height: 152%;
   font-weight: ${fontWeights.bold};
 

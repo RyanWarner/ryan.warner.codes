@@ -15,6 +15,8 @@ export const Cta = styled.div`
 
 export const Title = styled.h1`
   text-align: center;
+  margin-bottom: 20px;
+  color: ${Colors.glow10};
 `
 
 export const Description = styled.p`
@@ -29,5 +31,5 @@ export const Button = styled(Link)`
   padding: 8px 15px;
   color: ${Colors.blue10};
   font-weight: ${Type.fontWeights.bold};
-  margin-top: 30px;
+  margin-top: 45px;
 `

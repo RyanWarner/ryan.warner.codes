@@ -3,15 +3,19 @@ import styled from 'styled-components'
 import { Breakpoints, Colors, Type } from 'styles'
 import Link from '../Link/Link'
 
-export const Hero = styled.div``
+export const Hero = styled.div`
+  margin-top: 38px;
+`
 
-const maxWidth = '602px'
+const maxWidth = '632px'
 
 export const H1 = styled.h1`
   background: linear-gradient(${Colors.glow10}, ${Colors.glow20});
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   max-width: ${maxWidth};
+  margin: 0 0 32px 0;
+  letter-spacing: 1px;
 `
 
 export const SubHeader = styled.p`

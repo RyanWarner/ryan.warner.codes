@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Colors, Type } from '../../styles'
 import { Link } from '../'
-import { ReactLogo, Heart, Amplitude } from 'components/Icons'
+import { ReactLogo, Heart } from 'components/Icons'
 
 export const ArticleSnippet = styled(Link)`
   padding: 6px 16px;
@@ -46,6 +46,8 @@ export const Title = styled.h4`
 export const Date = styled.time`
   font-size: 12px;
   color: ${Colors.blue50};
+  margin-top: 3px;
+  display: block;
 `
 
 export const Icon = styled.div`
