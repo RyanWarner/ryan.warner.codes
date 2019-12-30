@@ -37,8 +37,12 @@ export const header3 = css`
   line-height: 152%;
   font-weight: ${fontWeights.bold};
   margin: 0;
-`
 
+  @media(max-width: ${Breakpoints.mobile}) {
+    font-size: 20px;
+    line-height: 138%;
+  }
+`
 
 export const GlobalType = createGlobalStyle`
   body {

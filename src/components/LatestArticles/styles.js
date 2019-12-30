@@ -2,10 +2,14 @@ import styled from 'styled-components'
 import { ChevronsRight } from 'react-feather'
 
 import { Link } from '../'
-import { Colors } from 'styles'
+import { Breakpoints, Colors } from 'styles'
 
 export const LatestArticles = styled.div`
-  margin: 106px 0;
+  margin: 70px 0;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    margin: 106px 0;
+  }
 `
 
 export const Header = styled.div`

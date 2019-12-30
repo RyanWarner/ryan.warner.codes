@@ -7,9 +7,9 @@ import { Heart } from 'components/Icons'
 export default () =>
   <Width>
     <S.Header>
-      <S.Wordmark>
+      <S.Wordmark to='/'>
         <Heart />
-        <S.Name to='/'>
+        <S.Name>
           Ryan Warner
         </S.Name>
       </S.Wordmark>

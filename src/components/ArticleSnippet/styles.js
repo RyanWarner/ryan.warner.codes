@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Colors, Type } from '../../styles'
+import { Breakpoints, Colors, Type } from '../../styles'
 import { Link } from '../'
 import { ReactLogo, Heart } from 'components/Icons'
 
@@ -41,6 +41,10 @@ export const Title = styled.h4`
   color: ${Colors.text10};
   font-weight: ${Type.fontWeights.medium};
   min-height: 30px;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    font-size: 16px;
+  }
 `
 
 export const Date = styled.time`

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Colors, Type } from 'styles'
+import { Breakpoints, Colors, Type } from 'styles'
 import { Link } from 'components'
 
 export const Cta = styled.div`
@@ -11,18 +11,29 @@ export const Cta = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    height: auto;
+    padding: 55px 20px;
+  }
 `
 
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 0;
   color: ${Colors.glow10};
 `
 
 export const Description = styled.p`
   text-align: center;
   font-size: 18px;
-  max-width: 460px;
+  max-width: 100vw;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    max-width: 460px;
+  }
 `
 
 export const Button = styled(Link)`

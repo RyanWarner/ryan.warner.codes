@@ -13,18 +13,20 @@ export const Header = styled.header`
   }
 `
 
-export const Wordmark = styled.div`
+export const Wordmark = styled(Link)`
   display: flex;
   align-items: center;
 `
 
-export const Name = styled(Link)`
+export const Name = styled.p`
   font-weight: bold;
   font-size: 16px;
   color: ${Colors.text10};
   margin-left: 22px;
+  display: none;
 
   @media(min-width: ${Breakpoints.mobile}) {
     font-size: 18px;
+    display: block;
   }
 `
