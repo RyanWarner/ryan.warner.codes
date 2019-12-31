@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Breakpoints, Buttons, Colors, Type } from 'styles'
+import { Breakpoints, Buttons, Colors } from 'styles'
 import { Link } from 'components'
 
 export const Project = styled.div`
@@ -16,6 +16,7 @@ export const Project = styled.div`
 
   @media(max-width: ${Breakpoints.mobile}) {
     grid-column: 1;
+    padding: 22px 28px;
   }
   
   &:before {
@@ -31,8 +32,6 @@ export const Project = styled.div`
 `
 
 export const Title = styled.h4`
-  font-size: 24px;
-  font-weight: ${Type.fontWeights.medium};
   margin: 0 0 14px 0;
 `
 

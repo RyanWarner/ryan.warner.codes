@@ -11,6 +11,7 @@ export const Footer = styled.footer`
   @media(max-width: ${Breakpoints.mobile}) {
     flex-direction: column;
     align-items: flex-start;
+    padding: 55px 0;
   }
 `
 

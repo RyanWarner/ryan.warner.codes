@@ -18,3 +18,7 @@ export const Content = styled.div`
     margin-bottom: 2rem;
   }
 `
+
+export const Title = styled.h1`
+  color: ${Colors.glow10};
+`

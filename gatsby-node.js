@@ -64,10 +64,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: node.fields.slug,
       // This component will wrap our MDX content
-      component: path.resolve(`./src/components/PostLayout/PostLayout.js`),
+      component: path.resolve(`./src/components/ArticleLayout/ArticleLayout.js`),
       // You can use the values in this context in
       // our page layout component
-      context: { id: node.id },
+      context: { id: node.id }
     })
   })
 }

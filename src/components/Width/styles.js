@@ -9,6 +9,6 @@ export const Width = styled.div`
   box-sizing: border-box;
 
   @media(max-width: ${Breakpoints.mobile}) {
-    padding: 0 20px;
+    padding: 0 6vw;
   }
 `

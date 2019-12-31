@@ -17,7 +17,7 @@ export default function PageTemplate ({ data: { mdx } }) {
     <Width>
       <Seo title={mdx.frontmatter.title} />
       <S.Content>
-        <h1>{mdx.frontmatter.title}</h1>
+        <S.Title>{mdx.frontmatter.title}</S.Title>
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
