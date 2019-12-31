@@ -29,7 +29,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       // Generated value based on filepath with 'blog' prefix. you
       // don't need a separating '/' before the value because
       // createFilePath returns a path with the leading '/'.
-      value: `/posts${value}`,
+      value: `/posts${value}`
     })
   }
 }
@@ -64,7 +64,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: node.fields.slug,
       // This component will wrap our MDX content
-      component: path.resolve(`./src/components/ArticleLayout/ArticleLayout.js`),
+      component: path.resolve('./src/components/ArticleLayout/ArticleLayout.js'),
       // You can use the values in this context in
       // our page layout component
       context: { id: node.id }
