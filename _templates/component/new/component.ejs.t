@@ -3,7 +3,9 @@ to: src/components/<%= name %>/<%= name %>.js
 ---
 import React from 'react'
 
+import * as S from './styles'
+
 export default props =>
-  <div>
+  <S.<%= name %>Component>
     <%= name %>
-  </div>
+  </S.<%= name %>Component>
