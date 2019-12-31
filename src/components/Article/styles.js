@@ -6,6 +6,12 @@ import { Link } from '../'
 
 export const ArticleComponent = styled.div`
   max-width: 630px;
+
+  a {
+    &:hover {
+      color: ${Colors.text10};
+    }
+  }
 `
 
 export const Title = styled.h2`
