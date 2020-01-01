@@ -26,7 +26,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: 'slug',
       // Individual MDX node
       node,
-      // Generated value based on filepath with 'blog' prefix. you
+      // Generated value based on filepath with 'articles' prefix. you
       // don't need a separating '/' before the value because
       // createFilePath returns a path with the leading '/'.
       value: `/articles${value}`
@@ -38,7 +38,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   // Destructure the createPage function from the actions object
   const { createPage } = actions
-  const result = await graphql(`
+  const result = await graphql`
     query {
       allMdx {
         edges {
@@ -51,7 +51,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
     }
-  `)
+  `
 
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')

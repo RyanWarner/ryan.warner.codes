@@ -33,6 +33,7 @@ const LatestArticles = ({ data }) => {
 export const latestArticlesQuery = graphql`
   query latestArticles {
     allMdx(
+      filter: {fileAbsolutePath: {glob: "**/articles/**"}}
       limit: 3
       sort: {
         fields: [frontmatter___date]
