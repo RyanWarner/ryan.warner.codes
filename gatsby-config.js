@@ -1,18 +1,15 @@
 const paths = require('./src/config/paths')
 require('dotenv').config({
-  path: `${paths.dotenv}.${process.env.DEPLOY_ENV || 'staging'}`
+  path: `${paths.dotenv}.${process.env.DEPLOY_ENV || 'local'}`
 })
 
 const amplitudeApiKey = process.env.AMPLITUDE_API_KEY
-console.log('process.env.DEPLOY_ENV', process.env.DEPLOY_ENV)
-console.log('amplitudeApiKey', amplitudeApiKey)
-console.log('paths.dotenv', paths.dotenv)
 
 module.exports = {
   siteMetadata: {
     title: 'Ryan Warner',
     description:
-      'I specialize in rapidly prototyping software companies and web applications.',
+      'I specialize in rapidly building software companies and web applications.',
     author: '@ryanwarnercodes'
   },
   plugins: [
@@ -21,28 +18,28 @@ module.exports = {
     'gatsby-plugin-mdx',
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        name: 'images',
+        path: `${__dirname}/src/images`
+      }
     }, {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `pages`,
+        name: 'pages',
         path: `${__dirname}/src/pages`
       }
     }, {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/content/posts`
+        name: 'articles',
+        path: `${__dirname}/src/content/articles`
       }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-default-mdx-basic',
         short_name: 'starter',
@@ -56,7 +53,7 @@ module.exports = {
       resolve: `gatsby-plugin-amplitude-analytics`,
       options: {
         // Specify the API key for your Amplitude Project (required)
-        apiKey: '4c24c0a86063468a5c71c19abfca0c39',
+        apiKey: amplitudeApiKey,
         // Puts tracking script in the head instead of the body (optional)
         head: false,
         // Prevents loading Amplitude and logging events if visitors have "Do Not Track" enabled (optional)
@@ -72,8 +69,8 @@ module.exports = {
           includeUtm: true,
           includeReferrer: true
         }
-      },
-    },
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

@@ -29,7 +29,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       // Generated value based on filepath with 'blog' prefix. you
       // don't need a separating '/' before the value because
       // createFilePath returns a path with the leading '/'.
-      value: `/posts${value}`
+      value: `/articles${value}`
     })
   }
 }
@@ -58,9 +58,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   // Create blog post pages.
-  const posts = result.data.allMdx.edges
+  const articles = result.data.allMdx.edges
 
-  posts.forEach(({ node }, index) => {
+  articles.forEach(({ node }, index) => {
     createPage({
       path: node.fields.slug,
       // This component will wrap our MDX content

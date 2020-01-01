@@ -13,7 +13,7 @@ export default () => (
 )
 
 const LatestArticles = ({ data }) => {
-  const { edges: posts } = data.allMdx
+  const { edges: articles } = data.allMdx
   return (
     <S.LatestArticles>
       <S.Header>
@@ -23,7 +23,7 @@ const LatestArticles = ({ data }) => {
           <S.Chevrons color={Colors.blue50} />
         </S.AllArticles>
       </S.Header>
-      {posts.map(item =>
+      {articles.map(item =>
         <ArticleSnippet article={item.node} key={item.node.id} />
       )}
     </S.LatestArticles>
