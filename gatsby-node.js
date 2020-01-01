@@ -34,13 +34,23 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-// https://www.gatsbyjs.org/docs/node-apis/#createPages
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  // Destructure the createPage function from the actions object
+exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions
-  const result = await graphql`
+
+  if (page && page.path.match(/about/)) {
+    page.context.layout = 'MdxPage'
+    createPage(page)
+  }
+}
+
+// https://www.gatsbyjs.org/docs/node-apis/#createPages
+// Destructure the createPage function from the actions object
+exports.createPages = async ({ page, graphql, actions, reporter }) => {
+  const { createPage } = actions
+
+  const result = await graphql(`
     query {
-      allMdx {
+      allMdx(filter: {fileAbsolutePath: {glob: "**/articles/**"}}) {
         edges {
           node {
             id
@@ -51,7 +61,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
     }
-  `
+  `)
 
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
