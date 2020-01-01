@@ -47,21 +47,18 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png' // This path is relative to the root of the site.
       }
     }, {
-      resolve: `gatsby-plugin-amplitude-analytics`,
+      resolve: 'gatsby-plugin-amplitude-analytics',
       options: {
         // Specify the API key for your Amplitude Project (required)
         apiKey: amplitudeApiKey,
         // Puts tracking script in the head instead of the body (optional)
         head: false,
-        // Prevents loading Amplitude and logging events if visitors have "Do Not Track" enabled (optional)
-        // respectDNT: true,
-        // Override the default event types (optional)
         eventTypes: {
           outboundLinkClick: 'outbound.link.click',
-          pageView: 'page.view',
+          pageView: 'page.view'
         },
         // Amplitude JS SDK configuration options (optional)
         amplitudeConfig: {

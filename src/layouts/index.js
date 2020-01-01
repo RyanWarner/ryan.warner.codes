@@ -1,14 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import { MDXProvider } from '@mdx-js/react'
 
-import { Header, Seo } from 'components'
+import { CodeBlock, Header, Seo, Width } from 'components'
 import 'styles/FontFaces.css'
 import * as S from './styles'
 import { GlobalType } from 'styles/Type'
 import { GlobalStyle } from 'styles/Global'
 
-const Layout = ({ children }) => (
+const components = {
+  pre: props => <div {...props} />,
+  p: S.P,
+  code: CodeBlock
+}
+
+const Content = ({ children, pageContext }) => {
+  if (pageContext.layout === 'MdxPage') {
+    return <Width>{children}</Width>
+  }
+  return children
+}
+
+const Layout = props => (
   <StaticQuery
     query={query}
     render={data => (
@@ -17,8 +31,10 @@ const Layout = ({ children }) => (
         <GlobalStyle />
         <GlobalType />
         <S.Wrap>
-          <Header />
-          {children}
+          <MDXProvider components={components}>
+            <Header />
+            <Content {...props} />
+          </MDXProvider>
         </S.Wrap>
       </>
     )}
@@ -36,7 +52,7 @@ const query = graphql`
 `
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout

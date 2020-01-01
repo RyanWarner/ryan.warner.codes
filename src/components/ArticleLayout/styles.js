@@ -13,10 +13,6 @@ export const Content = styled.div`
     margin-top: 4rem;
   }
 
-  p {
-    font-size: 19px;
-    margin-bottom: 2rem;
-  }
 `
 
 export const Title = styled.h1`
