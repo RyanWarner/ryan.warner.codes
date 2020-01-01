@@ -45,7 +45,7 @@ exports.onCreatePage = ({ page, actions }) => {
 
 // https://www.gatsbyjs.org/docs/node-apis/#createPages
 // Destructure the createPage function from the actions object
-exports.createPages = async ({ page, graphql, actions, reporter }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   const result = await graphql(`

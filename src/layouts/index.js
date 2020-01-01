@@ -1,12 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import { MDXProvider } from '@mdx-js/react'
 
-import { Header, Seo, Width } from 'components'
+import { CodeBlock, Header, Seo, Width } from 'components'
 import 'styles/FontFaces.css'
 import * as S from './styles'
 import { GlobalType } from 'styles/Type'
 import { GlobalStyle } from 'styles/Global'
+
+const components = {
+  pre: props => <div {...props} />,
+  p: S.P,
+  code: CodeBlock
+}
 
 const Content = ({ children, pageContext }) => {
   if (pageContext.layout === 'MdxPage') {
@@ -24,8 +31,10 @@ const Layout = props => (
         <GlobalStyle />
         <GlobalType />
         <S.Wrap>
-          <Header />
-          <Content {...props} />
+          <MDXProvider components={components}>
+            <Header />
+            <Content {...props} />
+          </MDXProvider>
         </S.Wrap>
       </>
     )}
