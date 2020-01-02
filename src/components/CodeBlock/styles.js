@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Pre = styled.pre`
   overflow-x: scroll;
   border-radius: 4px;
+  line-height: 150%;
 `
 
 export const Code = styled.code`
