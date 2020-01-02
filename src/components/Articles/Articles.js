@@ -20,11 +20,7 @@ export default ({ data }) => {
           </ul>
         </S.ArticlesComponent>
       </Width>
-      <S.FooterWrap>
-        <Width>
-          <Footer />
-        </Width>
-      </S.FooterWrap>
+      <Footer />
     </>
   )
 }

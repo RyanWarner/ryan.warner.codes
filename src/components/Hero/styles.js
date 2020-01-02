@@ -17,6 +17,11 @@ export const H1 = styled.h1`
   margin: 0 0 32px 0;
   letter-spacing: 1px;
 
+  &::selection {
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+  }
+
   @media(max-width: ${Breakpoints.mobile}) {
     margin: 0 0 20px 0;
   }

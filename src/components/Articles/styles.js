@@ -19,10 +19,3 @@ export const Title = styled.h1`
   margin: 25px 0 54px 0;
   color: ${Colors.text10};
 `
-
-export const FooterWrap = styled.div`
-  width: 100vw;
-  background-color: ${Colors.blue20};
-  display: flex;
-  justify-content: center;
-`

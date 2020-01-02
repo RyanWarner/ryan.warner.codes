@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
-import { Breakpoints, Colors } from '../../styles'
+import { Breakpoints, Colors } from 'styles'
+import { Width } from 'components'
 
 export const Footer = styled.footer`
-  padding: 60px 0;
+  width: 100vw;
+  background-color: ${props => props.disableBackground ? 'transparent' : Colors.blue20};
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 
   @media(max-width: ${Breakpoints.mobile}) {
     flex-direction: column;
@@ -26,3 +27,11 @@ export const Credits = styled.div`
     line-height: 180%;
   }
 `
+
+export const StyledWidth = styled(Width)`
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+` 

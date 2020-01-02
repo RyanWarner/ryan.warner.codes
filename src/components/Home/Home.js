@@ -18,7 +18,5 @@ export default () =>
       <Projects />
     </Width>
     <Cta />
-    <Width>
-      <Footer />
-    </Width>
+    <Footer disableBackground />
   </S.Home>

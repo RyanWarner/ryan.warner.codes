@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 
-import { CodeBlock, Header, Seo, Width } from 'components'
+import { CodeBlock, Header, Seo, Width, Footer } from 'components'
 import 'styles/FontFaces.css'
 import * as S from './styles'
 import { GlobalType } from 'styles/Type'
@@ -17,7 +17,14 @@ const components = {
 
 const Content = ({ children, pageContext }) => {
   if (pageContext.layout === 'MdxPage') {
-    return <Width>{children}</Width>
+    return (
+      <>
+        <S.StyledWidth>
+          {children}
+        </S.StyledWidth>
+        <Footer />
+      </>
+    )
   }
   return children
 }

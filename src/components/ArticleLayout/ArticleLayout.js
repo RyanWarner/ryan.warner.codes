@@ -7,14 +7,16 @@ import { Width, Footer, Seo } from 'components'
 
 export default function PageTemplate ({ data: { mdx } }) {
   return (
-    <Width>
-      <Seo title={mdx.frontmatter.title} />
-      <S.Content>
-        <S.Title>{mdx.frontmatter.title}</S.Title>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
-      </S.Content>
+    <>
+      <Width>
+        <Seo title={mdx.frontmatter.title} />
+        <S.Content>
+          <S.Title>{mdx.frontmatter.title}</S.Title>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </S.Content>
+      </Width>
       <Footer />
-    </Width>
+    </>
   )
 }
 
