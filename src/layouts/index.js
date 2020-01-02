@@ -10,8 +10,9 @@ import { GlobalType } from 'styles/Type'
 import { GlobalStyle } from 'styles/Global'
 
 const components = {
-  pre: props => <div {...props} />,
   p: S.P,
+  img: S.Img,
+  h2: S.H2,
   code: CodeBlock
 }
 
