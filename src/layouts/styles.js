@@ -8,6 +8,11 @@ export const Wrap = styled.div`
   align-items: center;
 `
 
+export const Li = styled.li`
+  font-size: 19px;
+  margin-bottom: 1rem;
+`
+
 export const P = styled.p`
   font-size: 19px;
   margin-bottom: 2rem;
