@@ -14,12 +14,17 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = (args) => {
+  const { node, actions, getNode } = args
   const { createNodeField } = actions
   // you only want to operate on `Mdx` nodes. If you had content from a
   // remote CMS you could also check to see if the parent node was a
   // `File` node here
   if (node.internal.type === 'Mdx') {
+    // console.log('args', args)
+    // console.log('')
+    // console.log('')
+    // console.log('')
     const value = createFilePath({ node, getNode })
     createNodeField({
       // Name of the field you are adding
@@ -43,7 +48,7 @@ exports.onCreatePage = ({ page, actions }) => {
   }
 }
 
-const getMdxForPath = async ({ path, graphql }) => {
+const getMdxForPath = async ({ path, graphql, reporter }) => {
   const result = await graphql(`
     query {
       allMdx(filter: {fileAbsolutePath: {glob: "**/${path}/**"}}) {
@@ -60,7 +65,7 @@ const getMdxForPath = async ({ path, graphql }) => {
   `)
 
   if (result.errors) {
-    // reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
   return result.data.allMdx.edges
@@ -71,8 +76,11 @@ const getMdxForPath = async ({ path, graphql }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const articles = await getMdxForPath({ path: 'articles', graphql })
-  const snippets = await getMdxForPath({ path: 'snippets', graphql })
+  const articles = await getMdxForPath({ path: 'articles', graphql, reporter })
+  const snippets = await getMdxForPath({ path: 'snippets', graphql, reporter })
+
+  console.log('articles', articles)
+  console.log('snippets', snippets)
 
   articles.forEach(({ node }, index) => {
     createPage({

@@ -35,6 +35,12 @@ module.exports = {
         name: 'articles',
         path: `${__dirname}/src/content/articles`
       }
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'articles',
+        path: `${__dirname}/src/content/snippets`
+      }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

@@ -1,9 +1,31 @@
-import React from 'react'
+import { graphql } from 'gatsby'
 
-import { Width } from 'components'
+import { Articles } from 'components'
 
-export default () =>
-  <Width>
-    <h1>Snippets</h1>
-    <p>Coming soon</p>
-  </Width>
+export const pageQuery = graphql`
+  query SnippetsIndex {
+    allMdx(
+      filter: {fileAbsolutePath: {glob: "**/snippets/**"}}
+      sort: {
+        fields: [frontmatter___date]
+        order: DESC
+      }
+    ) {
+      edges {
+        node {
+          id
+          excerpt
+          frontmatter {
+            title
+            date
+            tags
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
+export default Articles
