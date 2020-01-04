@@ -18,7 +18,7 @@ export const Img = styled.img`
 `
 
 export const H2 = styled.h2`
-  margin-top: 4rem;
+  margin-top: 6rem;
 `
 
 export const StyledWidth = styled(Width)`

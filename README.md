@@ -47,3 +47,4 @@ Code style is enforced by ESLint and follows the [Standard](https://standardjs.c
 
 [] Pagination for articles, snippets, etc.
 [] Abstract into a Gatsby starter
+[] Add a resume?

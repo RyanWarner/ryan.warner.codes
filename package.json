@@ -8,6 +8,7 @@
     "@mdx-js/react": "1.5.3",
     "amplitude-js": "5.8.0",
     "babel-plugin-styled-components": "1.10.6",
+    "copy-text-to-clipboard": "^2.1.1",
     "dayjs": "1.8.18",
     "gatsby": "2.18.17",
     "gatsby-image": "2.2.37",
