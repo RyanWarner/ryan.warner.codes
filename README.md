@@ -41,3 +41,9 @@ Code style is enforced by ESLint and follows the [Standard](https://standardjs.c
 - [Styled Components](styled-components.com)
 - Hosted on [Firebase](https://firebase.google.com/)
 - [Hygen](hygen.io)
+
+
+### Todo
+
+[] Pagination for articles, snippets, etc.
+[] Abstract into a Gatsby starter
