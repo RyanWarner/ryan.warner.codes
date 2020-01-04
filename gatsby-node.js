@@ -43,14 +43,10 @@ exports.onCreatePage = ({ page, actions }) => {
   }
 }
 
-// https://www.gatsbyjs.org/docs/node-apis/#createPages
-// Destructure the createPage function from the actions object
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
-
+const getMdxForPath = async ({ path, graphql }) => {
   const result = await graphql(`
     query {
-      allMdx(filter: {fileAbsolutePath: {glob: "**/articles/**"}}) {
+      allMdx(filter: {fileAbsolutePath: {glob: "**/${path}/**"}}) {
         edges {
           node {
             id
@@ -64,13 +60,32 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `)
 
   if (result.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+    // reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
-  // Create blog post pages.
-  const articles = result.data.allMdx.edges
+  return result.data.allMdx.edges
+}
+
+// https://www.gatsbyjs.org/docs/node-apis/#createPages
+// Destructure the createPage function from the actions object
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
+
+  const articles = await getMdxForPath({ path: 'articles', graphql })
+  const snippets = await getMdxForPath({ path: 'snippets', graphql })
 
   articles.forEach(({ node }, index) => {
+    createPage({
+      path: node.fields.slug,
+      // This component will wrap our MDX content
+      component: path.resolve('./src/components/ArticleLayout/ArticleLayout.js'),
+      // You can use the values in this context in
+      // our page layout component
+      context: { id: node.id }
+    })
+  })
+
+  snippets.forEach(({ node }, index) => {
     createPage({
       path: node.fields.slug,
       // This component will wrap our MDX content
