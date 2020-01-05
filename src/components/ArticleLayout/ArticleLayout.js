@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import dayjs from 'dayjs'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import * as S from './styles'
@@ -12,6 +13,15 @@ export default function PageTemplate ({ data: { mdx } }) {
         <Seo title={mdx.frontmatter.title} />
         <S.Content>
           <S.Title>{mdx.frontmatter.title}</S.Title>
+          <S.Meta>
+            <S.Image />
+            <S.Text>
+              <S.Author>Written by Ryan Warner</S.Author>
+              <S.Date datetime={mdx.frontmatter.date}>
+                {dayjs.unix(mdx.frontmatter.date).format('MMMM DD, YYYY')}
+              </S.Date>
+            </S.Text>
+          </S.Meta>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </S.Content>
       </Width>

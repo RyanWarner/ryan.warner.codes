@@ -34,6 +34,7 @@ export const AllArticles = styled(Link)`
   color: ${Colors.text10};
   display: flex;
   align-items: center;
+  padding: 6px 8px;
 
   &:hover {
     ${Chevrons} {

@@ -80,12 +80,18 @@ export const GlobalType = createGlobalStyle`
 
   a {
     text-decoration: none;
-    transition: color 300ms ease;
+    transition: all 300ms ease;
     color: ${Colors.text10};
     cursor: pointer;
 
     &:hover {
       color: ${Colors.glow20};
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px ${Colors.glow20};
+      border-radius: 4px;
     }
   }
 `
