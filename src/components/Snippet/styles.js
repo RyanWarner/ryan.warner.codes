@@ -16,7 +16,7 @@ export const ArticleComponent = styled.div`
 
 export const Title = styled.h2`
   font-size: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   margin-top: 8px;
 `
 
@@ -40,6 +40,10 @@ export const P = styled.p`
  margin-bottom: 24px;
 `
 
+export const Ul = styled.ul``
+
 export const Li = styled.li`
  font-size: 16px;
+ margin-bottom: 1rem;
+ list-style-type: none;
 `

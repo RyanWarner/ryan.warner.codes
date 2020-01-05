@@ -1,7 +1,7 @@
 
 import styled from 'styled-components'
 
-import { Colors } from 'styles'
+import { Breakpoints, Colors } from 'styles'
 
 export const ArticlesComponent = styled.div`
   ul {
@@ -11,7 +11,11 @@ export const ArticlesComponent = styled.div`
 
   li {
     list-style-type: none;
-    margin-bottom: 98px;
+    margin-bottom: 68px;
+
+    @media(min-width: ${Breakpoints.mobile}) {
+      margin-bottom: 98px;
+    }
   }
 `
 

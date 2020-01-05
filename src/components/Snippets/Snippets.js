@@ -13,9 +13,9 @@ export default ({ data }) => {
           <S.Title>Snippets</S.Title>
           <ul>
             {articles.map(({ node: snippet }) =>
-              <li key={snippet.id}>
+              <S.Li key={snippet.id}>
                 <Snippet {...snippet} />
-              </li>
+              </S.Li>
             )}
           </ul>
         </S.ArticlesComponent>

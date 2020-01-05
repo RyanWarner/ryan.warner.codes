@@ -1,7 +1,7 @@
 
 import styled from 'styled-components'
 
-import { Colors } from 'styles'
+import { Breakpoints, Colors } from 'styles'
 
 export const ArticleComponent = styled.div`
   max-width: 630px;
@@ -16,9 +16,8 @@ export const ArticleComponent = styled.div`
 `
 
 export const Title = styled.h2`
-  font-size: 26px;
   margin-bottom: 14px;
-  margin-top: 18px;
+  margin-top: 10px;
   color: ${Colors.text10};
 `
 
@@ -35,11 +34,15 @@ export const Description = styled.p`
 
 export const ReadMore = styled.p`
   color: ${Colors.blue50};
-  margin-top: 25px;
+  margin-top: 15px;
   display: block;
   transition: all 200ms ease;
 
   &:hover {
     color: ${Colors.text10};
+  }
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    margin-top: 25px;
   }
 `

@@ -9,22 +9,25 @@ export const Content = styled.div`
 
 export const Title = styled.h1`
   margin-bottom: 24px;
-  font-size: 40px;
-  line-height: 54px;
+  font-size: 26px;
+  line-height: 34px;
 
-  @media(max-width: ${Breakpoints.mobile}) {
-    font-size: 30px;
-    line-height: 38px;
+  @media(min-width: ${Breakpoints.mobile}) {
+    font-size: 40px;
+    line-height: 54px;
   }
 `
 
 export const Meta = styled.div`
-  margin-bottom: 60px;
+  margin-bottom: 35px;
   display: flex;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    margin-bottom: 60px;
+  }
 `
 
-export const Text = styled.div`
-`
+export const Text = styled.div``
 
 export const Image = styled.div`
   width: 45px;
@@ -47,6 +50,6 @@ export const Author = styled.div``
 export const Date = styled.time`
   font-size: 14px;
   color: ${Colors.blue50};
-  margin-top: 3px;
+  margin-top: 1px;
   display: block;
 `
