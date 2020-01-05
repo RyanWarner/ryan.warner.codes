@@ -12,6 +12,6 @@ export default ({ fields, frontmatter, excerpt }) =>
       </S.Date>
       <S.Title>{frontmatter.title}</S.Title>
       <S.Description>{excerpt}</S.Description>
-      <S.ReadMore to={fields.slug}>Read more ...</S.ReadMore>
+      <S.ReadMore>Read more ...</S.ReadMore>
     </Link>
   </S.ArticleComponent>

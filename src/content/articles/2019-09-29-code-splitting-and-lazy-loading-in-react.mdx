@@ -8,14 +8,14 @@ tags:
   - lazy loading
 ---
 
-Code splitting and lazy loading are two important ways to improve your app's performance.
+Code splitting and lazy loading are two important ways to improve your app's performance. This article serves as a living document describing my process working towards best practices in implementing these features.
 
-### Goals
+## Goals
 
 1. Faster initial load times. Users only download the code they need for the features they are using. This leads to faster load times and more efficient use of resources.
 2. Faster subsequent loads. Code splitting enables more efficient caching. Developers can now update isolated parts of the app without forcing users to re-download the entire application code.
 
-### Approach
+## Approach
 
 My initial approach is going to be aggressively splitting all of my components and node_modules. This will result in 10s if not 100s of JavaScript files, which is okay due to HTTP/2 enabling parallel loading of multiple files over the same connection. Gone are the days of round trips to your server for each file.
 

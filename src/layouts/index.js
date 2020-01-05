@@ -13,6 +13,7 @@ const components = {
   p: S.P,
   img: S.Img,
   h2: S.H2,
+  h3: S.H3,
   code: CodeBlock,
   a: props => <S.A {...props} />,
   li: props => <S.Li {...props} />

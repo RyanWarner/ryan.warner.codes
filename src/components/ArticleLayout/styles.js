@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { Colors } from 'styles'
+import ryan from 'images/ryan-warner.png'
 
 export const Content = styled.div`
   margin-bottom: 106px;
@@ -26,6 +27,9 @@ export const Image = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   margin-right: 15px;
+  background-image: url(${ryan});
+  background-size: cover;
+  background-position: center;
 `
 
 export const Author = styled.div``

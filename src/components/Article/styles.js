@@ -34,8 +34,13 @@ export const Description = styled.p`
   color: ${Colors.text20};
 `
 
-export const ReadMore = styled(Link)`
+export const ReadMore = styled.p`
   color: ${Colors.blue50};
   margin-top: 25px;
   display: block;
+  transition: all 200ms ease;
+
+  &:hover {
+    color: ${Colors.text10};
+  }
 `

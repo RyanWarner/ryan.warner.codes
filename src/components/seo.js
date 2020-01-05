@@ -10,7 +10,7 @@ function SEO ({ description, lang, meta, keywords, title }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
-        console.log('metaDescription', metaDescription)
+
         return (
           <Helmet
             htmlAttributes={{

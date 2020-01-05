@@ -49,4 +49,5 @@ Code style is enforced by ESLint and follows the [Standard](https://standardjs.c
 [] Abstract into a Gatsby starter
 [] Add Storybook
 [] Add Cypress
+[] Searchable tags
 [] Add a resume?
