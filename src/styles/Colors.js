@@ -12,6 +12,7 @@ export const blue20 = '#1C2C35'
 export const blue30 = '#243B4A'
 export const blue40 = '#416883'
 export const blue50 = '#5E8CA7'
+export const blue60 = '#4FB8FF'
 
 export const yawnch = '#CCA9F4'
 export const stockstreamtv = '#5CD47D'

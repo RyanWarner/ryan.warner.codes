@@ -14,4 +14,5 @@ export const NavItem = styled(Link)`
   font-size: 16px;
   font-weight: ${Type.fontWeights.medium};
   margin-left: 10px;
+  text-decoration: none;
 `

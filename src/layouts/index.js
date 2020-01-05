@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 
-import { CodeBlock, Header, Seo, Footer, UnderlineLink } from 'components'
+import { CodeBlock, Header, Seo, Footer } from 'components'
 import 'styles/FontFaces.css'
-import { Colors } from 'styles'
 import * as S from './styles'
 import { GlobalType } from 'styles/Type'
 import { GlobalStyle } from 'styles/Global'
@@ -15,7 +14,6 @@ const components = {
   img: S.Img,
   h2: S.H2,
   code: CodeBlock,
-  a: props => <UnderlineLink color={Colors.glow20} {...props} />,
   li: props => <S.Li {...props} />
 }
 

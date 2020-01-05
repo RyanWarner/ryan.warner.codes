@@ -74,8 +74,10 @@ Extract the JavaScript chunks.
 // server/render.js
 import { ChunkExtractor } from '@loadable/server'
 
-const publicPath = process.env.NODE_ENV === 'production' ? `${paths.cdn}/build/` : paths.publicPath
-const statsFile = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production'
+
+const publicPath = isProd ? `${paths.cdn}/build/` : paths.publicPath
+const statsFile = isProd
   ? path.resolve('build/server/loadable.json')
   : `${paths.cloudFunctions}/build/server/loadable.json`
 

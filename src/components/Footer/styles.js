@@ -26,6 +26,10 @@ export const Credits = styled.div`
     color: ${Colors.text20};
     line-height: 180%;
   }
+
+  a {
+    text-decoration: none;
+  }
 `
 
 export const StyledWidth = styled(Width)`

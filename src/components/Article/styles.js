@@ -8,6 +8,8 @@ export const ArticleComponent = styled.div`
   max-width: 630px;
 
   a {
+    text-decoration: none;
+
     &:hover {
       color: ${Colors.text10};
     }
@@ -18,6 +20,7 @@ export const Title = styled.h2`
   font-size: 26px;
   margin-bottom: 14px;
   margin-top: 18px;
+  color: ${Colors.text10};
 `
 
 export const Date = styled.time`
@@ -27,7 +30,9 @@ export const Date = styled.time`
   display: block;
 `
 
-export const Description = styled.p``
+export const Description = styled.p`
+  color: ${Colors.text20};
+`
 
 export const ReadMore = styled(Link)`
   color: ${Colors.blue50};

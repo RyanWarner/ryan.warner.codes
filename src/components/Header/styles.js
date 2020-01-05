@@ -16,6 +16,7 @@ export const Header = styled.header`
 export const Wordmark = styled(Link)`
   display: flex;
   align-items: center;
+  text-decoration: none;
 `
 
 export const Name = styled.p`
