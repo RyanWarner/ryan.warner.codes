@@ -1,4 +1,5 @@
 import { css, createGlobalStyle } from 'styled-components'
+import 'focus-visible'
 
 import * as Breakpoints from './Breakpoints'
 import * as Colors from './Colors'
@@ -82,6 +83,7 @@ export const GlobalType = createGlobalStyle`
     transition: all 300ms ease;
     color: ${Colors.blue60};
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
       color: ${Colors.glow20};
@@ -91,6 +93,11 @@ export const GlobalType = createGlobalStyle`
       outline: none;
       box-shadow: 0 0 0 2px ${Colors.glow20};
       border-radius: 4px;
+    }
+
+    &:focus:not(.focus-visible) {
+      outline: none;
+      box-shadow: none;
     }
   }
 `

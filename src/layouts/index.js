@@ -14,6 +14,7 @@ const components = {
   img: S.Img,
   h2: S.H2,
   code: CodeBlock,
+  a: props => <S.A {...props} />,
   li: props => <S.Li {...props} />
 }
 
@@ -41,7 +42,7 @@ const Layout = props => (
         <GlobalType />
         <S.Wrap>
           <MDXProvider components={components}>
-            <Header />
+            <Header location={props.location} />
             <Content {...props} />
           </MDXProvider>
         </S.Wrap>

@@ -4,7 +4,7 @@ import * as S from './styles'
 import { Nav, Width } from '../'
 import { Heart } from 'components/Icons'
 
-export default () =>
+export default ({ location }) =>
   <Width>
     <S.Header>
       <S.Wordmark to='/'>
@@ -13,6 +13,6 @@ export default () =>
           Ryan Warner
         </S.Name>
       </S.Wordmark>
-      <Nav />
+      <Nav location={location} />
     </S.Header>
   </Width>

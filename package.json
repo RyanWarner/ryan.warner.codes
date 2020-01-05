@@ -10,6 +10,7 @@
     "babel-plugin-styled-components": "1.10.6",
     "copy-text-to-clipboard": "^2.1.1",
     "dayjs": "1.8.18",
+    "focus-visible": "^5.0.2",
     "gatsby": "2.18.17",
     "gatsby-image": "2.2.37",
     "gatsby-plugin-amplitude-analytics": "2.0.0",
