@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Colors } from 'styles'
+import { Breakpoints, Colors } from 'styles'
 import ryan from 'images/ryan-warner.png'
 
 export const Content = styled.div`
@@ -11,6 +11,11 @@ export const Title = styled.h1`
   margin-bottom: 24px;
   font-size: 40px;
   line-height: 54px;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    font-size: 30px;
+    line-height: 38px;
+  }
 `
 
 export const Meta = styled.div`
@@ -30,6 +35,11 @@ export const Image = styled.div`
   background-image: url(${ryan});
   background-size: cover;
   background-position: center;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    width: 35px;
+    height: 35px;
+  }
 `
 
 export const Author = styled.div``

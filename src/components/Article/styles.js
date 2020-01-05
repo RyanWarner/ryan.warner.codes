@@ -2,7 +2,6 @@
 import styled from 'styled-components'
 
 import { Colors } from 'styles'
-import { Link } from '../'
 
 export const ArticleComponent = styled.div`
   max-width: 630px;

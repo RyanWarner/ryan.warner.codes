@@ -38,4 +38,11 @@ export const StyledWidth = styled(Width)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-` 
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+`
