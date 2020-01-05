@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 
-import { Articles } from 'components'
+import { Snippets } from 'components'
 
 export const pageQuery = graphql`
   query SnippetsIndex {
@@ -28,4 +28,4 @@ export const pageQuery = graphql`
     }
   }
 `
-export default Articles
+export default Snippets
