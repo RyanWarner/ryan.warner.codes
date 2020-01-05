@@ -15,13 +15,13 @@ export const ArticleComponent = styled.div`
 `
 
 export const Title = styled.h2`
-  font-size: 26px;
-  margin-bottom: 14px;
-  margin-top: 18px;
+  font-size: 20px;
+  margin-bottom: 12px;
+  margin-top: 8px;
 `
 
 export const Date = styled.time`
-  font-size: 14px;
+  font-size: 12px;
   color: ${Colors.blue50};
   margin-top: 3px;
   display: block;
@@ -33,4 +33,13 @@ export const ReadMore = styled(Link)`
   color: ${Colors.blue50};
   margin-top: 25px;
   display: block;
+`
+
+export const P = styled.p`
+ font-size: 15px;
+ margin-bottom: 24px;
+`
+
+export const Li = styled.li`
+ font-size: 16px;
 `

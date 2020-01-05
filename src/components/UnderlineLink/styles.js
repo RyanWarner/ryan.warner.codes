@@ -20,13 +20,10 @@ const link = css`
   cursor: pointer;
   color: ${props => props.color};
   transition: all 265ms ease;
-  background: linear-gradient(180deg, rgba(130, 249, 161, 0) 49.99%, ${Colors.glowOpacity} 50%);
-  background-size: auto 56px;
-  background-position: 0 -0;
 
   &:hover {
     color: #DEFFE7;
-    background-position: 0 -28px;
+    background: ${Colors.glowOpacity};
 
     &:after {
       content: '';

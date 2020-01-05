@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Pre = styled.pre`
   overflow-x: scroll;
-  border-radius: 4px;
+  border-radius: 6px;
   line-height: 150%;
 `
 
