@@ -2,7 +2,6 @@
 import styled, { css } from 'styled-components'
 
 import { Colors } from 'styles'
-import { Link } from 'components'
 
 const underline = css`
   content: '';
@@ -38,7 +37,7 @@ const link = css`
   }
 `
 
-export const UnderlineLinkComponent = styled(Link)`
+export const UnderlineLinkComponent = styled.a`
   ${link};
   color: ${Colors.text10};
 
