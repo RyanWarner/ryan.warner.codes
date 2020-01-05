@@ -6,7 +6,7 @@ import { Link } from '../'
 
 export default ({ fields, frontmatter, excerpt }) =>
   <S.ArticleComponent>
-    <Link to={fields.slug}>
+    <Link to={`/articles${fields.slug}`}>
       <S.Date datetime={frontmatter.date}>
         {dayjs.unix(frontmatter.date).format('MMMM DD, YYYY')}
       </S.Date>

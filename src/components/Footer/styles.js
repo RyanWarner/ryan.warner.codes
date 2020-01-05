@@ -8,6 +8,7 @@ export const Footer = styled.footer`
   background-color: ${props => props.disableBackground ? 'transparent' : Colors.blue20};
   display: flex;
   justify-content: center;
+  margin-top: auto;
 
   @media(max-width: ${Breakpoints.mobile}) {
     flex-direction: column;

@@ -18,6 +18,11 @@ export const Title = styled.h2`
   font-size: 20px;
   margin-bottom: 16px;
   margin-top: 8px;
+  color: ${Colors.text10};
+
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 export const Date = styled.time`

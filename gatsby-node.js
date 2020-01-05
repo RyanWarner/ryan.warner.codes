@@ -30,7 +30,7 @@ exports.onCreateNode = (args) => {
       // Generated value based on filepath with 'articles' prefix. you
       // don't need a separating '/' before the value because
       // createFilePath returns a path with the leading '/'.
-      value: `/articles${value}`
+      value: `${value}`
     })
   }
 }
@@ -70,7 +70,7 @@ const createPagesForMdxForDirectory = async ({ directory, graphql, reporter, act
 
   mdx.forEach(({ node }, index) => {
     createPage({
-      path: node.fields.slug,
+      path: `${directory}${node.fields.slug}`,
       // This component will wrap our MDX content
       component: path.resolve('./src/components/ArticleLayout/ArticleLayout.js'),
       // You can use the values in this context in
