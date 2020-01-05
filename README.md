@@ -50,4 +50,5 @@ Code style is enforced by ESLint and follows the [Standard](https://standardjs.c
 [] Add Storybook
 [] Add Cypress
 [] Searchable tags
+[] Use a form instead of a `mailto` link
 [] Add a resume?
