@@ -12,9 +12,9 @@ export default ({ data }) => {
         <S.ArticlesComponent>
           <S.Title>Articles</S.Title>
           <ul>
-            {articles.map(({ node: post }) =>
-              <li key={post.id}>
-                <Article {...post} />
+            {articles.map(({ node: article }) =>
+              <li key={article.id}>
+                <Article {...article} />
               </li>
             )}
           </ul>

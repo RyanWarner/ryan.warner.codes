@@ -1,7 +1,7 @@
 import React from 'react'
 
 import * as S from './styles'
-import { Article, Footer, Width } from 'components'
+import { Snippet, Footer, Width } from 'components'
 
 export default ({ data }) => {
   const { edges: articles } = data.allMdx
@@ -12,9 +12,9 @@ export default ({ data }) => {
         <S.ArticlesComponent>
           <S.Title>Snippets</S.Title>
           <ul>
-            {articles.map(({ node: post }) =>
-              <li key={post.id}>
-                <Article {...post} />
+            {articles.map(({ node: snippet }) =>
+              <li key={snippet.id}>
+                <Snippet {...snippet} />
               </li>
             )}
           </ul>

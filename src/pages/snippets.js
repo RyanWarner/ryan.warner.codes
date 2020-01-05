@@ -15,6 +15,7 @@ export const pageQuery = graphql`
         node {
           id
           excerpt
+          body
           frontmatter {
             title
             date
