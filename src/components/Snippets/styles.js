@@ -21,7 +21,7 @@ export const Li = styled.li`
 `
 
 export const Title = styled.h1`
-  margin: 25px 0 54px 0;
+  margin-top: 25px;
   color: ${Colors.text10};
 
   @media(max-width: ${Breakpoints.mobile}) {
