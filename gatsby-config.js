@@ -9,10 +9,11 @@ module.exports = {
   siteMetadata: {
     title: 'Ryan Warner',
     description:
-      'I specialize in rapidly building software companies and web applications.',
+      'Engineer and designer building software companies and web applications.',
     author: '@ryanwarnercodes',
     twitterUsername: '@ryanwarnercodes',
-    url: 'https://ryan.warner.codes'
+    url: 'https://ryan.warner.codes',
+    image: '/images/ogImage.png'
   },
   plugins: [
     'gatsby-plugin-styled-components',
