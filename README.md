@@ -46,6 +46,7 @@ Code style is enforced by ESLint and follows the [Standard](https://standardjs.c
 ### Todo
 
 [] Pagination for articles, snippets, etc.
+[] Better styling solution. [Theme UI](https://theme-ui.com/)? [Styled System](https://styled-system.com/)?
 [] Abstract into a Gatsby starter
 [] Add Storybook
 [] Add Cypress
