@@ -23,4 +23,8 @@ export const Li = styled.li`
 export const Title = styled.h1`
   margin: 25px 0 54px 0;
   color: ${Colors.text10};
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    margin: 30px 0 34px 0;
+  }
 `

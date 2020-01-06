@@ -10,7 +10,9 @@ module.exports = {
     title: 'Ryan Warner',
     description:
       'I specialize in rapidly building software companies and web applications.',
-    author: '@ryanwarnercodes'
+    author: '@ryanwarnercodes',
+    twitterUsername: '@ryanwarnercodes',
+    url: 'https://ryan.warner.codes'
   },
   plugins: [
     'gatsby-plugin-styled-components',

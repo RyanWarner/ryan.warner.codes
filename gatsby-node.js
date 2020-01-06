@@ -38,7 +38,10 @@ exports.onCreateNode = (args) => {
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions
 
-  if (page && page.path.match(/about/)) {
+  if (!page) return
+
+  // TODO: Clean this up
+  if (page.path.match(/about/) || page.path.match(/mentorship/)) {
     page.context.layout = 'MdxPage'
     createPage(page)
   }

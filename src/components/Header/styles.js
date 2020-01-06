@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import { Breakpoints, Colors } from 'styles'
+import { Heart } from 'components/Icons'
 
 export const Header = styled.header`
   padding: 65px 0;
@@ -30,4 +31,8 @@ export const Name = styled.p`
     font-size: 18px;
     display: block;
   }
+`
+
+export const StyledHeart = styled(Heart)`
+  width: 20px;
 `
