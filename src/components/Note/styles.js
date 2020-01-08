@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Colors } from 'styles'
 import { Link } from '../'
 
-export const ArticleComponent = styled.div`
+export const NoteComponent = styled.div`
   max-width: 630px;
 
   a {

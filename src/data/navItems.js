@@ -3,9 +3,9 @@ export default {
     title: 'Articles',
     url: '/articles'
   },
-  snippets: {
-    title: 'Snippets',
-    url: '/snippets'
+  notes: {
+    title: 'Notes',
+    url: '/notes'
   },
   about: {
     title: 'About',

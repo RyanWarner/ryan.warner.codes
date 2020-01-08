@@ -12,11 +12,11 @@ const components = {
 }
 
 export default ({ fields, frontmatter, excerpt, body }) =>
-  <S.ArticleComponent>
+  <S.NoteComponent>
     <S.Date datetime={frontmatter.date}>
       {dayjs.unix(frontmatter.date).format('MMMM DD, YYYY')}
     </S.Date>
-    <Link to={`snippets/${fields.slug}`}>
+    <Link to={`notes/${fields.slug}`}>
       <S.Title>{frontmatter.title}</S.Title>
     </Link>
     <S.Description>
@@ -24,4 +24,4 @@ export default ({ fields, frontmatter, excerpt, body }) =>
         <MDXRenderer>{body}</MDXRenderer>
       </MDXProvider>
     </S.Description>
-  </S.ArticleComponent>
+  </S.NoteComponent>

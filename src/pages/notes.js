@@ -1,11 +1,11 @@
 import { graphql } from 'gatsby'
 
-import { Snippets } from 'components'
+import { Notes } from 'components'
 
 export const pageQuery = graphql`
-  query SnippetsIndex {
+  query NotesIndex {
     allMdx(
-      filter: {fileAbsolutePath: {glob: "**/snippets/**"}}
+      filter: {fileAbsolutePath: {glob: "**/notes/**"}}
       sort: {
         fields: [frontmatter___date]
         order: DESC
@@ -29,4 +29,4 @@ export const pageQuery = graphql`
     }
   }
 `
-export default Snippets
+export default Notes

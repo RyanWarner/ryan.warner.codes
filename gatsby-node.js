@@ -87,5 +87,5 @@ const createPagesForMdxForDirectory = async ({ directory, graphql, reporter, act
 // Destructure the createPage function from the actions object
 exports.createPages = async args => {
   createPagesForMdxForDirectory({ directory: 'articles', ...args })
-  createPagesForMdxForDirectory({ directory: 'snippets', ...args })
+  createPagesForMdxForDirectory({ directory: 'notes', ...args })
 }
