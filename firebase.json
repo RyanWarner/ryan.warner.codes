@@ -11,6 +11,19 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "headers": [{
+      "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css|js|json|map)",
+      "headers": [{
+        "key": "Access-Control-Allow-Origin",
+        "value": "*"
+      }]
+    }, {
+      "source": "**",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "max-age=31557600"
+      }]
+    }]
   }
 }
