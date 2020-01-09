@@ -31,18 +31,3 @@ export const Date = styled.time`
 export const Description = styled.p`
   color: ${Colors.text20};
 `
-
-export const ReadMore = styled.p`
-  color: ${Colors.blue50};
-  margin-top: 15px;
-  display: block;
-  transition: all 200ms ease;
-
-  &:hover {
-    color: ${Colors.text10};
-  }
-
-  @media(min-width: ${Breakpoints.mobile}) {
-    margin-top: 25px;
-  }
-`

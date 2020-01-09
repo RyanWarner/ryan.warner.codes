@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import * as S from './styles'
-import { Link } from '../'
+import { Link, ReadMore } from '../'
 
 const components = {
   p: props => <S.P {...props} />,
@@ -20,8 +20,18 @@ export default ({ fields, frontmatter, excerpt, body }) =>
       <S.Title>{frontmatter.title}</S.Title>
     </Link>
     <S.Description>
-      <MDXProvider components={components}>
-        <MDXRenderer>{body}</MDXRenderer>
-      </MDXProvider>
+      {frontmatter.description
+        ? frontmatter.description
+        : (
+          <MDXProvider components={components}>
+            <MDXRenderer>
+              {body}
+            </MDXRenderer>
+          </MDXProvider>
+        )}
     </S.Description>
+    {frontmatter.description &&
+      <Link to={`notes/${fields.slug}`}>
+        <ReadMore>Read more ...</ReadMore>
+      </Link>}
   </S.NoteComponent>

@@ -20,6 +20,7 @@ export const pageQuery = graphql`
             title
             date
             tags
+            description
           }
           fields {
             slug

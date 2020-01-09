@@ -2,7 +2,7 @@ import React from 'react'
 import dayjs from 'dayjs'
 
 import * as S from './styles'
-import { Link } from '../'
+import { Link, ReadMore } from '../'
 
 export default ({ fields, frontmatter, excerpt }) =>
   <S.ArticleComponent>
@@ -12,6 +12,6 @@ export default ({ fields, frontmatter, excerpt }) =>
       </S.Date>
       <S.Title>{frontmatter.title}</S.Title>
       <S.Description>{excerpt}</S.Description>
-      <S.ReadMore>Read more ...</S.ReadMore>
+      <ReadMore>Read more ...</ReadMore>
     </Link>
   </S.ArticleComponent>
