@@ -32,6 +32,10 @@ function SEO ({ description, lang, meta, keywords, title, image }) {
                 content: data.site.siteMetadata.image
               },
               {
+                property: 'og:image:alt',
+                content: "Ryan Warner's tech blog and mentorship website"
+              },
+              {
                 property: 'og:logo',
                 content: data.site.siteMetadata.logo
               },
