@@ -41,7 +41,7 @@ exports.onCreatePage = ({ page, actions }) => {
   if (!page) return
 
   // TODO: Clean this up
-  if (page.path.match(/about/) || page.path.match(/mentorship/)) {
+  if (page.path.match(/about/) || page.path.match(/mentorship/) || page.path.match(/uses/)) {
     page.context.layout = 'MdxPage'
     createPage(page)
   }
