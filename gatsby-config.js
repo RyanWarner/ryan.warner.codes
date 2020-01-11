@@ -13,7 +13,8 @@ module.exports = {
     author: '@ryanwarnercodes',
     twitterUsername: '@ryanwarnercodes',
     url: 'https://ryan.warner.codes',
-    image: '/images/ogImage.png'
+    image: '/images/ogImage.png',
+    logo: '/images/logo.jpg'
   },
   plugins: [
     'gatsby-plugin-styled-components',
