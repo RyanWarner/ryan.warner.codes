@@ -12,7 +12,6 @@ module.exports = {
       'Lead engineer and designer building software companies and web applications.',
     author: '@ryanwarnercodes',
     twitterUsername: '@ryanwarnercodes',
-    url: 'https://ryan.warner.codes',
     siteUrl: 'https://ryan.warner.codes',
     image: '/images/ogImage.png',
     logo: '/images/logo.jpg'
