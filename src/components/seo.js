@@ -108,6 +108,7 @@ const detailsQuery = graphql`
         description
         author
         image
+        twitterImage
         logo
       }
     }
