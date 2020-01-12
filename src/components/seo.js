@@ -60,8 +60,8 @@ function SEO ({ description, lang, meta, keywords, title, image }) {
                 content: title
               },
               {
-                property: 'twitter:image',
-                content: data.site.siteMetadata.image
+                name: 'twitter:image',
+                content: data.site.siteMetadata.twitterImage
               },
               {
                 name: 'twitter:description',

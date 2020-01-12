@@ -14,6 +14,7 @@ module.exports = {
     twitterUsername: '@ryanwarnercodes',
     siteUrl: 'https://ryan.warner.codes',
     image: '/images/ogImage.png',
+    twitterImage: '/images/ogImage.png',
     logo: '/images/logo.jpg'
   },
   plugins: [
