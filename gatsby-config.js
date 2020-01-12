@@ -21,6 +21,7 @@ module.exports = {
     'gatsby-plugin-layout',
     'gatsby-plugin-mdx',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
