@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Breakpoints, Colors } from 'styles'
 import ryan from 'images/ryan-warner.png'
 
-export const Content = styled.div`
+export const Content = styled.article`
   margin-bottom: 106px;
 `
 
