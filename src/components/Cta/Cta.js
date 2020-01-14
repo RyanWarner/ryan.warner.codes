@@ -8,7 +8,7 @@ export default () =>
     <S.Description>
       Let’s have a conversation! I’d love to hear about what you’re working on, and find a way to work together.
     </S.Description>
-    <S.Button href='mailto:warner.ryan@gmail.com' el='a'>
+    <S.Button href='mailto:ryan@warner.codes' el='a'>
       Email me
     </S.Button>
   </S.Cta>
