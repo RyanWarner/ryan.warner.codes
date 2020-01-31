@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { Breakpoints, Colors, Type } from 'styles'
 import Link from '../Link/Link'
@@ -39,7 +39,7 @@ export const SubHeader = styled.p`
   }
 `
 
-const underline = `
+const underline = css`
   content: '';
   display: block;
   width: 100%;

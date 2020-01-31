@@ -41,14 +41,14 @@ export const ReadMore = styled(Link)`
 `
 
 export const P = styled.p`
- font-size: 15px;
- margin-bottom: 24px;
+  font-size: 15px;
+  margin-bottom: 24px;
 `
 
 export const Ul = styled.ul``
 
 export const Li = styled.li`
- font-size: 16px;
- margin-bottom: 1rem;
- list-style-type: none;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  list-style-type: none;
 `
