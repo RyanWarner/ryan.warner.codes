@@ -10,7 +10,10 @@ export default function PageTemplate ({ data: { mdx } }) {
   return (
     <>
       <Width>
-        <Seo title={mdx.frontmatter.title} />
+        <Seo
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
+        />
         <S.Content>
           <S.Title>{mdx.frontmatter.title}</S.Title>
           <S.Meta>
