@@ -1,7 +1,8 @@
 
 import styled from 'styled-components'
 
-import { Breakpoints, Colors } from 'styles'
+import { Colors } from 'styles'
+import { Link } from '../'
 
 export const ArticleComponent = styled.div`
   max-width: 630px;
@@ -13,6 +14,10 @@ export const ArticleComponent = styled.div`
       color: ${Colors.text10};
     }
   }
+`
+
+export const StyledLink = styled(Link)`
+  display: block;
 `
 
 export const Title = styled.h2`

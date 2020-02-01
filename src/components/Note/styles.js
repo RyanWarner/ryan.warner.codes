@@ -14,6 +14,10 @@ export const NoteComponent = styled.div`
   }
 `
 
+export const StyledLink = styled(Link)`
+  display: block;
+`
+
 export const Title = styled.h2`
   font-size: 20px;
   margin-bottom: 16px;

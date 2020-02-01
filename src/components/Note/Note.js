@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import * as S from './styles'
-import { Link, ReadMore } from '../'
+import { ReadMore } from '../'
 
 const components = {
   p: props => <S.P {...props} />,
@@ -16,9 +16,9 @@ export default ({ fields, frontmatter, excerpt, body }) =>
     <S.Date datetime={frontmatter.date}>
       {dayjs.unix(frontmatter.date).format('MMMM DD, YYYY')}
     </S.Date>
-    <Link to={`notes/${fields.slug}`}>
+    <S.StyledLink to={`notes/${fields.slug}`}>
       <S.Title>{frontmatter.title}</S.Title>
-    </Link>
+    </S.StyledLink>
     <S.Description>
       {frontmatter.description
         ? frontmatter.description
@@ -31,7 +31,7 @@ export default ({ fields, frontmatter, excerpt, body }) =>
         )}
     </S.Description>
     {frontmatter.description &&
-      <Link to={`notes/${fields.slug}`}>
+      <S.StyledLink to={`notes/${fields.slug}`}>
         <ReadMore>Read more ...</ReadMore>
-      </Link>}
+      </S.StyledLink>}
   </S.NoteComponent>
