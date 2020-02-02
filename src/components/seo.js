@@ -13,7 +13,7 @@ function SEO ({ description, lang, meta, keywords, title, siteUrl, image }) {
           description || data.site.siteMetadata.description
 
         const ogImage = image
-          ? `/images/${image}`
+          ? `/images/ogImages/${image}`
           : data.site.siteMetadata.image
 
         return (
@@ -54,7 +54,7 @@ function SEO ({ description, lang, meta, keywords, title, siteUrl, image }) {
               },
               {
                 name: 'twitter:card',
-                content: 'summary'
+                content: 'summary_large_image'
               },
               {
                 name: 'twitter:creator',
