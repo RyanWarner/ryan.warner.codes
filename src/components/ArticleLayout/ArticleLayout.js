@@ -7,15 +7,13 @@ import * as S from './styles'
 import { Width, Footer, Seo } from 'components'
 
 export default function PageTemplate ({ data: { mdx } }) {
-  console.log('MDX')
-  console.log('MDX', mdx)
-  console.log('MDX')
   return (
     <>
       <Width>
         <Seo
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
+          image={mdx.frontmatter.ogImage}
         />
         <S.Content>
           <S.Title>{mdx.frontmatter.title}</S.Title>
@@ -46,6 +44,7 @@ export const pageQuery = graphql`
         description
         date
         tags
+        ogImage
       }
     }
   }
