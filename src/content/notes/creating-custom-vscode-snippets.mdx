@@ -19,9 +19,30 @@ Create a global snippets file.
 
 ![Create a global snippets file](/images/posts/customSnippets/custom-vscode-snippets-1.gif)
 
-Define your snippet, save, and start using it!
+Define your snippet and start using it!
 
-- Type your defined prefix, and press tab.
+- In this example, we're creating a simple React component snippet.
+  ```json
+    // snippets.code-snippets
+
+    {
+      "ReactComponent": {
+        "prefix": "component",
+        "scope": "javascript",
+        "body": [
+          "import React from 'react'",
+          "",
+          "export default props => {",
+          "  return <div>New Function Component</div>",
+          "}"
+        ],
+        "description": "Create a React component"
+      }
+    }
+  ```
+- Save (`CMD+S`) the `snippets.code-snippets` file.
+- Open a JavaScript file.
+- Type your defined prefix and press tab.
 - See your snippet appear.
 
 ![Define and use your snippet](/images/posts/customSnippets/custom-vscode-snippets-2.gif)
