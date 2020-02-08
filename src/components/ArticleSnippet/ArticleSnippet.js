@@ -5,7 +5,8 @@ import * as S from './styles'
 
 const iconMap = {
   default: <S.StyledHeart />,
-  react: <S.StyledReactLogo />
+  react: <S.StyledReactLogo />,
+  vscode: <S.StyledVSCode />
 }
 
 export default ({ article }) =>

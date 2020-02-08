@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Breakpoints, Colors, Type } from '../../styles'
 import { Link } from '../'
-import { ReactLogo, Heart } from 'components/Icons'
+import { ReactLogo, Heart, VSCode } from 'components/Icons'
 
 export const ArticleSnippet = styled(Link)`
   padding: 6px 16px;
@@ -71,4 +71,9 @@ export const StyledReactLogo = styled(ReactLogo)`
 export const StyledHeart = styled(Heart)`
   width: 16px;
   height: 16px;
+`
+
+export const StyledVSCode = styled(VSCode)`
+  width: 23px;
+  height: 23px;
 `

@@ -35,7 +35,6 @@ export const StyledLink = styled(Link)`
   }
 `
 
-
 export const Date = styled.time`
   font-size: 14px;
   color: ${Colors.blue50};
