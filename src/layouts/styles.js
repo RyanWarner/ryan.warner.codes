@@ -39,6 +39,10 @@ export const Img = styled.img`
   margin: 4rem 0;
 `
 
+export const H1 = styled.h1`
+  color: ${Colors.text20};
+`
+
 export const H2 = styled.h2`
   margin-top: 3rem;
 
