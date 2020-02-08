@@ -12,7 +12,13 @@ export const ArticlesComponent = styled.div`
 
 export const Li = styled.li`
     list-style-type: none;
-    margin-bottom: 64px;
+    margin-bottom: 34px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid ${Colors.blue30};
+
+    &:last-child {
+      border: 0;
+    }
 
     @media(min-width: ${Breakpoints.mobile}) {
       margin-bottom: 74px;
@@ -22,6 +28,7 @@ export const Li = styled.li`
 
 export const Title = styled.h1`
   margin-top: 25px;
+  margin-bottom: 50px;
   color: ${Colors.text10};
 
   @media(max-width: ${Breakpoints.mobile}) {

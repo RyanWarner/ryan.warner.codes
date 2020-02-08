@@ -11,16 +11,24 @@ export const ArticlesComponent = styled.div`
 
   li {
     list-style-type: none;
-    margin-bottom: 68px;
+    margin-bottom: 34px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid ${Colors.blue30};
+
+    &:last-child {
+      border: 0;
+    }
 
     @media(min-width: ${Breakpoints.mobile}) {
-      margin-bottom: 98px;
+      margin-bottom: 49px;
+      padding-bottom: 49px;
     }
   }
 `
 
 export const Title = styled.h1`
   margin-top: 25px;
+  margin-bottom: 50px;
   color: ${Colors.text10};
 
   @media(max-width: ${Breakpoints.mobile}) {
