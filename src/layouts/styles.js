@@ -36,7 +36,8 @@ export const P = styled.p`
 
 export const Img = styled.img`
   max-width: 80%;
-  margin: 4rem 0;
+  margin: 4rem auto;
+  display: block;
 `
 
 export const H1 = styled.h1`
