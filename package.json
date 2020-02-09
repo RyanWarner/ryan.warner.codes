@@ -2,7 +2,7 @@
   "name": "ryan-warner-codes",
   "description": "Personal site",
   "version": "1.0.0",
-  "author": "Ryan Warner <ryanwarnercodes@gmail.com>",
+  "author": "Ryan Warner <ryan@warner.codes>",
   "dependencies": {
     "@mdx-js/mdx": "1.5.5",
     "@mdx-js/react": "1.5.5",
@@ -33,7 +33,10 @@
     "styled-components": "5.0.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "react",
+    "blog",
+    "portfolio"
   ],
   "license": "MIT",
   "scripts": {
@@ -64,6 +67,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/christopherbiscardi/gatsby-starter-mdx-basic"
+    "url": "https://github.com/RyanWarner/ryan.warner.codes"
   }
 }
