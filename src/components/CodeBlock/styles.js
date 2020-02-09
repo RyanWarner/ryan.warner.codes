@@ -10,4 +10,5 @@ export const Code = styled.code`
   margin: 20px;
   display: inline-block;
   min-width: 100%;
+  font-size: 16px;
 `

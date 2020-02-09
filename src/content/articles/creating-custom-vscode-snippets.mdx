@@ -14,7 +14,7 @@ When I find myself copying and pasting boilerplate code, I create a snippet to h
 
 ![Create a global snippets file](/images/posts/customSnippets/custom-vscode-snippets-1.gif)
 
-Create a global snippets file. 
+Create a global snippets file.
 
 - `Code > Preferences > User Snippets`
 - New Global Snippets File...
@@ -25,30 +25,33 @@ Create a global snippets file.
 Define your snippet and start using it!
 
 - In this example, we're creating a simple React component snippet.
+
   ```json
-    // snippets.code-snippets
+  // snippets.code-snippets
 
-    {
-      "ReactComponent": {
-        "prefix": "component",
-        "scope": "javascript",
-        "body": [
-          "import React from 'react'",
-          "",
-          "export default props => {",
-          "  return <div>New Function Component</div>",
-          "}"
-        ],
-        "description": "Create a React component"
-      }
+  {
+    "ReactComponent": {
+      "prefix": "component",
+      "scope": "javascript",
+      "body": [
+        "import React from 'react'",
+        "",
+        "export default props => {",
+        "  return <div>New Function Component</div>",
+        "}"
+      ],
+      "description": "Create a React component"
     }
+  }
   ```
-- Save (`CMD+S`) the `snippets.code-snippets` file.
-- Open a JavaScript file (this file type is determined by the `scope` key).
-- Type your defined prefix and press `TAB`.
-- See your snippet appear.
 
+* Save (`CMD+S`) the `snippets.code-snippets` file.
+* Open a JavaScript file (this file type is determined by the `scope` key).
+* Type your defined prefix and press `TAB`.
+* See your snippet appear.
 
-[View my VSCode snippets on GitHub](https://github.com/RyanWarner/vscode-snippets/blob/master/Global.code-snippets)
+---
+
+View my [VSCode snippets on GitHub](https://github.com/RyanWarner/vscode-snippets/blob/master/Global.code-snippets)
 
 Source: [The official VSCode docs, "Snippets in Visual Studio Code"](https://code.visualstudio.com/docs/editor/userdefinedsnippets)

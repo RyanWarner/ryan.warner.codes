@@ -19,7 +19,7 @@ export const Li = styled.li`
   margin-bottom: 1rem;
   color: ${Colors.text20};
 
-  @media(min-width: ${Breakpoints.mobile}) {
+  @media (min-width: ${Breakpoints.mobile}) {
     font-size: 19px;
   }
 `
@@ -29,7 +29,7 @@ export const P = styled.p`
   margin-bottom: 2rem;
   color: ${Colors.text20};
 
-  @media(min-width: ${Breakpoints.mobile}) {
+  @media (min-width: ${Breakpoints.mobile}) {
     font-size: 19px;
   }
 `
@@ -46,7 +46,7 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   margin-top: 3rem;
 
-  @media(min-width: ${Breakpoints.mobile}) {
+  @media (min-width: ${Breakpoints.mobile}) {
     margin-top: 6rem;
   }
 `
@@ -54,11 +54,18 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   margin-top: 3rem;
 
-  @media(min-width: ${Breakpoints.mobile}) {
+  @media (min-width: ${Breakpoints.mobile}) {
     margin-top: 6rem;
   }
 `
 
 export const StyledWidth = styled(Width)`
   margin-bottom: 100px;
+`
+
+export const Hr = styled.hr`
+  background-color: ${Colors.blue30};
+  border: 0;
+  height: 1px;
+  margin: 60px 0;
 `

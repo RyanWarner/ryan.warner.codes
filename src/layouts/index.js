@@ -17,16 +17,15 @@ const components = {
   h3: S.H3,
   code: CodeBlock,
   a: props => <S.A {...props} />,
-  li: props => <S.Li {...props} />
+  li: props => <S.Li {...props} />,
+  hr: S.Hr
 }
 
 const Content = ({ children, pageContext }) => {
   if (pageContext.layout === 'MdxPage') {
     return (
       <>
-        <S.StyledWidth>
-          {children}
-        </S.StyledWidth>
+        <S.StyledWidth>{children}</S.StyledWidth>
         <Footer />
       </>
     )
