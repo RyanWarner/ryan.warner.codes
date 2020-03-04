@@ -22,7 +22,7 @@ The app is hosted on [Firebase](https://firebase.google.com/). You will need use
 - [Production project](https://console.firebase.google.com/u/0/project/warner-codes/overview)
 - [Staging project](https://console.firebase.google.com/u/0/project/warner-codes-staging/overview)
 
-### Generate code with [Hygen](hygen.io)
+### Generate code with [Hygen](https://hygen.io)
 
 To create a new component, run `npx hygen component new --name MyComponent`
 
@@ -36,11 +36,11 @@ Code style is enforced by ESLint and follows the [Standard](https://standardjs.c
 
 ### Tech stack
 
-- [Gatsby](gatsbyjs.org) (React, Webpack, Babel)
+- [Gatsby](https://gatsbyjs.org) (React, Webpack, Babel)
 - [MDX](https://mdxjs.com/)
-- [Styled Components](styled-components.com)
+- [Styled Components](https://styled-components.com)
 - Hosted on [Firebase](https://firebase.google.com/)
-- [Hygen](hygen.io)
+- [Hygen](https://hygen.io)
 
 ### Todo
 
