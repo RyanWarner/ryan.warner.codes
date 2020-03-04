@@ -9,18 +9,18 @@ export default {
     color: Colors.allTurtles,
     span: 2
   },
-  yawnch: {
-    title: 'Yawnch',
+  twitch: {
+    title: 'Live Coding',
     description:
-      'An online coworking community for indie hackers, entreprenuers, and founders.',
-    url: 'https://yawnch.com',
-    color: Colors.yawnch
+      'I stream web development and design live on Twitch. Follow me to get notified when I go live!',
+    url: 'https://twitch.tv/RyanWarnerCodes',
+    color: Colors.glow20
   },
-  sstv: {
-    title: 'Stockstream.tv',
+  partyCorgi: {
+    title: 'Party Corgi Website',
     description:
-      'On a mission to democratize investing knowledge. My partner and I bootstrapped this company with zero funding.',
-    url: 'https://stockstream.tv',
-    color: Colors.stockstreamtv
+      'I maintain the website for the Party Corgi Network, an inclusive community of content creators helping each other grow.',
+    url: 'https://partycorgi.com',
+    color: Colors.partyCorgi
   }
 }

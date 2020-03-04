@@ -16,6 +16,7 @@ export const blue60 = '#4FB8FF'
 
 export const yawnch = '#CCA9F4'
 export const stockstreamtv = '#5CD47D'
+export const partyCorgi = '#02A1E8'
 export const allTurtles = '#D9534D'
 
 export const twitter = '#1DA1F2'
