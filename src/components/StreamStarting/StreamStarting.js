@@ -1,9 +1,10 @@
 import React from 'react'
+import dayjs from 'dayjs'
 
 import * as S from './styles'
 
 const title = 'Show and tell Sunday'
-const date = 'Monday'
+const date = dayjs().format('dddd, MMM DD YYYY')
 
 export default () =>
   <S.StreamStarting>
