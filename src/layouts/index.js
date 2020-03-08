@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 
 import { CodeBlock, Header, Seo, Footer } from 'components'
@@ -21,23 +20,11 @@ const components = {
   hr: S.Hr
 }
 
-const Content = ({ children, pageContext }) => {
-  if (pageContext.layout === 'MdxPage') {
-    return (
-      <>
-        <S.StyledWidth>{children}</S.StyledWidth>
-        <Footer />
-      </>
-    )
-  }
-  return children
-}
-
 const Blank = props => {
   return props.children
 }
 
-const Main = props => (
+const Default = props => (
   <>
     <Seo />
     <GlobalStyle />
@@ -45,40 +32,36 @@ const Main = props => (
     <S.Wrap>
       <MDXProvider components={components}>
         <Header location={props.location} />
-        <Content {...props} />
+        {props.children}
       </MDXProvider>
     </S.Wrap>
   </>
 )
 
-const Layout = props => (
-  <StaticQuery
-    query={query}
-    render={data => (
-      <>
-        <Seo />
-        <GlobalStyle />
-        <GlobalType />
-        <S.Wrap>
-          <MDXProvider components={components}>
-            <Header location={props.location} />
-            <Content {...props} />
-          </MDXProvider>
-        </S.Wrap>
-      </>
-    )}
-  />
+const MdxPage = props => (
+  <>
+    <Seo />
+    <GlobalStyle />
+    <GlobalType />
+    <S.Wrap>
+      <MDXProvider components={components}>
+        <Header location={props.location} />
+        <S.StyledWidth>{props.children}</S.StyledWidth>
+        <Footer />
+      </MDXProvider>
+    </S.Wrap>
+  </>
 )
 
-const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+const Layouts = {
+  Blank,
+  MdxPage
+}
+
+const Layout = props => {
+  const Component = Layouts[props.pageContext.layout] || Default
+  return <Component {...props} />
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
