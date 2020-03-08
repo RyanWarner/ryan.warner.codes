@@ -8,6 +8,7 @@ export const StreamStarting = styled.div`
   background: transparent;
   background: linear-gradient(162.07deg, #BAFFC5 5.07%, #74AED6 80.61%);
   padding: 100px 174px;
+  box-sizing: border-box;
 `
 
 export const Date = styled.time`
