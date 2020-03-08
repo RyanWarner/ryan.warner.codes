@@ -1,4 +1,8 @@
 
 import styled from 'styled-components'
 
-export const TimerComponent = styled.div``
+import { Colors } from 'styles'
+
+export const TimerComponent = styled.div`
+  color: ${Colors.blue10};
+`
