@@ -2,7 +2,7 @@ import React from 'react'
 import dayjs from 'dayjs'
 
 import * as S from './styles'
-import { Timer, IconCard, ComfyJS } from '../'
+import { Timer, IconCard } from '../'
 import { Time } from '../Icons'
 
 const title = 'The stream title goes here'
@@ -10,7 +10,6 @@ const date = dayjs().format('dddd, MMM DD YYYY')
 
 export default () =>
   <S.StreamStarting>
-    <ComfyJS />
     <S.Date>{date}</S.Date>
     <S.Title>{title}</S.Title>
     <S.IconCards>

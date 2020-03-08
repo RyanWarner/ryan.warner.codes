@@ -46,7 +46,7 @@ exports.onCreatePage = ({ page, actions }) => {
     createPage(page)
   }
 
-  if (page.path.match(/stream-starting/)) {
+  if (page.path.match(/stream-starting/) || page.path.match(/stream-commands/)) {
     page.context.layout = 'Blank'
     createPage(page)
   }
