@@ -11,6 +11,7 @@ const secondsToTime = (secs) => {
   const divisorForSeconds = divisorForMinutes % 60
   let seconds = Math.ceil(divisorForSeconds)
   if (seconds === 0) seconds = '00'
+  else if (seconds < 10) seconds = `0${seconds}`
 
   return {
     h: hours,
