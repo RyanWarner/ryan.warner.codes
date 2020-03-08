@@ -8,6 +8,7 @@
     "@mdx-js/react": "1.5.5",
     "amplitude-js": "5.9.0",
     "babel-plugin-styled-components": "1.10.7",
+    "comfy.js": "^1.0.15",
     "copy-text-to-clipboard": "2.1.1",
     "dayjs": "^1.8.20",
     "focus-visible": "5.0.2",
