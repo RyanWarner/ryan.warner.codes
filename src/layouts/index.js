@@ -33,12 +33,30 @@ const Content = ({ children, pageContext }) => {
   return children
 }
 
+const Blank = props => {
+  return props.children
+}
+
+const Main = props => (
+  <>
+    <Seo />
+    <GlobalStyle />
+    <GlobalType />
+    <S.Wrap>
+      <MDXProvider components={components}>
+        <Header location={props.location} />
+        <Content {...props} />
+      </MDXProvider>
+    </S.Wrap>
+  </>
+)
+
 const Layout = props => (
   <StaticQuery
     query={query}
     render={data => (
       <>
-        <Seo title={data.site.siteMetadata.title} />
+        <Seo />
         <GlobalStyle />
         <GlobalType />
         <S.Wrap>

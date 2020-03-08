@@ -45,6 +45,11 @@ exports.onCreatePage = ({ page, actions }) => {
     page.context.layout = 'MdxPage'
     createPage(page)
   }
+
+  if (page.path.match(/stream-starting/)) {
+    page.context.layout = 'Blank'
+    createPage(page)
+  }
 }
 
 const createPagesForMdxForDirectory = async ({ directory, graphql, reporter, actions }) => {

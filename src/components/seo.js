@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO ({ description, lang, meta, keywords, title, siteUrl, image }) {
+const SEO = ({ description, lang, meta, keywords, title, siteUrl, image }) => {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -11,6 +11,8 @@ function SEO ({ description, lang, meta, keywords, title, siteUrl, image }) {
         const { siteUrl } = data.site.siteMetadata
         const metaDescription =
           description || data.site.siteMetadata.description
+
+        const metaTitle = title || data.site.siteMetadata.title
 
         const ogImage = image
           ? `/images/ogImages/${image}`
@@ -21,54 +23,43 @@ function SEO ({ description, lang, meta, keywords, title, siteUrl, image }) {
             htmlAttributes={{
               lang
             }}
-            title={title}
+            title={metaTitle}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
                 name: 'description',
                 content: metaDescription
-              },
-              {
+              }, {
                 property: 'og:title',
-                content: title
-              },
-              {
+                content: metaTitle
+              }, {
                 property: 'og:image',
                 content: `${siteUrl}${ogImage}`
-              },
-              {
+              }, {
                 property: 'og:image:alt',
                 content: "Ryan Warner's tech blog and mentorship website"
-              },
-              {
+              }, {
                 property: 'og:logo',
                 content: data.site.siteMetadata.logo
-              },
-              {
+              }, {
                 property: 'og:description',
                 content: metaDescription
-              },
-              {
+              }, {
                 property: 'og:type',
                 content: 'website'
-              },
-              {
+              }, {
                 name: 'twitter:card',
                 content: 'summary_large_image'
-              },
-              {
+              }, {
                 name: 'twitter:creator',
                 content: data.site.siteMetadata.author
-              },
-              {
+              }, {
                 name: 'twitter:title',
                 content: title
-              },
-              {
+              }, {
                 name: 'twitter:image',
                 content: `${siteUrl}${ogImage}`
-              },
-              {
+              }, {
                 name: 'twitter:description',
                 content: metaDescription
               }
