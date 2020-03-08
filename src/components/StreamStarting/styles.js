@@ -9,6 +9,9 @@ export const StreamStarting = styled.div`
   background: linear-gradient(162.07deg, #BAFFC5 5.07%, #74AED6 80.61%);
   padding: 100px 174px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 export const Date = styled.time`
@@ -21,4 +24,9 @@ export const Title = styled.h1`
   font-size: 90px;
   color: ${Colors.blue10};
   margin: 0;
+`
+
+export const TimeWrap = styled.div`
+  display: flex;
+  align-items: center;
 `
