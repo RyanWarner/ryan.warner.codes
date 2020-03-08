@@ -20,9 +20,13 @@ const components = {
   hr: S.Hr
 }
 
-const Blank = props => {
-  return props.children
-}
+const Blank = props => (
+  <>
+    <GlobalStyle />
+    <GlobalType />
+    {props.children}
+  </>
+)
 
 const Default = props => (
   <>
