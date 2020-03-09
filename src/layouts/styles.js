@@ -12,17 +12,6 @@ export const Wrap = styled.div`
   position: relative;
 `
 
-export const PullDown = styled.div`
-  display: block;
-  position: fixed;
-  background-color: ${Colors.blue10};
-  top: -25vh;
-  left: 0;
-  right: 0;
-  height: 25vh;
-  z-index: 1;
-`
-
 export const A = styled.a`
   text-decoration: underline;
 `
