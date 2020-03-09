@@ -8,6 +8,19 @@ export const Wrap = styled.div`
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  z-index: 2;
+  position: relative;
+`
+
+export const PullDown = styled.div`
+  display: block;
+  position: fixed;
+  background-color: ${Colors.blue10};
+  top: -25vh;
+  left: 0;
+  right: 0;
+  height: 25vh;
+  z-index: 1;
 `
 
 export const A = styled.a`
