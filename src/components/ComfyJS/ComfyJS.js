@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
 import ComfyJS from 'comfy.js'
 import getRandomInt from '../../utilities/getRandomInt'
+import rainbowfireball from '../../images/rainbow-fireball.png'
+import hadouken from '../../images/hadouken.png'
 
 import * as S from './styles'
 import Fireball from './Fireball'
@@ -11,20 +13,22 @@ const commands = {
   heart: 'heart',
   heal: 'heal',
   fireball: 'fireball',
-  hadouken: 'hadouken'
+  hadouken: 'hadouken',
+  rainbowfireball: 'rainbowfireball'
 }
 
 ComfyJS.Init('RyanWarnerCodes')
 
 let lasers = []
 
-const addNew = () => {
+const addNew = (image) => {
   const laser = new Fireball({
     x: 0,
     y: getRandomInt(0, 1080),
     angle: getRandomInt(-90, 90),
     velocity: getRandomInt(0, 8),
-    index: 1
+    index: 1,
+    image
   })
 
   lasers.push(laser)
@@ -71,7 +75,11 @@ export default props => {
       case commands.fireball:
       case commands.hadouken:
         dispatch({ type: 'SET_HEALTH', health: hearts - 1 })
-        addNew()
+        addNew(hadouken)
+        break
+      case commands.rainbowfireball:
+        dispatch({ type: 'SET_HEALTH', health: hearts - 1 })
+        addNew(rainbowfireball)
         break
     }
   }

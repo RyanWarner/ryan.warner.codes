@@ -1,7 +1,6 @@
 'use strict'
 
 import Config from './config.js'
-import hadouken from '../../images/hadouken.png'
 
 function Fireball(position) {
   console.log('position', position)
@@ -24,7 +23,7 @@ function Fireball(position) {
   this.element = document.createElement('div')
   this.element.style.width = '80px'
   this.element.style.height = '80px'
-  this.element.style.backgroundImage = `url(${hadouken})`
+  this.element.style.backgroundImage = `url(${position.image || hadouken})`
   this.element.style.backgroundSize = 'cover'
 
   this.container.appendChild(this.element)
