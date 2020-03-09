@@ -7,6 +7,7 @@ import 'styles/FontFaces.css'
 import * as S from './styles'
 import { GlobalType } from 'styles/Type'
 import { GlobalStyle } from 'styles/Global'
+import { StateProvider } from '../components/store.js'
 
 const components = {
   p: S.P,
@@ -21,11 +22,11 @@ const components = {
 }
 
 const Blank = props => (
-  <>
+  <StateProvider>
     <GlobalStyle />
     <GlobalType />
     {props.children}
-  </>
+  </StateProvider>
 )
 
 const Default = props => (

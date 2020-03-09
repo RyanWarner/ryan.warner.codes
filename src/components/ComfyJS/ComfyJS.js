@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import ComfyJS from 'comfy.js'
+import getRandomInt from '../../utilities/getRandomInt'
 
 import * as S from './styles'
 import Fireball from './Fireball'
+import { store } from '../store.js'
 
 const commands = {
   test: 'test',
@@ -14,13 +16,7 @@ const commands = {
 
 ComfyJS.Init('RyanWarnerCodes')
 
-function getRandomInt(min, max) {
-  return Math.random() * (max - min) + min
-}
-
 let lasers = []
-
-
 
 const addNew = () => {
   const laser = new Fireball({
@@ -34,8 +30,6 @@ const addNew = () => {
   lasers.push(laser)
 }
 
-
-
 const startGame = () => {
   function gameLoop() {
     for (var i = 0; i < lasers.length; i++) {
@@ -44,6 +38,7 @@ const startGame = () => {
 
       switch (doMovement) {
         case 'delete':
+          // dispatch({ type: 'SET_HEALTH', health: state.health - 1 })
           lasers.splice(i, 1)
           break
         case 'hit':
@@ -53,25 +48,31 @@ const startGame = () => {
     }
   }
 
-  window.setInterval(gameLoop, 33)
+  setInterval(gameLoop, 33)
+
+  return <div />
 }
 
 startGame()
 
 export default props => {
-  const [hearts, setHearts] = useState(1)
+  const { state, dispatch } = useContext(store)
+  const hearts = state.health
 
   ComfyJS.onCommand = (user, command, message, flags, extra) => {
     if (flags.broadcaster && command === commands.test) {
       console.log('!test was typed in chat')
     }
 
-    if (command === commands.heal) {
-      setHearts(hearts + 1)
-    }
-
-    if (command === commands.fireball) {
-      addNew()
+    switch (command) {
+      case commands.heal:
+        dispatch({ type: 'SET_HEALTH', health: hearts + 1 })
+        break
+      case commands.fireball:
+      case commands.hadouken:
+        dispatch({ type: 'SET_HEALTH', health: hearts - 1 })
+        addNew()
+        break
     }
   }
 

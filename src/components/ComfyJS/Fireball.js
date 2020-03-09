@@ -28,21 +28,21 @@ function Fireball(position) {
   this.element.style.backgroundSize = 'cover'
 
   this.container.appendChild(this.element)
-  Config.bodyElement.appendChild(this.container)
+  window.document.body.appendChild(this.container)
 }
 
 Fireball.prototype.doMovement = function () {
   var newX = this.x + (this.velocity * Math.cos(Math.PI / 180 * this.angle))
   var newY = this.y + (this.velocity * Math.sin(Math.PI / 180 * this.angle))
 
-  if (newX >= Config.windowWidth - 300 && newY >= Config.windowHeight - 300) {
+  if (newX >= window.innerWidth - 300 && newY >= window.innerHeight - 300) {
     // Hit!
-    Config.bodyElement.removeChild(this.container)
+    window.document.body.removeChild(this.container)
     return "hit"
   }
 
-  if ((newX >= Config.windowWidth) || (newX <= 0) || (newY >= Config.windowHeight) || (newY <= 0)) {
-    Config.bodyElement.removeChild(this.container)
+  if ((newX >= window.innerWidth) || (newX <= 0) || (newY >= window.innerHeight) || (newY <= 0)) {
+    window.document.body.removeChild(this.container)
     return "delete"
   }
 

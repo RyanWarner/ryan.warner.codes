@@ -1,12 +1,11 @@
 const Config = {
-  bodyElement: document.body,
   MAX_SPEED: 10,
   FRICTION: 0.04,
   TURN_SPEED: 7.77,
   ACCELERATION: 0.5,
   LASER_SPEED: 11,
-  windowWidth: window.innerWidth,
-  windowHeight: window.innerHeight,
+  // windowWidth: window.innerWidth,
+  // windowHeight: window.innerHeight,
   keyCodes: {
     w: 87,
     a: 65,
