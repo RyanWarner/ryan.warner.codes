@@ -9,6 +9,8 @@ import * as S from './styles'
 import Fireball from './Fireball'
 import { store } from '../store.js'
 
+const twitchChannel = 'RyanWarnerCodes'
+
 const commands = {
   test: 'test',
   heart: 'heart',
@@ -20,20 +22,30 @@ const commands = {
   rbf: 'rbf'
 }
 
-ComfyJS.Init('RyanWarnerCodes')
+ComfyJS.Init(twitchChannel)
 
 let lasers = []
 
-const addNew = (image) => {
-  const laser = new Fireball({
+const createLaser = (image) =>
+  new Fireball({
     x: 0,
-    y: getRandomInt(0, 1080),
-    angle: getRandomInt(-90, 90),
-    velocity: getRandomInt(0, 8),
+    y: getRandomInt(100, 980),
+    angle: getRandomInt(-70, 70),
+    velocity: getRandomInt(0.5, 8),
     index: 1,
     image
   })
 
+const addNew = (image, message) => {
+  const laser = createLaser(image)
+  const number = parseInt(message)
+
+  if (number && number <= 10) {
+    for (let i = 1; i < number; i++) {
+      const laser = createLaser(image)
+      lasers.push(laser)
+    }
+  }
   lasers.push(laser)
 }
 
@@ -67,6 +79,9 @@ export default props => {
   const hearts = state.health
 
   ComfyJS.onCommand = (user, command, message, flags, extra) => {
+    console.log('command', command)
+    console.log('message', message)
+    console.log('extra', extra)
     if (flags.broadcaster && command === commands.test) {
       console.log('!test was typed in chat')
     }
@@ -80,16 +95,16 @@ export default props => {
         break
       case commands.fireball:
         dispatch({ type: 'SET_HEALTH', health: hearts - 1 })
-        addNew(fireball)
+        addNew(fireball, message)
         break
       case commands.hadouken:
         dispatch({ type: 'SET_HEALTH', health: hearts - 1 })
-        addNew(hadouken)
+        addNew(hadouken, message)
         break
       case commands.rainbowfireball:
       case commands.rbf:
         dispatch({ type: 'SET_HEALTH', health: hearts - 1 })
-        addNew(rainbowfireball)
+        addNew(rainbowfireball, message)
         break
     }
   }
