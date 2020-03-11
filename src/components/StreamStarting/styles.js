@@ -34,6 +34,7 @@ export const Title = styled.h1`
   margin: 0;
   max-width: 60vw;
   line-height: 120%;
+  z-index: 3;
 `
 
 export const TimeWrap = styled.div`
@@ -43,6 +44,8 @@ export const TimeWrap = styled.div`
 
 export const StyledIconCard = styled(IconCard)`
   margin-right: 30px;
+  z-index: 3;
+  position: relative;
 `
 
 export const StyledTwitter = styled(Twitter)`

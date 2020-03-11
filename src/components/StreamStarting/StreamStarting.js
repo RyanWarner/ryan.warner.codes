@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import dayjs from 'dayjs'
 
 import * as S from './styles'
 import { Timer, IconCard } from '../'
 import { Time } from '../Icons'
+import hearts from './hearts'
 
 const title = 'The stream title goes here'
 const date = dayjs().format('dddd, MMM DD YYYY')
 
-export default () =>
-  <S.StreamStarting>
+export default () => {
+  useEffect(() => {
+    hearts()
+  }, [])
+
+  return <S.StreamStarting>
     <S.Date>{date}</S.Date>
     <S.Title>{title}</S.Title>
     <S.IconCards>
@@ -20,7 +25,7 @@ export default () =>
         />
       </a>
       <a href='https://rw.codes'>
-        <IconCard
+        <S.StyledIconCard
           icon={<S.StyledLinkIcon />}
           text='https://rw.codes'
         />
@@ -31,3 +36,4 @@ export default () =>
       <Timer />
     </S.TimeWrap>
   </S.StreamStarting>
+}
