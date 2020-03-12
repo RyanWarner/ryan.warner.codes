@@ -10,8 +10,9 @@ const title = 'The stream title goes here'
 const date = dayjs().format('dddd, MMM DD YYYY')
 
 export default () => {
-  useEffect(() => {
-    hearts()
+  useEffect(async () => {
+    await hearts.initialize()
+    hearts.start()
   }, [])
 
   return <S.StreamStarting>
