@@ -2,6 +2,7 @@ import heart from '../../images/opacityHeart.svg'
 import rainbowHeart from '../../images/rainbow-heart.svg'
 import partyCorgi from '../../images/party-corgi.gif'
 import ComfyJS from 'comfy.js'
+import randomizeSprite from './randomizeSprite'
 
 export default class Hearts {
   static initialize = async () => {
@@ -16,7 +17,7 @@ export default class Hearts {
     const PIXI = this.PIXI
 
     const app = new PIXI.Application({
-      transparent: true,
+      transparent: true
     })
     app.renderer.view.style.position = "absolute"
     app.renderer.view.style.display = "block"
@@ -30,7 +31,7 @@ export default class Hearts {
     // Get the texture for rope.
     const starTexture = PIXI.Texture.from(heart)
 
-    let starAmount = 200
+    let starAmount = 250
     let cameraZ = 0
     const fov = 20
     const baseSpeed = 0.025
@@ -53,7 +54,7 @@ export default class Hearts {
       }
       star.sprite.anchor.x = 0.5
       star.sprite.anchor.y = 0.7
-      randomizeStar(star, true)
+      randomizeSprite(star, true, cameraZ)
       app.stage.addChild(star.sprite)
       stars.push(star)
     }
@@ -67,51 +68,16 @@ export default class Hearts {
       if (command === 'chillspeed') {
         warpSpeed = 0
       }
-
-      // if (command === 'warpspeed') {
-      //   warpSpeed = warpSpeed > 0 ? 0 : 1
-      // }
-      // for (let i = 0; i < 50; i++) {
-      //   const star = {
-      //     sprite: new PIXI.Sprite(starTexture),
-      //     z: 0,
-      //     x: 0,
-      //     y: 0
-      //   }
-      //   star.sprite.anchor.x = 0.5
-      //   star.sprite.anchor.y = 0.7
-      //   randomizeStar(star, true)
-      //   app.stage.addChild(star.sprite)
-      //   console.log('make', i)
-      //   stars.push(star)
-      //   starAmount = stars.length
-      // }
-
     }
-
-    function randomizeStar(star, initial) {
-      star.z = initial ? Math.random() * 2000 : cameraZ + Math.random() * 1000 + 2000;
-
-      // Calculate star positions with radial random coordinate so no star hits the camera.
-      const deg = Math.random() * Math.PI * 2;
-      const distance = Math.random() * 50 + 1;
-      star.x = Math.cos(deg) * distance;
-      star.y = Math.sin(deg) * distance;
-    }
-
-    // Change flight speed every 5 seconds
-    // setInterval(() => {
-    //   warpSpeed = warpSpeed > 0 ? 0 : 1
-    // }, 5000)
 
     // Listen for animate update
     app.ticker.add((delta) => {
       // Simple easing. This should be changed to proper easing function when used for real.
       speed += (warpSpeed - speed) / 20;
-      cameraZ += delta * 10 * (speed + baseSpeed);
+      cameraZ += delta * 10 * (speed + baseSpeed)
       for (let i = 0; i < starAmount; i++) {
-        const star = stars[i];
-        if (star.z < cameraZ) randomizeStar(star);
+        const star = stars[i]
+        if (star.z < cameraZ) randomizeSprite(star, false, cameraZ)
 
         // Map star 3d position to 2d with really simple projection
         const z = star.z - cameraZ

@@ -9,6 +9,7 @@ export const IconCardComponent = styled.div`
   padding: 17px 37px;
   display: flex;
   align-items: center;
+  backdrop-filter: blur(5px);
 `
 
 export const Text = styled.span`
