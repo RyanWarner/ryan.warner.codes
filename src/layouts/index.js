@@ -44,11 +44,15 @@ const Default = props => (
 )
 
 const MdxPage = props => {
-  const { pageContext } = props
+  const { frontmatter } = props.pageContext
 
   return (
     <>
-      <Seo image={pageContext.frontmatter?.ogImage} />
+      <Seo
+        image={frontmatter?.ogImage}
+        title={frontmatter?.title}
+        description={frontmatter?.description}
+      />
       <GlobalStyle />
       <GlobalType />
       <S.Wrap>
