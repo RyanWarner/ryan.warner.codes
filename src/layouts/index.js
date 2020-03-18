@@ -43,20 +43,24 @@ const Default = props => (
   </>
 )
 
-const MdxPage = props => (
-  <>
-    <Seo />
-    <GlobalStyle />
-    <GlobalType />
-    <S.Wrap>
-      <MDXProvider components={components}>
-        <Header location={props.location} />
-        <S.StyledWidth>{props.children}</S.StyledWidth>
-        <Footer />
-      </MDXProvider>
-    </S.Wrap>
-  </>
-)
+const MdxPage = props => {
+  const { pageContext } = props
+
+  return (
+    <>
+      <Seo image={pageContext.frontmatter?.ogImage} />
+      <GlobalStyle />
+      <GlobalType />
+      <S.Wrap>
+        <MDXProvider components={components}>
+          <Header location={props.location} />
+          <S.StyledWidth>{props.children}</S.StyledWidth>
+          <Footer />
+        </MDXProvider>
+      </S.Wrap>
+    </>
+  )
+}
 
 const Layouts = {
   Blank,

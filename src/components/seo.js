@@ -25,45 +25,43 @@ const SEO = ({ description, lang, meta, keywords, title, siteUrl, image }) => {
             }}
             title={metaTitle}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            meta={[
-              {
-                name: 'description',
-                content: metaDescription
-              }, {
-                property: 'og:title',
-                content: metaTitle
-              }, {
-                property: 'og:image',
-                content: `${siteUrl}${ogImage}`
-              }, {
-                property: 'og:image:alt',
-                content: "Ryan Warner's tech blog and mentorship website"
-              }, {
-                property: 'og:logo',
-                content: data.site.siteMetadata.logo
-              }, {
-                property: 'og:description',
-                content: metaDescription
-              }, {
-                property: 'og:type',
-                content: 'website'
-              }, {
-                name: 'twitter:card',
-                content: 'summary_large_image'
-              }, {
-                name: 'twitter:creator',
-                content: data.site.siteMetadata.author
-              }, {
-                name: 'twitter:title',
-                content: title
-              }, {
-                name: 'twitter:image',
-                content: `${siteUrl}${ogImage}`
-              }, {
-                name: 'twitter:description',
-                content: metaDescription
-              }
-            ]
+            meta={[{
+              name: 'description',
+              content: metaDescription
+            }, {
+              property: 'og:title',
+              content: metaTitle
+            }, {
+              property: 'og:image',
+              content: `${siteUrl}${ogImage}`
+            }, {
+              property: 'og:image:alt',
+              content: "Ryan Warner's tech blog and mentorship website"
+            }, {
+              property: 'og:logo',
+              content: data.site.siteMetadata.logo
+            }, {
+              property: 'og:description',
+              content: metaDescription
+            }, {
+              property: 'og:type',
+              content: 'website'
+            }, {
+              name: 'twitter:card',
+              content: 'summary_large_image'
+            }, {
+              name: 'twitter:creator',
+              content: data.site.siteMetadata.author
+            }, {
+              name: 'twitter:title',
+              content: title
+            }, {
+              name: 'twitter:image',
+              content: `${siteUrl}${ogImage}`
+            }, {
+              name: 'twitter:description',
+              content: metaDescription
+            }]
               .concat(
                 keywords.length > 0
                   ? {
