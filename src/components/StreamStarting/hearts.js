@@ -7,7 +7,7 @@ import randomizeSprite from './randomizeSprite'
 export default class Hearts {
   static initialize = async () => {
     if (typeof window !== 'undefined') {
-      const PIXI = await require('pixi.js')
+      const PIXI = await require('pixi.js-legacy')
       this.PIXI = PIXI
     }
   }

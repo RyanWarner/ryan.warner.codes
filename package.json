@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "author": "Ryan Warner <ryan@warner.codes>",
   "dependencies": {
-    "@mdx-js/mdx": "1.5.5",
-    "@mdx-js/react": "1.5.5",
+    "@mdx-js/mdx": "1.5.7",
+    "@mdx-js/react": "1.5.7",
     "amplitude-js": "5.9.0",
     "babel-plugin-styled-components": "1.10.7",
     "comfy.js": "^1.0.15",
@@ -28,6 +28,7 @@
     "install": "^0.13.0",
     "npm": "^6.14.2",
     "pixi.js": "^5.2.1",
+    "pixi.js-legacy": "^5.2.1",
     "prism-react-renderer": "1.0.2",
     "prop-types": "15.7.2",
     "react": "16.12.0",
