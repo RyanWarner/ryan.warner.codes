@@ -42,7 +42,9 @@
     "react",
     "blog",
     "portfolio",
-    "ryan warner"
+    "ryan warner",
+    "mentorship",
+    "tutorials"
   ],
   "license": "MIT",
   "scripts": {
