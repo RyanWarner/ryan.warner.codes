@@ -32,11 +32,11 @@ Fireball.prototype.doMovement = function () {
   var newX = this.x + (this.velocity * Math.cos(Math.PI / 180 * this.angle))
   var newY = this.y + (this.velocity * Math.sin(Math.PI / 180 * this.angle))
 
-  if (newX >= window.innerWidth - 300 && newY >= window.innerHeight - 300) {
-    // Hit!
-    window.document.body.removeChild(this.container)
-    return "hit"
-  }
+  // if (newX >= window.innerWidth - 300 && newY >= window.innerHeight - 300) {
+  //   // Hit!
+  //   window.document.body.removeChild(this.container)
+  //   return "hit"
+  // }
 
   if ((newX >= window.innerWidth) || (newX <= 0) || (newY >= window.innerHeight) || (newY <= 0)) {
     window.document.body.removeChild(this.container)

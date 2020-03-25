@@ -6,7 +6,7 @@ import { Timer, IconCard } from '../'
 import { Time } from '../Icons'
 import hearts from './hearts'
 
-const title = 'The stream title goes here'
+const title = 'Figma, hanging out & chatting'
 const date = dayjs().format('dddd, MMM DD YYYY')
 
 export default () => {
