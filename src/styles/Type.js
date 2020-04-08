@@ -11,7 +11,7 @@ export const monospace = "Menlo, Monaco, 'Courier New', monospace"
 export const fontWeights = {
   regular: 400,
   medium: 500,
-  bold: 'bold'
+  bold: 700
 }
 
 export const body = css`
