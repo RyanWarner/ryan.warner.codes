@@ -33,6 +33,10 @@ export const header1 = css`
   }
 `
 
+export const header2 = css`
+  font-weight: ${fontWeights.bold};
+`
+
 export const header3 = css`
   font-size: 24px;
   line-height: 152%;
@@ -65,6 +69,10 @@ export const GlobalType = createGlobalStyle`
 
   h1 {
     ${header1};
+  }
+
+  h2 {
+    ${header2};
   }
 
   h3 {

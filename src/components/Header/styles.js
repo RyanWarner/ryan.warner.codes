@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { Breakpoints, Colors } from 'styles'
+import { Breakpoints, Colors, Type } from 'styles'
 import { Heart } from 'components/Icons'
 
 export const Header = styled.header`
@@ -21,7 +21,7 @@ export const Wordmark = styled(Link)`
 `
 
 export const Name = styled.p`
-  font-weight: bold;
+  font-weight: ${Type.fontWeights.bold};
   font-size: 16px;
   color: ${Colors.text10};
   margin-left: 22px;
