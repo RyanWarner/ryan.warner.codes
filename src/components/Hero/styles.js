@@ -7,7 +7,7 @@ export const Hero = styled.div`
   margin-top: 38px;
 `
 
-const maxWidth = '632px'
+const maxWidth = '656px'
 
 export const H1 = styled.h1`
   background: linear-gradient(${Colors.glow10}, ${Colors.glow20});
