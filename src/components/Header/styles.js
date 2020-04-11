@@ -24,12 +24,15 @@ export const Header = styled.header`
 
 export const MainNav = styled.div`
   display: flex;
+  align-items: center;
 `
 
 export const Wordmark = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
+  padding: 12px;
+  margin-left: -12px;
 `
 
 export const StyledHeart = styled(Heart)`
