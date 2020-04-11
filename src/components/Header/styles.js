@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { Breakpoints, Colors } from 'styles'
+import { Breakpoints, Colors, Sizes } from 'styles'
 import { Heart } from 'components/Icons'
 
 export const Background = styled.div`
   width: 100vw;
-  height: 80px;
+  height: ${Sizes.navHeight};
   background-color: ${Colors.blue00};
   display: flex;
   justify-content: center;

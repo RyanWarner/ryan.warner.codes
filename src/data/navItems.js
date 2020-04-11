@@ -1,31 +1,40 @@
+import { Colors } from 'styles'
+
 export default {
   tutorials: {
     title: 'Tutorials',
-    url: '/tutorials'
+    url: '/tutorials',
+    color: Colors.rainbowRed
   },
   resources: {
     title: 'Resources',
-    url: '/resources'
+    url: '/resources',
+    color: Colors.rainbowOrange
   },
   courses: {
     title: 'Courses',
-    url: '/courses'
+    url: '/courses',
+    color: Colors.rainbowYellow
   },
   workshops: {
     title: 'Workshops',
-    url: '/workshops'
+    url: '/workshops',
+    color: Colors.rainbowGreen
   },
   feedback: {
     title: 'Feedback',
-    url: '/feedback'
+    url: '/feedback',
+    color: Colors.rainbowBlue
   },
   // mentorship: {
   //   title: 'Mentorship',
-  //   url: '/mentorship'
+  //   url: '/mentorship',
+  // color: Colors.rainbowIndigo
   // },
   live: {
     title: 'Live',
-    url: '/live'
+    url: '/live',
+    color: Colors.rainbowViolet
   }
 }
 

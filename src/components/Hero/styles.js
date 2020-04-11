@@ -16,6 +16,7 @@ export const H1 = styled.h1`
   max-width: ${maxWidth};
   margin: 0 0 32px 0;
   letter-spacing: 1px;
+  color: ${Colors.glow20};
 
   &::selection {
     -webkit-background-clip: initial;

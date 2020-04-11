@@ -18,6 +18,14 @@ export const blue40 = '#416883'
 export const blue50 = '#5E8CA7'
 export const blue60 = '#4FB8FF'
 
+export const rainbowRed = '#F98282'
+export const rainbowOrange = '#F9C982'
+export const rainbowYellow = '#F7F982'
+export const rainbowGreen = glow20
+export const rainbowBlue = '#82F9E4'
+export const rainbowIndigo = '#82B9F9'
+export const rainbowViolet = '#8482F9'
+
 export const yawnch = '#CCA9F4'
 export const stockstreamtv = '#5CD47D'
 export const partyCorgi = '#02A1E8'
