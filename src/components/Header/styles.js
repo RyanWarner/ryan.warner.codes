@@ -1,11 +1,19 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { Breakpoints, Colors, Type } from 'styles'
+import { Breakpoints, Colors } from 'styles'
 import { Heart } from 'components/Icons'
 
+export const Background = styled.div`
+  width: 100vw;
+  height: 80px;
+  background-color: ${Colors.blue00};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 export const Header = styled.header`
-  padding: 65px 0;
   display: flex;
   justify-content: space-between;
 
@@ -14,23 +22,14 @@ export const Header = styled.header`
   }
 `
 
+export const MainNav = styled.div`
+  display: flex;
+`
+
 export const Wordmark = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-`
-
-export const Name = styled.p`
-  font-weight: ${Type.fontWeights.bold};
-  font-size: 16px;
-  color: ${Colors.text10};
-  margin-left: 22px;
-  display: none;
-
-  @media(min-width: ${Breakpoints.mobile}) {
-    font-size: 18px;
-    display: block;
-  }
 `
 
 export const StyledHeart = styled(Heart)`

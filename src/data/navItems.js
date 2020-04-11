@@ -19,17 +19,17 @@ export default {
     title: 'Feedback',
     url: '/feedback'
   },
-  mentorship: {
-    title: 'Mentorship',
-    url: '/mentorship'
-  },
+  // mentorship: {
+  //   title: 'Mentorship',
+  //   url: '/mentorship'
+  // },
   live: {
     title: 'Live',
     url: '/live'
   }
 }
 
-const sideNavItems = {
+const secondaryNavItems = {
   notes: {
     title: 'Notes',
     url: '/notes'
@@ -44,4 +44,4 @@ const sideNavItems = {
   }
 }
 
-export { sideNavItems }
+export { secondaryNavItems }

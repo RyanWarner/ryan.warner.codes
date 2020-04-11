@@ -9,6 +9,7 @@ export const text20 = '#C9E2F0'
 
 export const red = '#E73E3E'
 
+export const blue00 = '#0B1115'
 export const blue10 = '#111A20'
 export const blue20 = '#1C2C35'
 export const blue30 = '#243B4A'
