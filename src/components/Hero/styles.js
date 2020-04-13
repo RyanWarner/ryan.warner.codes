@@ -4,7 +4,9 @@ import { Breakpoints, Colors, Type } from 'styles'
 import Link from '../Link/Link'
 
 export const Hero = styled.div`
-  margin-top: 38px;
+  margin-top: 100px;
+  display: flex;
+  position: relative;
 `
 
 const maxWidth = '656px'
@@ -92,3 +94,5 @@ export const Dribbble = styled(Link)`
     background-color: ${Colors.dribbble};
   }
 `
+
+export const Copy = styled.div``

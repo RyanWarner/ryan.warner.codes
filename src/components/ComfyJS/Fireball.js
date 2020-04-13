@@ -1,6 +1,6 @@
 import Config from './config.js'
 
-function Fireball(position) {
+function Fireball (position) {
   console.log('position', position)
   this.x = position.x
   this.y = position.y
@@ -40,7 +40,7 @@ Fireball.prototype.doMovement = function () {
 
   if ((newX >= window.innerWidth) || (newX <= 0) || (newY >= window.innerHeight) || (newY <= 0)) {
     window.document.body.removeChild(this.container)
-    return "delete"
+    return 'delete'
   }
 
   this.x = newX

@@ -1,13 +1,10 @@
 import heart from '../../images/opacityHeart.svg'
-import rainbowHeart from '../../images/rainbow-heart.svg'
-import partyCorgi from '../../images/party-corgi.gif'
-import ComfyJS from 'comfy.js'
 import randomizeSprite from './randomizeSprite'
 
 export default class Hearts {
   static initialize = async () => {
     if (typeof window !== 'undefined') {
-      const PIXI = await require('pixi.js-legacy')
+      const PIXI = await require('pixi.js')
       this.PIXI = PIXI
     }
   }
@@ -20,7 +17,7 @@ export default class Hearts {
     })
     app.renderer.view.style.position = 'absolute'
     app.renderer.view.style.display = 'block'
-    app.renderer.view.style.zIndex = '2'
+    app.renderer.view.style.zIndex = '1'
     app.renderer.view.style.top = '0'
     app.renderer.autoResize = true
     app.renderer.resize(window.innerWidth, window.innerHeight)
@@ -30,17 +27,13 @@ export default class Hearts {
     // Get the texture for rope.
     const starTexture = PIXI.Texture.from(heart)
 
-    const starAmount = 250
+    const starAmount = 150
     let cameraZ = 0
     const fov = 20
     const baseSpeed = 0.025
     let speed = 0
-    let warpSpeed = 0
-    const starStretch = 5
+    const warpSpeed = 0
     const starBaseSize = 2.5
-
-    const twitchChannel = 'RyanWarnerCodes'
-    ComfyJS.Init(twitchChannel)
 
     // Create the stars
     const stars = []
@@ -51,22 +44,13 @@ export default class Hearts {
         x: 0,
         y: 0
       }
-      star.sprite.anchor.x = 0.5
-      star.sprite.anchor.y = 0.7
+      // star.sprite.anchor.x = 0.5
+      // star.sprite.anchor.y = 0.7
+      star.sprite.scale.x = 0.5
+      star.sprite.scale.y = 0.5
       randomizeSprite(star, true, cameraZ)
       app.stage.addChild(star.sprite)
       stars.push(star)
-    }
-
-    ComfyJS.onCommand = (user, command, message, flags, extra) => {
-      console.log('command')
-      if (command === 'warpspeed') {
-        warpSpeed = 1
-      }
-
-      if (command === 'chillspeed') {
-        warpSpeed = 0
-      }
     }
 
     // Listen for animate update
@@ -83,15 +67,18 @@ export default class Hearts {
         star.sprite.x = star.x * (fov / z) * app.renderer.screen.width + app.renderer.screen.width / 2
         star.sprite.y = star.y * (fov / z) * app.renderer.screen.width + app.renderer.screen.height / 2
 
+        star.sprite.alpha = 0.1
+        // star.sprite.alpha = star.alpha * (fov / z) * app.renderer.screen.width + app.renderer.screen.width / 2;
         // Calculate star scale & rotation.
         const dxCenter = star.sprite.x - app.renderer.screen.width / 2
         const dyCenter = star.sprite.y - app.renderer.screen.height / 2
         const distanceCenter = Math.sqrt(dxCenter * dxCenter + dyCenter * dyCenter)
         const distanceScale = Math.max(0, (2000 - z) / 2000)
-        star.sprite.scale.x = distanceScale * starBaseSize
+        // star.sprite.scale.x = distanceScale / starBaseSize
+        // star.sprite.scale.y = distanceScale / starBaseSize
         // Star is looking towards center so that y axis is towards center.
         // Scale the star depending on how fast we are moving, what the stretchfactor is and depending on how far away it is from the center.
-        star.sprite.scale.y = distanceScale * starBaseSize + distanceScale * speed * starStretch * distanceCenter / app.renderer.screen.width
+        // star.sprite.scale.y = distanceScale * starBaseSize + distanceScale * speed * starStretch * distanceCenter / app.renderer.screen.width
         star.sprite.rotation = Math.atan2(dyCenter, dxCenter) + Math.PI / 2
       }
     })
