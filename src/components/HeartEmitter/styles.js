@@ -2,14 +2,13 @@
 import styled from 'styled-components'
 
 import HeartClicker from '../HeartClicker/HeartClicker'
+import { ZIndex } from 'styles'
 
 export const HeartEmitterComponent = styled.div`
   width: 600px;
   height: 600px;
   position: relative;
-  /* position: absolute;
-  right: 30px;
-  top: -155px; */
+  z-index: ${ZIndex.z1};
 `
 
 export const HeartContainer = styled.div`

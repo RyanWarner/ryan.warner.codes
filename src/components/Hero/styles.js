@@ -4,9 +4,10 @@ import { Breakpoints, Colors, Type } from 'styles'
 import Link from '../Link/Link'
 
 export const Hero = styled.div`
-  margin-top: 100px;
   display: flex;
   position: relative;
+  align-items: center;
+  margin: 0 0 -50px 0;
 `
 
 const maxWidth = '656px'
