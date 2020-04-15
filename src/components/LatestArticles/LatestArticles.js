@@ -23,9 +23,11 @@ const LatestArticles = ({ data }) => {
           <S.Chevrons color={Colors.blue50} />
         </S.AllArticles>
       </S.Header>
-      {articles.map(item =>
-        <ArticleSnippet article={item.node} key={item.node.id} />
-      )}
+      <S.Articles>
+        {articles.map(item =>
+          <ArticleSnippet article={item.node} key={item.node.id} />
+        )}
+      </S.Articles>
     </S.LatestArticles>
   )
 }

@@ -61,6 +61,13 @@ export const header4 = css`
   }
 `
 
+export const capsTitle = css`
+  font-weight: ${fontWeights.medium};
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+`
+
 export const GlobalType = createGlobalStyle`
   body {
     ${body};

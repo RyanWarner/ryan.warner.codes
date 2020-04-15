@@ -2,15 +2,17 @@ import styled, { css } from 'styled-components'
 
 import { Breakpoints, Colors, Type } from 'styles'
 import Link from '../Link/Link'
+import HeartEmitter from '../HeartEmitter/HeartEmitter'
 
 export const Hero = styled.div`
   display: flex;
   position: relative;
   align-items: center;
   margin: 0 0 -50px 0;
+  padding: 180px 0 100px 0;
 `
 
-const maxWidth = '656px'
+const maxWidth = '756px'
 
 export const H1 = styled.h1`
   background: linear-gradient(${Colors.glow10}, ${Colors.glow20});
@@ -20,6 +22,7 @@ export const H1 = styled.h1`
   margin: 0 0 32px 0;
   letter-spacing: 1px;
   color: ${Colors.glow20};
+  font-size: 50px;
 
   &::selection {
     -webkit-background-clip: initial;
@@ -97,3 +100,8 @@ export const Dribbble = styled(Link)`
 `
 
 export const Copy = styled.div``
+
+export const StyledHeartEmitter = styled(HeartEmitter)`
+  position: absolute;
+  right: -96px;
+`

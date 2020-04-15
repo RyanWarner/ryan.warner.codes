@@ -14,7 +14,7 @@ export default props => {
   }, [])
 
   return (
-    <S.HeartEmitterComponent id='heartEmitter'>
+    <S.HeartEmitterComponent id='heartEmitter' {...props}>
       <S.HeartContainer>
         <motion.div
           whileHover={{ scale: 1.1 }}
@@ -23,8 +23,8 @@ export default props => {
           }}
           transition={{
             type: 'spring',
-            stiffness: 260,
-            damping: 20
+            stiffness: 277,
+            damping: 14
           }}
         >
           <S.StyledHeartClicker onClick={Particles.handleHeartClick} />

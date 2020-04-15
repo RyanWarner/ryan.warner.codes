@@ -1,2 +1,2 @@
-export const maxWidth = '1440px'
+export const maxWidth = '1280px'
 export const navHeight = '80px'

@@ -2,7 +2,6 @@ import React from 'react'
 
 import * as S from './styles'
 import { social } from 'data'
-import { HeartEmitter } from 'components'
 
 export default () =>
   <S.Hero>
@@ -15,5 +14,5 @@ export default () =>
         and take shots on <S.Dribbble to={social.dribbble} el='a'>Dribbble</S.Dribbble>.
       </S.SubHeader>
     </S.Copy>
-    <HeartEmitter />
+    <S.StyledHeartEmitter />
   </S.Hero>

@@ -37,7 +37,7 @@ export const NavItem = styled.div`
 export const NavLink = styled(Link)`
   padding: 10px;
   color: ${Colors.text10};
-  font-size: 16px;
+  font-size: 17px;
   font-weight: ${Type.fontWeights.medium};
   text-decoration: none;
   display: flex;

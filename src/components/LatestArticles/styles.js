@@ -2,14 +2,20 @@ import styled from 'styled-components'
 import { ChevronsRight } from 'react-feather'
 
 import { Link } from '../'
-import { Breakpoints, Colors } from 'styles'
+import { Breakpoints, Colors, Type } from 'styles'
 
 export const LatestArticles = styled.div`
   margin: 70px 0;
+  max-width: 800px;
 
   @media(min-width: ${Breakpoints.mobile}) {
     margin: 106px 0;
   }
+`
+
+export const Articles = styled.div`
+  border: 2px solid ${Colors.blue20};
+  border-radius: 6px;
 `
 
 export const Header = styled.div`
@@ -19,7 +25,8 @@ export const Header = styled.div`
   margin-bottom: 32px;
 `
 
-export const Title = styled.h3`
+export const Title = styled.h2`
+  ${Type.capsTitle};
   margin: 0;
   color: ${Colors.text10};
 `
