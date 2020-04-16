@@ -7,7 +7,7 @@ import { Heart } from 'components/Icons'
 export const Background = styled.div`
   width: 100vw;
   height: ${Sizes.navHeight};
-  background-color: rgba(11, 17, 21, 0.78);
+  background-color: rgba(13, 21, 26, 0.78);
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
