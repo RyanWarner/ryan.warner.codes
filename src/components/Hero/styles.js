@@ -8,8 +8,7 @@ export const Hero = styled.div`
   display: flex;
   position: relative;
   align-items: center;
-  margin: 0 0 -50px 0;
-  padding: 180px 0 100px 0;
+  padding: 180px 0 110px 0;
 `
 
 const maxWidth = '756px'

@@ -11,9 +11,9 @@ export const Home = styled.div`
 
 export const ContentWrap = styled.div`
   display: flex;
-  margin: 70px 0;
+  margin: 0 0 70px 0;
 
   @media(min-width: ${Breakpoints.mobile}) {
-    margin: 106px 0;
+    margin: 0 0 106px 0;
   }
 `
