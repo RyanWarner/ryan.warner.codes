@@ -103,5 +103,5 @@ export const Copy = styled.div``
 
 export const StyledHeartEmitter = styled(HeartEmitter)`
   position: absolute;
-  right: -96px;
+  right: -122px;
 `

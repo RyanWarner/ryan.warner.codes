@@ -2,11 +2,11 @@ import React from 'react'
 
 import * as S from './styles'
 import {
-  Cta,
+  Live,
   Footer,
   Hero,
   LatestArticles,
-  Projects,
+  Resources,
   Width
 } from '../../components'
 
@@ -14,9 +14,13 @@ export default () =>
   <S.Home>
     <Width>
       <Hero />
-      <LatestArticles />
-      <Projects />
+      <S.ContentWrap>
+        <LatestArticles />
+        <div style={{ width: '100%' }}>
+          <Live />
+          <Resources />
+        </div>
+      </S.ContentWrap>
     </Width>
-    <Cta />
     <Footer disableBackground />
   </S.Home>
