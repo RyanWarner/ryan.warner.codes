@@ -13,6 +13,7 @@
     "dayjs": "1.8.24",
     "focus-visible": "5.1.0",
     "framer-motion": "^1.10.3",
+    "fuse.js": "^5.1.0",
     "gatsby": "2.20.16",
     "gatsby-image": "2.3.2",
     "gatsby-plugin-amplitude-analytics": "2.0.0",
