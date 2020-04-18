@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import { Breakpoints, Colors, Mixins } from 'styles'
 
 export const TutorialsComponent = styled.div`
+  margin-top: 50px;
+  display: flex;
+
   ul {
     ${Mixins.outlineContainer};
     margin: 0;
@@ -25,4 +28,13 @@ export const TutorialsComponent = styled.div`
       padding-bottom: 49px;
     }
   }
+`
+
+export const Tutorials = styled.div`
+  width: 100%;
+`
+
+export const Filters = styled.div`
+  width: 320px;
+  flex-shrink: 100%;
 `
