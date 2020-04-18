@@ -35,4 +35,5 @@ export const Tutorials = styled.div`
 export const Filters = styled.div`
   width: 320px;
   flex-shrink: 100%;
+  margin-right: 40px;
 `
