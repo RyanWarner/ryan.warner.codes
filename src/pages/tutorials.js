@@ -5,7 +5,7 @@ import { Tutorials } from 'components'
 export const pageQuery = graphql`
   query TutorialsIndex {
     allMdx(
-      filter: {fileAbsolutePath: {glob: "**/tutorials/**"}}
+      filter: {fileAbsolutePath: {glob: "**/articles/**"}}
       sort: {
         fields: [frontmatter___date]
         order: DESC

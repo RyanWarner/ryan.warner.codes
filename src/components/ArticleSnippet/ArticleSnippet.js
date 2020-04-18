@@ -10,7 +10,7 @@ const iconMap = {
 }
 
 export default ({ article }) =>
-  <S.ArticleSnippet to={`/articles${article.fields.slug}`}>
+  <S.ArticleSnippet to={`/${article.fields.slug}`}>
     <S.Icon>
       {iconMap[article.frontmatter.icon || 'default']}
     </S.Icon>

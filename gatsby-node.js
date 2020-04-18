@@ -78,7 +78,7 @@ const createPagesForMdxForDirectory = async ({ directory, graphql, reporter, act
 
   mdx.forEach(({ node }, index) => {
     createPage({
-      path: `${directory}${node.fields.slug}`,
+      path: `${node.fields.slug}`,
       // This component will wrap our MDX content
       component: path.resolve('./src/components/ArticleLayout/ArticleLayout.js'),
       // You can use the values in this context in

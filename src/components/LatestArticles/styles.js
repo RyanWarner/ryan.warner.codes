@@ -2,18 +2,18 @@ import styled from 'styled-components'
 import { ChevronsRight } from 'react-feather'
 
 import { Link } from '../'
-import { Colors } from 'styles'
+import { Colors, ZIndex, Mixins } from 'styles'
 
 export const LatestArticles = styled.div`
   max-width: 737px;
   width: 100%;
   margin-right: 60px;
   flex-shrink: 0;
+  z-index: ${ZIndex.z2};
 `
 
 export const Articles = styled.div`
-  border: 2px solid ${Colors.blue20};
-  border-radius: 6px;
+  ${Mixins.outlineContainer};
 `
 
 export const Header = styled.div`

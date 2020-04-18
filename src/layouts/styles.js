@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { Width } from 'components'
-import { Breakpoints, Colors } from 'styles'
+import { Breakpoints, Colors, Sizes } from 'styles'
 
 export const Wrap = styled.div`
   display: flex;
@@ -10,6 +10,7 @@ export const Wrap = styled.div`
   min-height: 100vh;
   z-index: 2;
   position: relative;
+  margin-top: ${Sizes.navHeight};
 `
 
 export const A = styled.a`
