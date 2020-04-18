@@ -5,7 +5,7 @@ import { Resources } from 'components'
 export const pageQuery = graphql`
   query ResourcesIndex {
     allMdx(
-      filter: {fileAbsolutePath: {glob: "**/resources/**"}}
+      filter: {fileAbsolutePath: {glob: "**/content/resources/**"}}
       sort: {
         fields: [frontmatter___date]
         order: DESC
@@ -19,6 +19,7 @@ export const pageQuery = graphql`
             title
             date
             tags
+            # url
           }
           fields {
             slug

@@ -47,6 +47,12 @@ module.exports = {
         name: 'articles',
         path: `${__dirname}/src/content/notes`
       }
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'resources',
+        path: `${__dirname}/src/content/resources`
+      }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

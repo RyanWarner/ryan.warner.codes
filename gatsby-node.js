@@ -91,6 +91,17 @@ const createPagesForMdxForDirectory = async ({ directory, graphql, reporter, act
 // https://www.gatsbyjs.org/docs/node-apis/#createPages
 // Destructure the createPage function from the actions object
 exports.createPages = async args => {
-  await createPagesForMdxForDirectory({ directory: 'articles', ...args })
-  await createPagesForMdxForDirectory({ directory: 'notes', ...args })
+  const mdxSourceDirectories = [
+    'articles',
+    'resources',
+    'notes'
+  ]
+
+  const promises = mdxSourceDirectories.map(directory => {
+    return createPagesForMdxForDirectory({ directory, ...args })
+  })
+
+  console.log({ promises })
+
+  await Promise.all(promises)
 }
