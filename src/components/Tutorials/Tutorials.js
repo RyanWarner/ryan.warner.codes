@@ -9,19 +9,18 @@ export default ({ data }) => {
   const articles = edges.map(item => ({
     id: item.node.id,
     title: item.node.frontmatter.title,
+    description: item.node.frontmatter.description,
     excerpt: item.node.excerpt,
     tags: item.node.frontmatter.tags,
-    slug: item.node.fields.slug
+    slug: item.node.fields.slug,
+    type: item.node.frontmatter.type
   }))
 
   const [filteredData, setFilteredData] = useState(articles)
-  
+
   const handleFilter = (data) => {
     setFilteredData(data)
   }
-  
-
-  console.log('filteredData', filteredData)
 
   return (
     <>

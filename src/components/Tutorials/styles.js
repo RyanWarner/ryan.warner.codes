@@ -15,8 +15,7 @@ export const TutorialsComponent = styled.div`
 
   li {
     list-style-type: none;
-    margin-bottom: 34px;
-    padding-bottom: 34px;
+    padding: 30px 30px 30px 0;
     border-bottom: 1px solid ${Colors.blue30};
 
     &:last-child {
@@ -24,8 +23,7 @@ export const TutorialsComponent = styled.div`
     }
 
     @media(min-width: ${Breakpoints.mobile}) {
-      margin-bottom: 49px;
-      padding-bottom: 49px;
+      padding: 30px 30px 30px 0;
     }
   }
 `

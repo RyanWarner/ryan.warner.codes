@@ -35,6 +35,7 @@ export const header1 = css`
 
 export const header2 = css`
   font-weight: ${fontWeights.bold};
+  margin: 0;
 `
 
 export const header3 = css`
