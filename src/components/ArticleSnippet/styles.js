@@ -5,12 +5,12 @@ import { Link } from '../'
 import { ReactLogo, Heart, VSCode } from 'components/Icons'
 
 export const ArticleSnippet = styled(Link)`
-  padding: 26px 26px 26px 0;
+  padding: 20px 20px 20px 0;
+  margin-bottom: 6px;
   width: 100%;
   display: flex;
   cursor: pointer;
   transition: background .2s ease-in-out;
-  margin-bottom: 16px;
   position: relative;
   box-sizing: border-box;
 
@@ -29,6 +29,11 @@ export const ArticleSnippet = styled(Link)`
       box-shadow: 3px 0 22px rgba(14, 255, 77, .5);
       border-radius: 6px 0 0 0;
     }
+  }
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    padding: 26px 26px 26px 0;
+  margin-bottom: 16px;
   }
 `
 
@@ -54,25 +59,45 @@ export const Date = styled.time`
 `
 
 export const Icon = styled.div`
-  width: 90px;
-  height: 30px;
+  width: 50px;
+  height: 22px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 90px;
+    height: 30px;
+  }
 `
 
 export const StyledReactLogo = styled(ReactLogo)`
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 28px;
+    height: 28px;
+  }
 `
 
 export const StyledHeart = styled(Heart)`
-  width: 22px;
-  height: 22px;
+  width: 16px;
+  height: 16px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 22px;
+    height: 22px;
+  }
 `
 
 export const StyledVSCode = styled(VSCode)`
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 28px;
+    height: 28px;
+  }
 `

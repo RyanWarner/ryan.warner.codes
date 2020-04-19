@@ -6,6 +6,11 @@ import { Breakpoints, Colors, Mixins } from 'styles'
 export const TutorialsComponent = styled.div`
   margin-top: 50px;
   display: flex;
+  flex-direction: column;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    flex-direction: row;
+  }
 
   ul {
     ${Mixins.outlineContainer};

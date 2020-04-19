@@ -12,7 +12,7 @@ export const Nav = styled.nav`
 export const NavItem = styled.div`
   display: flex;
   align-items: center;
-  height: ${Sizes.navHeight};
+  height: ${Sizes.navHeightMobile};
   position: relative;
   margin-left: 10px;
 
@@ -32,6 +32,10 @@ export const NavItem = styled.div`
       background-color: ${props => props.color || Colors.glow10};
     }
   `}
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    height: ${Sizes.navHeight};
+  }
 `
 
 export const NavLink = styled(Link)`

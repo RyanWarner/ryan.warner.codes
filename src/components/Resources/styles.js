@@ -1,9 +1,16 @@
 
 import styled from 'styled-components'
 
+import { Breakpoints } from 'styles'
+
 export const TutorialsComponent = styled.div`
   margin-top: 50px;
   display: flex;
+  flex-direction: column;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    flex-direction: row;
+  }
 
   ul {
     margin: 0;

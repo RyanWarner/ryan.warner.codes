@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { Breakpoints, Colors, Sizes, ZIndex } from 'styles'
+import { Breakpoints, Sizes, ZIndex } from 'styles'
 import { Heart } from 'components/Icons'
 
 export const Background = styled.div`
   width: 100vw;
-  height: ${Sizes.navHeight};
+  height: ${Sizes.navHeightMobile};
   background-color: rgba(13, 21, 26, 0.78);
   backdrop-filter: blur(5px);
   display: flex;
@@ -15,6 +15,10 @@ export const Background = styled.div`
   z-index: ${ZIndex.z3};
   position: fixed;
   top: 0;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    height: ${Sizes.navHeight};
+  }
 `
 
 export const Header = styled.header`
