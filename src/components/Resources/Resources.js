@@ -1,12 +1,10 @@
-import React, { useState }  from 'react'
+import React, { useState } from 'react'
 
 import * as S from './styles'
-import { Article, Footer, Width, Filter } from 'components'
+import { ResourceCard, Footer, Width, Filter } from 'components'
 
 export default ({ data }) => {
   const { edges } = data.allMdx
-
-  console.log({ edges})
 
   const articles = edges.map(item => ({
     id: item.node.id,
@@ -35,7 +33,7 @@ export default ({ data }) => {
             <ul>
               {filteredData.map((article) =>
                 <li key={article.id}>
-                  <Article {...article} />
+                  <ResourceCard {...article} />
                 </li>
               )}
             </ul>

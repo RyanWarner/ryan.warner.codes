@@ -6,7 +6,7 @@ import {
   Footer,
   Hero,
   LatestArticles,
-  Resources,
+  ResourcesPreview,
   Width
 } from '../../components'
 
@@ -18,7 +18,7 @@ export default () =>
         <LatestArticles />
         <div style={{ width: '100%' }}>
           <Live />
-          <Resources />
+          <ResourcesPreview />
         </div>
       </S.ContentWrap>
     </Width>

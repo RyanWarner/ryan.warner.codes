@@ -22,10 +22,13 @@ export default ({ data, onChange }) => {
 
   return (
     <S.FilterComponent>
+      <S.SearchIcon>
+        <S.StyledSearch />
+      </S.SearchIcon>
       <S.TextField
         onChange={onSearchChange}
         value={searchValue}
-        placeholder='Filter'
+        placeholder='Search'
       />
     </S.FilterComponent>
   )

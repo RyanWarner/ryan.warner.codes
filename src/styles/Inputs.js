@@ -8,7 +8,7 @@ export const filter = css`
   border: 2px solid transparent;
   border-radius: 6px;
   height: 33px;
-  padding: 8px 35px;
+  padding: 6px 35px 6px 45px;
   display: flex;
   justify-content: center;
   align-items: center;
