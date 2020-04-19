@@ -4,12 +4,12 @@ import dayjs from 'dayjs'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import * as S from './styles'
-import { Width, Footer, Seo } from 'components'
+import { ArticleWidth, Footer, Seo } from 'components'
 
 export default function PageTemplate ({ data: { mdx } }) {
   return (
     <>
-      <Width>
+      <ArticleWidth>
         <Seo
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
@@ -28,7 +28,7 @@ export default function PageTemplate ({ data: { mdx } }) {
           </S.Meta>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </S.Content>
-      </Width>
+      </ArticleWidth>
       <Footer />
     </>
   )

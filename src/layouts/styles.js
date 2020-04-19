@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Width } from 'components'
+import { ArticleWidth } from 'components'
 import { Breakpoints, Colors, Sizes } from 'styles'
 
 export const Wrap = styled.div`
@@ -63,7 +63,7 @@ export const H3 = styled.h3`
   }
 `
 
-export const StyledWidth = styled(Width)`
+export const StyledWidth = styled(ArticleWidth)`
   margin-bottom: 100px;
 `
 

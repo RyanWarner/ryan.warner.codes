@@ -1,9 +1,10 @@
 
 import styled from 'styled-components'
 
-import { Colors, Mixins, Type } from 'styles'
+import { Colors, Mixins } from 'styles'
+import { Link } from 'components'
 
-export const ResourceCardComponent = styled.a`
+export const ResourceCardComponent = styled(Link)`
   ${Mixins.outlineContainer};
   overflow: hidden;
   background-color: ${Colors.blue10};
@@ -21,6 +22,6 @@ export const Meta = styled.div`
   padding: 12px;
 
   p {
-    color: ${Type.text10};
+    color: ${Colors.text10};
   }
 `

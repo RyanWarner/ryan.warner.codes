@@ -4,6 +4,7 @@ import { Breakpoints, Colors } from 'styles'
 import ryan from 'images/ryan-warner.png'
 
 export const Content = styled.article`
+  margin-top: 70px;
   margin-bottom: 106px;
 `
 

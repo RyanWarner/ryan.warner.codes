@@ -1,4 +1,4 @@
-import React, { useState }  from 'react'
+import React, { useState } from 'react'
 
 import * as S from './styles'
 import { Article, Footer, Width, Filter } from 'components'
