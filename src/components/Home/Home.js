@@ -16,10 +16,10 @@ export default () =>
       <Hero />
       <S.ContentWrap>
         <LatestArticles />
-        <div style={{ width: '100%' }}>
+        <S.RightCol>
           <Live />
           <ResourcesPreview />
-        </div>
+        </S.RightCol>
       </S.ContentWrap>
     </Width>
     <Footer disableBackground />

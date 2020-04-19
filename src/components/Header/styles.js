@@ -12,7 +12,7 @@ export const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: ${ZIndex.z2};
+  z-index: ${ZIndex.z3};
   position: fixed;
   top: 0;
 `

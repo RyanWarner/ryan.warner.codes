@@ -23,7 +23,7 @@ export const body = css`
 `
 
 export const header1 = css`
-  font-size: 48px;
+  font-size: 50px;
   line-height: 152%;
   font-weight: ${fontWeights.bold};
 
@@ -64,9 +64,14 @@ export const header4 = css`
 
 export const capsTitle = css`
   font-weight: ${fontWeights.medium};
-  font-size: 17px;
+  font-size: 14px;
+  letter-spacing: 0.14rem;
   text-transform: uppercase;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    font-size: 17px;
   letter-spacing: 0.18rem;
+  }
 `
 
 export const GlobalType = createGlobalStyle`

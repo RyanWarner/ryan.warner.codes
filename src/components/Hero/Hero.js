@@ -5,6 +5,7 @@ import { social } from 'data'
 
 export default () =>
   <S.Hero>
+    <S.StyledHeartEmitter />
     <S.Copy>
       <S.H1>I'm Ryan, software engineer and interface designer.</S.H1>
       <S.SubHeader>
@@ -14,5 +15,4 @@ export default () =>
         and take shots on <S.Dribbble to={social.dribbble} el='a'>Dribbble</S.Dribbble>.
       </S.SubHeader>
     </S.Copy>
-    <S.StyledHeartEmitter />
   </S.Hero>

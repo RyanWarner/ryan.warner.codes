@@ -9,6 +9,11 @@ export const Hero = styled.div`
   position: relative;
   align-items: center;
   padding: 100px 0 110px 0;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    flex-direction: column;
+    padding-top: 0;
+  }
 `
 
 const maxWidth = '756px'
@@ -21,7 +26,6 @@ export const H1 = styled.h1`
   margin: 0 0 32px 0;
   letter-spacing: 1px;
   color: ${Colors.glow20};
-  font-size: 50px;
 
   &::selection {
     -webkit-background-clip: initial;
@@ -103,4 +107,9 @@ export const Copy = styled.div``
 export const StyledHeartEmitter = styled(HeartEmitter)`
   position: absolute;
   right: -122px;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    position: relative;
+    right: 0;
+  }
 `

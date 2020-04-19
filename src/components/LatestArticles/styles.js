@@ -8,7 +8,6 @@ export const LatestArticles = styled.div`
   max-width: 737px;
   width: 100%;
   margin-right: 60px;
-  flex-shrink: 0;
   z-index: ${ZIndex.z2};
 `
 

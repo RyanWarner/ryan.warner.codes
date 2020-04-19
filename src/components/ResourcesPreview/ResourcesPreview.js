@@ -8,7 +8,5 @@ export default props =>
     <SectionHeader>
       <CapsTitle>Resources</CapsTitle>
     </SectionHeader>
-    <S.Content>
-      <ResourceCard />
-    </S.Content>
+    <ResourceCard />
   </S.ResourcesComponent>
