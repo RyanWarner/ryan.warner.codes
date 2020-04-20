@@ -15,3 +15,7 @@ export const Stream = styled.div`
 export const StreamTitle = styled.div`
   padding: 16px;
 `
+
+export const Img = styled.img`
+  max-width: 100%;
+`

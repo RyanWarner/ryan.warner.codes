@@ -19,7 +19,7 @@ export const pageQuery = graphql`
             title
             date
             tags
-            # url
+            url
           }
           fields {
             slug

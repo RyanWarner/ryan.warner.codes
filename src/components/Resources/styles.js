@@ -16,9 +16,9 @@ export const TutorialsComponent = styled.div`
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+    grid-row-gap: 4%;
   }
 
   li {
@@ -31,7 +31,13 @@ export const Tutorials = styled.div`
 `
 
 export const Filters = styled.div`
-  width: 320px;
-  flex-shrink: 100%;
-  margin-right: 40px;
+  width: 100%;
+  flex-shrink: 0;
+  margin-right: 0;
+  margin-bottom: 40px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 320px;
+    margin-right: 40px;
+  }
 `

@@ -7,11 +7,13 @@ import { Colors, Inputs } from 'styles'
 export const FilterComponent = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
 `
 
 export const TextField = styled.input`
   ${Inputs.filter};
   height: 37px;
+  width: inherit;
 `
 
 export const SearchIcon = styled.div`
@@ -22,6 +24,7 @@ export const SearchIcon = styled.div`
   justify-content: center;
   margin-right: -45px;
   z-index: 1;
+  flex-shrink: 0;
 `
 
 export const StyledSearch = styled(Search)`

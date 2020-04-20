@@ -18,7 +18,7 @@ export const Articles = styled.div`
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 32px;
 `
 
@@ -32,6 +32,9 @@ export const All = styled(Link)`
   color: ${Colors.text10};
   display: flex;
   align-items: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.2ch;
 
   &:hover {
     ${Chevrons} {

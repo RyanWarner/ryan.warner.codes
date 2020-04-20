@@ -17,8 +17,8 @@ export default () =>
       <S.ContentWrap>
         <LatestArticles />
         <S.RightCol>
-          <Live />
           <ResourcesPreview />
+          <Live />
         </S.RightCol>
       </S.ContentWrap>
     </Width>
