@@ -13,7 +13,7 @@ module.exports = {
     author: '@ryanwarnercodes',
     twitterUsername: '@ryanwarnercodes',
     siteUrl: 'https://ryan.warner.codes',
-    image: '/images/ogImage.png',
+    image: '/images/ogImage2.png',
     twitterImage: '/images/twitterImage.png',
     logo: '/images/logo.jpg'
   },
