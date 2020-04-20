@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
 import * as S from './styles'
-import { ArticleSnippet } from '../'
+import { ArticleSnippet, CapsTitle } from '../'
 import { Colors } from 'styles'
 
 export default () => (
@@ -13,19 +13,21 @@ export default () => (
 )
 
 const LatestArticles = ({ data }) => {
-  const { edges: posts } = data.allMdx
+  const { edges: articles } = data.allMdx
   return (
     <S.LatestArticles>
       <S.Header>
-        <S.Title>Latest Articles</S.Title>
-        <S.AllArticles to='/articles'>
-          All articles
+        <CapsTitle>Latest Tutorials</CapsTitle>
+        <S.All to='/articles'>
+          View all
           <S.Chevrons color={Colors.blue50} />
-        </S.AllArticles>
+        </S.All>
       </S.Header>
-      {posts.map(item =>
-        <ArticleSnippet article={item.node} key={item.node.id} />
-      )}
+      <S.Articles>
+        {articles.map(item =>
+          <ArticleSnippet article={item.node} key={item.node.id} />
+        )}
+      </S.Articles>
     </S.LatestArticles>
   )
 }
@@ -33,7 +35,8 @@ const LatestArticles = ({ data }) => {
 export const latestArticlesQuery = graphql`
   query latestArticles {
     allMdx(
-      limit: 3
+      filter: {fileAbsolutePath: {glob: "**/articles/**"}}
+      limit: 5
       sort: {
         fields: [frontmatter___date]
         order: DESC

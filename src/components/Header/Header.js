@@ -1,18 +1,19 @@
 import React from 'react'
 
 import * as S from './styles'
-import { Nav, Width } from '../'
-import { Heart } from 'components/Icons'
+import { Nav, SecondaryNav, Width } from '../'
 
-export default () =>
-  <Width>
-    <S.Header>
-      <S.Wordmark>
-        <Heart />
-        <S.Name to='/'>
-          Ryan Warner
-        </S.Name>
-      </S.Wordmark>
-      <Nav />
-    </S.Header>
-  </Width>
+export default ({ location }) =>
+  <S.Background>
+    <Width>
+      <S.Header>
+        <S.MainNav>
+          <S.Wordmark to='/'>
+            <S.StyledHeart />
+          </S.Wordmark>
+          <Nav location={location} />
+        </S.MainNav>
+        <SecondaryNav location={location} />
+      </S.Header>
+    </Width>
+  </S.Background>

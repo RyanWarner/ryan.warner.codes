@@ -4,6 +4,10 @@ import { Breakpoints } from 'styles'
 
 export const Projects = styled.div`
   margin-bottom: 134px;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    margin-bottom: 65px;
+  }
 `
 
 export const Title = styled.h3`

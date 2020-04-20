@@ -1,23 +1,26 @@
 import { Colors } from 'styles'
 
 export default {
-  yawnch: {
-    title: 'Yawnch',
-    description: 'An online coworking community for indie hackers, entreprenuers, and founders. Chat live with app developers, designers, and mentors. Access video courses and tutorials.',
-    url: 'https://yawnch.com',
-    color: Colors.yawnch,
-    span: 2
-  },
-  sstv: {
-    title: 'Stockstream.tv',
-    description: 'On a mission to democratize investing knowledge. My partner and I bootstrapped this company with zero funding.',
-    url: 'https://stockstream.tv',
-    color: Colors.stockstreamtv
-  },
   at: {
     title: 'All Turtles',
-    description: 'I lead web development full time at All Turtles, an AI startup studio.',
+    description:
+      'I lead web development full time at All Turtles, an AI startup studio. I work across many projects, building React applications from scratch on top of varying types of servers and databases.',
     url: 'https://all-turtles.com',
-    color: Colors.allTurtles
+    color: Colors.allTurtles,
+    span: 2
+  },
+  twitch: {
+    title: 'Live Coding',
+    description:
+      'I stream web development and design live on Twitch. Follow me to get notified when I go live!',
+    url: 'https://twitch.tv/RyanWarnerCodes',
+    color: Colors.glow20
+  },
+  partyCorgi: {
+    title: 'Party Corgi Website',
+    description:
+      'I maintain the website for the Party Corgi Network, an inclusive community of content creators helping each other grow.',
+    url: 'https://partycorgi.com',
+    color: Colors.partyCorgi
   }
 }

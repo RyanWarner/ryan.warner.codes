@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { Colors } from 'styles'
+import { Breakpoints, Colors } from 'styles'
 import { GitHub, Twitter, Dribbble } from 'components/Icons'
 import { Link } from 'components'
 
@@ -44,4 +44,10 @@ export const StyledDribbble = styled(Dribbble)`
 export const StyledLink = styled(Link)`
   margin-left: 19px;
   line-height: 0;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    &:first-of-type {
+      margin: 0;
+    }
+  }
 `

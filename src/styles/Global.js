@@ -3,7 +3,13 @@ import { createGlobalStyle } from 'styled-components'
 import { Colors } from './'
 
 export const GlobalStyle = createGlobalStyle`
-  html, body {
+  html {
+    margin: 0;
+    padding: 0;
+    background-color: ${Colors.blue10};
+  }
+
+  body {
     min-height: 100vh;
     margin: 0;
     padding: 0;

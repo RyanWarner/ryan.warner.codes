@@ -2,11 +2,11 @@ import React from 'react'
 
 import * as S from './styles'
 import {
-  Cta,
+  Live,
   Footer,
   Hero,
   LatestArticles,
-  Projects,
+  ResourcesPreview,
   Width
 } from '../../components'
 
@@ -14,11 +14,13 @@ export default () =>
   <S.Home>
     <Width>
       <Hero />
-      <LatestArticles />
-      <Projects />
+      <S.ContentWrap>
+        <LatestArticles />
+        <S.RightCol>
+          <ResourcesPreview />
+          <Live />
+        </S.RightCol>
+      </S.ContentWrap>
     </Width>
-    <Cta />
-    <Width>
-      <Footer />
-    </Width>
+    <Footer disableBackground />
   </S.Home>

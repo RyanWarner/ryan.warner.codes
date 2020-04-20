@@ -16,6 +16,6 @@ export const primary = css`
   transition: all 300ms ease;
 
   &:hover {
-    background-color: ${Colors.blue60};
+    background-color: ${Colors.blue30};
   }
 `

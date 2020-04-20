@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+  "settings": {
+    "workbench.colorCustomizations": {
+      "sideBar.background": "#111A20",
+      "editorRuler.foreground": "#111A20",
+      "titleBar.border": "#3A3647",
+      "titleBar.activeForeground": "#82F9A1",
+      "statusBar.background": "#243B4A",
+      "statusBar.foreground": "#82F9A1",
+      "activityBar.foreground": "#82F9A1",
+    },
+    "editor.tabCompletion": "on",
+  }
+}

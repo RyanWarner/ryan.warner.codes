@@ -1,48 +1,63 @@
 const paths = require('./src/config/paths')
 require('dotenv').config({
-  path: `${paths.dotenv}.${process.env.DEPLOY_ENV || 'staging'}`
+  path: `${paths.dotenv}.${process.env.DEPLOY_ENV || 'local'}`
 })
 
 const amplitudeApiKey = process.env.AMPLITUDE_API_KEY
-console.log('process.env.DEPLOY_ENV', process.env.DEPLOY_ENV)
-console.log('amplitudeApiKey', amplitudeApiKey)
-console.log('paths.dotenv', paths.dotenv)
 
 module.exports = {
   siteMetadata: {
     title: 'Ryan Warner',
     description:
-      'I specialize in rapidly prototyping software companies and web applications.',
-    author: '@ryanwarnercodes'
+      'Lead engineer and designer building software companies and web applications.',
+    author: '@ryanwarnercodes',
+    twitterUsername: '@ryanwarnercodes',
+    siteUrl: 'https://ryan.warner.codes',
+    image: '/images/ogImage.png',
+    twitterImage: '/images/twitterImage.png',
+    logo: '/images/logo.jpg'
   },
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-layout',
     'gatsby-plugin-mdx',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        name: 'images',
+        path: `${__dirname}/src/images`
+      }
     }, {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `pages`,
+        name: 'pages',
         path: `${__dirname}/src/pages`
       }
     }, {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/content/posts`
+        name: 'articles',
+        path: `${__dirname}/src/content/articles`
+      }
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'articles',
+        path: `${__dirname}/src/content/notes`
+      }
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'resources',
+        path: `${__dirname}/src/content/resources`
       }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-default-mdx-basic',
         short_name: 'starter',
@@ -50,21 +65,18 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png' // This path is relative to the root of the site.
       }
     }, {
-      resolve: `gatsby-plugin-amplitude-analytics`,
+      resolve: 'gatsby-plugin-amplitude-analytics',
       options: {
         // Specify the API key for your Amplitude Project (required)
-        apiKey: '4c24c0a86063468a5c71c19abfca0c39',
+        apiKey: amplitudeApiKey,
         // Puts tracking script in the head instead of the body (optional)
         head: false,
-        // Prevents loading Amplitude and logging events if visitors have "Do Not Track" enabled (optional)
-        // respectDNT: true,
-        // Override the default event types (optional)
         eventTypes: {
           outboundLinkClick: 'outbound.link.click',
-          pageView: 'page.view',
+          pageView: 'page.view'
         },
         // Amplitude JS SDK configuration options (optional)
         amplitudeConfig: {
@@ -72,8 +84,8 @@ module.exports = {
           includeUtm: true,
           includeReferrer: true
         }
-      },
-    },
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
