@@ -14,8 +14,8 @@ export const Title = styled.h1`
   line-height: 34px;
 
   @media(min-width: ${Breakpoints.mobile}) {
-    font-size: 40px;
-    line-height: 54px;
+    font-size: 36px;
+    line-height: 50px;
   }
 `
 

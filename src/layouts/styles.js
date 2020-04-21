@@ -19,6 +19,8 @@ export const Wrap = styled.div`
 
 export const A = styled.a`
   text-decoration: underline;
+  color: ${Colors.text20};
+  text-decoration-color: ${Colors.blue60};
 `
 
 export const Li = styled.li`
@@ -27,7 +29,7 @@ export const Li = styled.li`
   color: ${Colors.text20};
 
   @media (min-width: ${Breakpoints.mobile}) {
-    font-size: 19px;
+    font-size: 18px;
   }
 `
 
@@ -37,7 +39,14 @@ export const P = styled.p`
   color: ${Colors.text20};
 
   @media (min-width: ${Breakpoints.mobile}) {
-    font-size: 19px;
+    font-size: 18px;
+  }
+
+  code {
+    font-size: 15px;
+    background-color: ${Colors.blue00};
+    padding: 3px 6px;
+    border-radius: 2px;
   }
 `
 
@@ -47,15 +56,19 @@ export const Img = styled.img`
   display: block;
 `
 
+export const Pre = styled.pre`
+  margin: 3rem 0;
+`
+
 export const H1 = styled.h1`
   color: ${Colors.text20};
 `
 
 export const H2 = styled.h2`
-  margin-top: 3rem;
+  margin: 3rem 0 1rem 0;
 
   @media (min-width: ${Breakpoints.mobile}) {
-    margin-top: 6rem;
+    margin: 6rem 0 2rem 0;
   }
 `
 

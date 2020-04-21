@@ -1,0 +1,72 @@
+---
+title: Getting started with Gatsby, MDX, and Theme UI
+description: Create a new Gatsby site from scratch, then add MDX support and style with Theme UI.
+date: 1549152000
+icon: default
+type: article
+ogImage: ''
+tags:
+  - gatsby
+  - react
+  - theme-ui
+  - mdx
+---
+
+## Initializing a new, default Gatsby site
+
+- Create a new GitHub repository
+
+- Follow the steps from the official [Gatsby Quick Start](https://www.gatsbyjs.org/docs/quick-start).
+  ```bash
+    npm install -g gatsby-cli
+    gatsby new gatsby-site
+    npm install -g gatsby-cli
+    npm start
+  ```
+
+  This will create and run a new Gatsby site using the [default Gatsby starter](https://github.com/gatsbyjs/gatsby-starter-default). You should see the site running at [`localhost:8000`](http://localhost:8000).
+
+  Let's get familiar with the project structure by making a small change. Open the project in your code editor, and navigate to `src/pages/index.js`. Change the `<h1>` text to something else, like "Hello world". Save, and observe your changes in the browser.
+
+  [582737a](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/582737aa360a6a6aebb8b77c0b8676d5333b6520)
+
+## Adding MDX support
+
+"MDX is an authorable format that lets you seamlessly write JSX in your Markdown documents." — [mdxjs.com](https://mdxjs.com/)
+
+To add MDX support, follow the steps detailed in [gatsby-plugin-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#installation).
+
+```bash
+  npm install --save gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+```
+
+Add ``gatsby-plugin-mdx`` to the plugins array found in `gatsby-config.js`.
+
+```js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    `gatsby-plugin-mdx`,
+  ],
+}
+```
+
+[db1ebc8](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/db1ebc87c74c90d45c36c66badfbccbe48860790)
+
+You can now create MDX pages.
+
+- To test this out, change the file extension of `src/pages/page-2.js` to `page-2.mdx`.
+- Replace the content with markdown.
+  ```mdx
+    # Page 2
+  ```
+- Restart your server (`CTRL+C`, `npm start`) and navigate to [http://localhost:8000/page-2](http://localhost:8000/page-2) to observe the MDX page working.
+- [039bb6d](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/039bb6da6b4fec403b07cee33a456ed61d66b656)
+
+## Create pages from content

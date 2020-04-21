@@ -19,7 +19,8 @@ const components = {
   code: CodeBlock,
   a: props => <S.A {...props} />,
   li: props => <S.Li {...props} />,
-  hr: S.Hr
+  hr: S.Hr,
+  pre: S.Pre
 }
 
 const Blank = props => (

@@ -101,7 +101,5 @@ exports.createPages = async args => {
     return createPagesForMdxForDirectory({ directory, ...args })
   })
 
-  console.log({ promises })
-
   await Promise.all(promises)
 }
