@@ -20,11 +20,13 @@ const highlightSyntax = str => {
 
 export default (props) =>
   <S.DiffViewerComponent>
-    <ReactDiffViewer
-      splitView
-      useDarkTheme
-      renderContent={highlightSyntax}
-      styles={diffViewerTheme}
-      {...props}
-    />
+    <S.DiffViewerWrap>
+      <ReactDiffViewer
+        splitView
+        useDarkTheme
+        renderContent={highlightSyntax}
+        styles={diffViewerTheme}
+        {...props}
+      />
+    </S.DiffViewerWrap>
   </S.DiffViewerComponent>

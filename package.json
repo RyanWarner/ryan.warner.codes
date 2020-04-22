@@ -25,6 +25,7 @@
     "gatsby-plugin-sharp": "2.5.6",
     "gatsby-plugin-sitemap": "2.3.5",
     "gatsby-plugin-styled-components": "3.2.3",
+    "gatsby-remark-images": "^3.2.5",
     "gatsby-source-filesystem": "2.2.4",
     "gatsby-transformer-sharp": "2.4.6",
     "pixi-particles": "^4.2.0",

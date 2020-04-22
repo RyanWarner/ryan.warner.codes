@@ -20,7 +20,20 @@ module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-layout',
-    'gatsby-plugin-mdx',
+    'gatsby-remark-images',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1080
+            }
+          }
+        ]
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     {

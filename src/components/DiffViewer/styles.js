@@ -1,14 +1,22 @@
 
 import styled from 'styled-components'
 
+import { Sizes } from 'styles'
+
 export const DiffViewerComponent = styled.div`
-  width: 60vw;
-  margin-left: calc(-30vw + 350px);
+  width: ${Sizes.maxWidth};
+  max-width: 100vw;
+  padding: 0 ${Sizes.xPadding};
+  box-sizing: border-box;
+  margin-left: calc(-640px + 350px);
+  margin-bottom: 5rem;
+`
+
+export const DiffViewerWrap = styled.div`
+  font-size: 15px;
+  box-shadow: 0 5px 23px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 5px 23px rgba(0, 0, 0, 0.5);
-  margin-bottom: 5rem;
-  font-size: 15px;
 
   table pre {
     line-height: 22px;

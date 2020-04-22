@@ -9,7 +9,7 @@ export default {
       addedGutterBackground: '#1E3F50',
       diffViewerTitleBackground: Colors.blue20,
       diffViewerTitleColor: Colors.blue50,
-      diffViewerTitleBorderColor: Colors.blue30
+      diffViewerTitleBorderColor: Colors.blue20
     }
   }
 }

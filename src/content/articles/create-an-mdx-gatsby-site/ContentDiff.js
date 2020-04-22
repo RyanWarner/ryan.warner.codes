@@ -4,7 +4,6 @@ import { DiffViewer } from 'components'
 
 const oldCode = `
 import React from 'react'
-import { graphql } from 'gatsby'
 
 export default ({ data }) => {
   const { edges } = data.allMdx
@@ -30,7 +29,7 @@ export default ({ data }) => {
   const { edges } = data.allMdx
 
   return (
-    <div>
+    <>
       <h1>Content</h1>
       <ul>
         {edges.map(item => (
@@ -41,7 +40,7 @@ export default ({ data }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   )
 }
 `
@@ -51,4 +50,5 @@ export default () =>
     oldValue={oldCode}
     newValue={newValue}
     leftTitle='src/components/content.js'
+    showDiffOnly={false}
   />

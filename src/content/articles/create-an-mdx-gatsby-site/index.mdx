@@ -12,35 +12,35 @@ tags:
   - mdx
 ---
 
-import Diff from './Diff'
+import ContentDiff from './ContentDiff'
 
-<Diff />
-
-Gatsby is a static site generator built on React that provides a delightful developer experience. Using Gatsby with MDX allows us to create rich content 
+Gatsby is a static site generator built on React that provides a delightful developer experience. Using Gatsby with MDX allows us to create rich content using familiar, readable syntax stored right in our source code.
 
 ## Initializing a new, default Gatsby site
 
-- Create a new GitHub repository
+(Optional) Start by creating a new GitHub repository and cloning it locally.
 
-- Follow the steps from the official [Gatsby Quick Start](https://www.gatsbyjs.org/docs/quick-start).
-  ```bash
-    npm install -g gatsby-cli
-    gatsby new gatsby-site
-    npm install -g gatsby-cli
-    npm start
-  ```
+Next, install Gatsby CLI and use it to initialize a new Gatsby site with the [default starter](https://github.com/gatsbyjs/gatsby-starter-default). These steps are adapted from the official [Gatsby Quick Start](https://www.gatsbyjs.org/docs/quick-start).
 
-  This will create and run a new Gatsby site using the [default Gatsby starter](https://github.com/gatsbyjs/gatsby-starter-default). You should see the site running at [`localhost:8000`](http://localhost:8000).
+```bash
+npm install -g gatsby-cli
+gatsby new gatsby-site
+npm start
+```
 
-  Let's get familiar with the project structure by making a small change. Open the project in your code editor, and navigate to `src/pages/index.js`. Change the `<h1>` text to something else, like "Hello world". Save, and observe your changes in the browser.
+You should see the site running at [`localhost:8000`](http://localhost:8000).
 
-  [582737a](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/582737aa360a6a6aebb8b77c0b8676d5333b6520)
+![Gatsby Default Starter](./gatsby-default-starter.png)
+
+Let's get familiar with the project structure by making a small change. Open the project in your code editor, and navigate to `src/pages/index.js`. Change the `<h1>` text to something else, like "Hello world". Save, and observe your changes in the browser.
+
+[582737a](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/582737aa360a6a6aebb8b77c0b8676d5333b6520)
 
 ## Adding MDX support
 
 "MDX is an authorable format that lets you seamlessly write JSX in your Markdown documents." — [mdxjs.com](https://mdxjs.com/)
 
-To add MDX support, follow the steps detailed in [gatsby-plugin-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#installation).
+To add MDX support, we will follow the steps detailed in [gatsby-plugin-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#installation). I've pulled them out below for convenience.
 
 ```bash
 npm install --save gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react

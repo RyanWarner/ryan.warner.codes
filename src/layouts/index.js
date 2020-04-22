@@ -12,7 +12,7 @@ import { ArticleWidth } from '../components'
 
 const components = {
   p: S.P,
-  img: S.Img,
+  // img: S.Img,
   h1: S.H1,
   h2: S.H2,
   h3: S.H3,
