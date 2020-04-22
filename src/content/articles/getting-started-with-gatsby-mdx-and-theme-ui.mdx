@@ -1,5 +1,5 @@
 ---
-title: Getting started with Gatsby, MDX, and Theme UI
+title: Create an MDX powered Gatsby site from scratch
 description: Create a new Gatsby site from scratch, then add MDX support and style with Theme UI.
 date: 1549152000
 icon: default
@@ -12,6 +12,10 @@ tags:
   - mdx
 ---
 
+import Diff from './Diff'
+
+Gatsby is a static site generator built on React that provides a delightful developer experience. Using Gatsby with MDX allows us to create rich content 
+
 ## Initializing a new, default Gatsby site
 
 - Create a new GitHub repository
@@ -19,6 +23,7 @@ tags:
 - Follow the steps from the official [Gatsby Quick Start](https://www.gatsbyjs.org/docs/quick-start).
   ```bash
     npm install -g gatsby-cli
+// highlight-next-line
     gatsby new gatsby-site
     npm install -g gatsby-cli
     npm start
@@ -37,7 +42,7 @@ tags:
 To add MDX support, follow the steps detailed in [gatsby-plugin-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#installation).
 
 ```bash
-  npm install --save gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+npm install --save gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
 ```
 
 Add ``gatsby-plugin-mdx`` to the plugins array found in `gatsby-config.js`.
@@ -59,14 +64,258 @@ module.exports = {
 
 [db1ebc8](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/db1ebc87c74c90d45c36c66badfbccbe48860790)
 
-You can now create MDX pages.
+You can now create MDX pages. To test this out, change the file extension of `src/pages/page-2.js` to `page-2.mdx`. Then, replace the content with markdown.
 
-- To test this out, change the file extension of `src/pages/page-2.js` to `page-2.mdx`.
-- Replace the content with markdown.
   ```mdx
-    # Page 2
+  # Page 2
   ```
-- Restart your server (`CTRL+C`, `npm start`) and navigate to [http://localhost:8000/page-2](http://localhost:8000/page-2) to observe the MDX page working.
-- [039bb6d](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/039bb6da6b4fec403b07cee33a456ed61d66b656)
+
+Restart your server (`CTRL+C`, `npm start`) and navigate to [http://localhost:8000/page-2](http://localhost:8000/page-2) to observe the MDX page working.
+
+[039bb6d](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/039bb6da6b4fec403b07cee33a456ed61d66b656)
 
 ## Create pages from content
+
+It's common to want to create pages or routes from files outside of the pages directory. In this example, we will create pages from a new directory, `content`.
+
+First, install [gatsby-plugin-page-creator](https://www.gatsbyjs.org/packages/gatsby-plugin-page-creator/). We'll use this to automatically create pages from React components in directories of our choosing.
+
+```
+npm install --save gatsby-plugin-page-creator
+```
+
+Next, configure the plugin to create pages from files within `src/content/`.
+
+```
+// gatsby-config.js
+
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/content`
+      }
+    }
+  ]
+}
+```
+
+Now create the `src/content/` directory and add an MDX file with some [frontmatter](https://www.gatsbyjs.org/docs/adding-markdown-pages/#frontmatter-for-metadata-in-markdown-files). Restart your server and navigate to `localhost:8000/content-page` to see it working.
+
+`src/content/content-page.mdx`
+```mdx
+---
+title: My new content page
+---
+
+# This is a header
+```
+
+[7a466a8](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/7a466a813bf089c61292e1c25d14745c0853ff54)
+
+## Display content in your components
+
+We're now creating pages from React components and MDX files within the content directory (and sub-directories) but we don't have a way to interact with those pages from our components. Adding this feature is useful for creating things like a blog index, or displaying the most recent posts.
+
+To accomplish this, we will use [gatsby-source-filesystem](https://www.gatsbyjs.org/pac[kages/gatsby-source-filesystem/) to provide our application with data about our files, and a [Gatsby Page Query](https://www.gatsbyjs.org/docs/page-query/) to provide data to our component.
+
+First, let's tell our Gatsby app about the content folder by add this object to our plugins array:
+
+```js
+// gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `images`,
+      path: `${__dirname}/src/content`,
+    }
+  },
+]
+```
+
+Next, create a new page, `content.js`. We'll use this to display a list of all of our content pages.
+
+```jsx
+// src/pages/content.js
+
+import React from 'react'
+
+export default (props) => {
+  return (
+    <>
+      <h1>Content</h1>
+      <ul>
+        <li>Content placeholder</li>
+      </ul>
+    </>
+  )
+}
+```
+
+To supply this component with information about our MDX content, we need to create a page query. Gatsby automatically looks for a single exported `graphql` string and passes the result of the GraphQL query to your page component as a prop named `data`.
+
+<Diff />
+
+```jsx
+// src/pages/content.js
+
+import React from 'react'
+import { graphql } from 'gatsby'
+
+export default ({ data }) => {
+  console.log('data', data)
+
+  return (
+    <>
+      <h1>Content</h1>
+      <ul>
+        <li>Content placeholder</li>
+      </ul>
+    </>
+  )
+}
+
+export const pageQuery = graphql`
+  query ContentIndex {
+    allMdx(
+      filter: {fileAbsolutePath: {glob: "**/content/**"}}
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
+```
+
+Restart your development server, and observe the output of the console log. We can use this data to render a list of content pages. 
+
+```jsx
+// src/pages/content.js
+
+import React from 'react'
+import { graphql } from 'gatsby'
+
+export default ({ data }) => {
+  const { edges } = data.allMdx
+
+  return (
+    <>
+      <h1>Content</h1>
+      <ul>
+        {edges.map(item => (
+          <li>{item.node.frontmatter.title}</li>
+        ))}
+      </ul>
+    </>
+  )
+}
+
+export const pageQuery = graphql`
+  query ContentIndex {
+    allMdx(
+      filter: {fileAbsolutePath: {glob: "**/content/**"}}
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
+```
+
+## Add links to your content pages
+
+During the Gatsby build process, we need to add some extra data to each MDX node, specifically the slug used for the URL. This will eventually get passed to our component and get used to link to each page.
+
+We'll hook in to the [onCreateNode](https://www.gatsbyjs.org/docs/node-apis/#onCreateNode) API and add a field called `slug` to each MDX node.
+
+```js
+// gatsby-node.js
+
+const { createFilePath } = require('gatsby-source-filesystem')
+
+exports.onCreateNode = (args) => {
+  const { node, actions, getNode } = args
+  const { createNodeField } = actions
+
+  if (node.internal.type === 'Mdx') {
+    const value = createFilePath({ node, getNode })
+
+    createNodeField({
+      name: 'slug',
+      node,
+      value
+    })
+  }
+}
+```
+
+Now that each MDX node has its own slug, we'll need to update the GraphQL page query to query for the slug field.
+
+```js
+export const pageQuery = graphql`
+  query ContentIndex {
+    allMdx(
+      filter: {fileAbsolutePath: {glob: "**/content/**"}}
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
+```
+
+With this new data, update the content component to include a link to each page.
+
+<Diff />
+
+
+```jsx
+import React from 'react'
+import { Link } from 'gatsby'
+
+export default ({ data }) => {
+  const { edges } = data.allMdx
+
+  return (
+    <div>
+      <h1>Content</h1>
+      <ul>
+        {edges.map(item => (
+          <li>
+            <Link to={item.node.fields.slug}>
+              {item.node.frontmatter.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+```
+
+
+Restart your server, and try it out!

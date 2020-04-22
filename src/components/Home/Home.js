@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDiffViewer from 'react-diff-viewer'
 
 import * as S from './styles'
 import {

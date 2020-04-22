@@ -10,10 +10,10 @@ export const Wrap = styled.div`
   min-height: 100vh;
   z-index: 2;
   position: relative;
-  margin-top: ${Sizes.navHeightMobile};
+  padding-top: ${Sizes.navHeightMobile};
 
   @media(min-width: ${Breakpoints.mobile}) {
-    margin-top: ${Sizes.navHeight};
+    padding-top: ${Sizes.navHeight};
   }
 `
 
