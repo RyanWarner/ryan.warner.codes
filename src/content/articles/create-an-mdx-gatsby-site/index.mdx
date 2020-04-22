@@ -14,6 +14,8 @@ tags:
 
 import Diff from './Diff'
 
+<Diff />
+
 Gatsby is a static site generator built on React that provides a delightful developer experience. Using Gatsby with MDX allows us to create rich content 
 
 ## Initializing a new, default Gatsby site
@@ -23,7 +25,6 @@ Gatsby is a static site generator built on React that provides a delightful deve
 - Follow the steps from the official [Gatsby Quick Start](https://www.gatsbyjs.org/docs/quick-start).
   ```bash
     npm install -g gatsby-cli
-// highlight-next-line
     gatsby new gatsby-site
     npm install -g gatsby-cli
     npm start
@@ -156,8 +157,6 @@ export default (props) => {
 
 To supply this component with information about our MDX content, we need to create a page query. Gatsby automatically looks for a single exported `graphql` string and passes the result of the GraphQL query to your page component as a prop named `data`.
 
-<Diff />
-
 ```jsx
 // src/pages/content.js
 
@@ -288,8 +287,6 @@ export const pageQuery = graphql`
 ```
 
 With this new data, update the content component to include a link to each page.
-
-<Diff />
 
 
 ```jsx
