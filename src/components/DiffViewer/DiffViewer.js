@@ -6,25 +6,27 @@ import * as S from './styles'
 import './theme.css'
 import diffViewerTheme from './diffViewerTheme'
 
-const highlightSyntax = str => {
+const highlightSyntax = (str, language) => {
   const string = str || ''
+  const lang = language || 'javascript'
+
   return (
     <pre
       style={{ display: 'inline' }}
       dangerouslySetInnerHTML={{
-        __html: Prism.highlight(string, Prism.languages.javascript)
+        __html: Prism.highlight(string, Prism.languages[lang])
       }}
     />
   )
 }
 
 export default (props) =>
-  <S.DiffViewerComponent>
+  <S.DiffViewerComponent splitView={props.splitView}>
     <S.DiffViewerWrap>
       <ReactDiffViewer
         splitView
         useDarkTheme
-        renderContent={highlightSyntax}
+        renderContent={str => highlightSyntax(str, props.language)}
         styles={diffViewerTheme}
         {...props}
       />

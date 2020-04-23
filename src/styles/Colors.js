@@ -10,6 +10,7 @@ export const text20 = '#C9E2F0'
 export const red = '#E73E3E'
 
 export const blue00 = '#0B1115'
+export const blue05 = '#0E1417'
 export const blue10 = '#111A20'
 export const blue15 = '#18242C'
 export const blue20 = '#1C2C35'
@@ -28,7 +29,6 @@ export const rainbowIndigo = '#82B9F9'
 export const rainbowViolet = '#8482F9'
 
 export const yawnch = '#CCA9F4'
-export const stockstreamtv = '#5CD47D'
 export const partyCorgi = '#02A1E8'
 export const allTurtles = '#D9534D'
 

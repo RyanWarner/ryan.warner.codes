@@ -12,7 +12,9 @@ tags:
   - mdx
 ---
 
+import { DiffViewer } from 'components'
 import ContentDiff from './ContentDiff'
+import MdxPluginDiff from './MdxPluginDiff'
 
 Gatsby is a static site generator built on React that provides a delightful developer experience. Using Gatsby with MDX allows us to create rich content using familiar, readable syntax stored right in our source code.
 
@@ -48,30 +50,23 @@ npm install --save gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
 
 Add ``gatsby-plugin-mdx`` to the plugins array found in `gatsby-config.js`.
 
-```js
-module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
-    },
-    `gatsby-plugin-mdx`,
-  ],
-}
-```
+<MdxPluginDiff />
 
 [db1ebc8](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/db1ebc87c74c90d45c36c66badfbccbe48860790)
 
 You can now create MDX pages. To test this out, change the file extension of `src/pages/page-2.js` to `page-2.mdx`. Then, replace the content with markdown.
 
-  ```mdx
-  # Page 2
-  ```
+<DiffViewer
+  language='markdown'
+  splitView={false}
+  leftTitle='src/pages/page-2.mdx'
+  hideLineNumbers
+  newValue={`
+# Page 2
+  `}
+/>
 
-Restart your server (`CTRL+C`, `npm start`) and navigate to [http://localhost:8000/page-2](http://localhost:8000/page-2) to observe the MDX page working.
+Restart your server (`CTRL+C` then `npm start`) and navigate to [http://localhost:8000/page-2](http://localhost:8000/page-2) to observe the MDX page working.
 
 [039bb6d](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/039bb6da6b4fec403b07cee33a456ed61d66b656)
 
@@ -87,20 +82,29 @@ npm install --save gatsby-plugin-page-creator
 
 Next, configure the plugin to create pages from files within `src/content/`.
 
-```
-// gatsby-config.js
-
+<DiffViewer
+  splitView={false}
+  leftTitle='gatsby-config.js'
+  hideLineNumbers
+  oldValue={`
+module.exports = {
+  plugins: [
+  ]
+}
+  `}
+  newValue={`
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-plugin-page-creator`,
+      resolve: \`gatsby-plugin-page-creator\`,
       options: {
-        path: `${__dirname}/src/content`
+        path: \`\${__dirname}/src/content\`
       }
     }
   ]
 }
-```
+  `}
+/>
 
 Now create the `src/content/` directory and add an MDX file with some [frontmatter](https://www.gatsbyjs.org/docs/adding-markdown-pages/#frontmatter-for-metadata-in-markdown-files). Restart your server and navigate to `localhost:8000/content-page` to see it working.
 

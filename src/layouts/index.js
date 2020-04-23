@@ -8,7 +8,6 @@ import * as S from './styles'
 import { GlobalType } from 'styles/Type'
 import { GlobalStyle } from 'styles/Global'
 import { StateProvider } from '../components/store.js'
-import { ArticleWidth } from '../components'
 
 const components = {
   p: S.P,

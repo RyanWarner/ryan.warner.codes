@@ -1,7 +1,7 @@
 
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-import { Sizes } from 'styles'
+import { Sizes, Shadows } from 'styles'
 
 export const DiffViewerComponent = styled.div`
   width: ${Sizes.maxWidth};
@@ -10,11 +10,17 @@ export const DiffViewerComponent = styled.div`
   box-sizing: border-box;
   margin-left: calc(-640px + 350px);
   margin-bottom: 5rem;
+
+  ${props => !props.splitView && css`
+    width: auto;
+    margin-left: 0;
+    padding: 0;
+  `}
 `
 
 export const DiffViewerWrap = styled.div`
   font-size: 15px;
-  box-shadow: 0 5px 23px rgba(0, 0, 0, 0.5);
+  box-shadow: ${Shadows.code};
   border-radius: 6px;
   overflow: hidden;
 
