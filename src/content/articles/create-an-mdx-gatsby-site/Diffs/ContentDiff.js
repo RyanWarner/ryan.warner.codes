@@ -25,6 +25,7 @@ const newValue = `
 import React from 'react'
 import { Link } from 'gatsby'
 
+
 export default ({ data }) => {
   const { edges } = data.allMdx
 

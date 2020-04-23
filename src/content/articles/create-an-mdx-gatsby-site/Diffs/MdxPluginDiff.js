@@ -37,5 +37,4 @@ export default () =>
     showDiffOnly={false}
     splitView={false}
     hideLineNumbers
-    extraLinesSurroundingDiff={5}
   />

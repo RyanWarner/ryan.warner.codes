@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDiffViewer from 'react-diff-viewer'
+import ReactDiffViewer, { DiffMethod } from 'react-diff-viewer'
 import Prism from 'prism-react-renderer/prism'
 
 import * as S from './styles'
@@ -21,9 +21,10 @@ const highlightSyntax = (str, language) => {
 }
 
 export default (props) =>
-  <S.DiffViewerComponent splitView={props.splitView}>
+  <S.DiffViewerComponent splitView={props.splitView === undefined}>
     <S.DiffViewerWrap>
       <ReactDiffViewer
+        compareMethod={DiffMethod.LINES}
         splitView
         useDarkTheme
         renderContent={str => highlightSyntax(str, props.language)}

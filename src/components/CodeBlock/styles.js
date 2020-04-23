@@ -13,6 +13,6 @@ export const Pre = styled.pre`
 export const Code = styled.code`
   display: inline-block;
   min-width: 100%;
-  font-size: 16px;
+  font-size: 15px;
   padding: 0;
 `

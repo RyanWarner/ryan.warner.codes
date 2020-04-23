@@ -9,7 +9,8 @@ export const DiffViewerComponent = styled.div`
   padding: 0 ${Sizes.xPadding};
   box-sizing: border-box;
   margin-left: calc(-640px + 350px);
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 
   ${props => !props.splitView && css`
     width: auto;
