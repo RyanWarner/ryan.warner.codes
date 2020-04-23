@@ -5,12 +5,6 @@ import { DiffViewer } from 'components'
 const oldValue = `
 module.exports = {
   plugins: [
-    {
-      resolve: \`gatsby-plugin-page-creator\`,
-      options: {
-        path: \`\${__dirname}/src/content\`
-      }
-    }
     \`gatsby-plugin-mdx\`,
     \`gatsby-plugin-react-helmet\`,
     {
@@ -33,13 +27,6 @@ module.exports = {
     }
     \`gatsby-plugin-mdx\`,
     \`gatsby-plugin-react-helmet\`,
-    {
-      resolve: \`gatsby-source-filesystem\`,
-      options: {
-        name: \`content\`,
-        path: \`\${__dirname}/src/content\`,
-      }
-    },
     {
       resolve: \`gatsby-source-filesystem\`,
       options: {

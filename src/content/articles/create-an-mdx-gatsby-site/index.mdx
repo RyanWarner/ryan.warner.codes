@@ -20,12 +20,14 @@ import AddGraphql from './Diffs/AddGraphql'
 import GraphqlSlug from './Diffs/GraphqlSlug'
 import ContentSource from './Diffs/ContentSource'
 import OnCreateNode from './Diffs/OnCreateNode'
+import CreateContentPage from './Diffs/CreateContentPage'
+import GatsbyConfigPages from './Diffs/GatsbyConfigPages'
 
 Gatsby is a static site generator built on React that provides a delightful developer experience. Using Gatsby with MDX allows us to create rich content using familiar, readable syntax stored right in our source code.
 
 ## Initializing a new, default Gatsby site
 
-(Optional) Start by creating a new GitHub repository and cloning it locally.
+Start by creating a new GitHub repository and cloning it locally (Optional).
 
 Next, install Gatsby CLI and use it to initialize a new Gatsby site with the [default starter](https://github.com/gatsbyjs/gatsby-starter-default). These steps are adapted from the official [Gatsby Quick Start](https://www.gatsbyjs.org/docs/quick-start).
 
@@ -77,7 +79,7 @@ Restart your server (`CTRL+C` then `npm start`) and navigate to [http://localhos
 
 ## Create pages from content
 
-It's common to want to create pages or routes from files outside of the pages directory. In this example, we will create pages from a new directory, `content`.
+Next we'll add a feature to create pages or routes from files outside of the pages directory. In this example, we will create pages from a new directory, `content`. Every file inside the `content/` directory will be its own page.
 
 First, install [gatsby-plugin-page-creator](https://www.gatsbyjs.org/packages/gatsby-plugin-page-creator/). We'll use this to automatically create pages from React components in directories of our choosing.
 
@@ -85,67 +87,31 @@ First, install [gatsby-plugin-page-creator](https://www.gatsbyjs.org/packages/ga
 npm install --save gatsby-plugin-page-creator
 ```
 
-Next, configure the plugin to create pages from files within `src/content/`.
+Configure the plugin to create pages from files within `src/content/`.
 
-<DiffViewer
-  splitView={false}
-  leftTitle='gatsby-config.js'
-  hideLineNumbers
-  oldValue={`
-module.exports = {
-  plugins: [
-  ]
-}
-  `}
-  newValue={`
-module.exports = {
-  plugins: [
-    {
-      resolve: \`gatsby-plugin-page-creator\`,
-      options: {
-        path: \`\${__dirname}/src/content\`
-      }
-    }
-  ]
-}
-  `}
-/>
+<GatsbyConfigPages />
 
-Now create the `src/content/` directory and add an MDX file with some [frontmatter](https://www.gatsbyjs.org/docs/adding-markdown-pages/#frontmatter-for-metadata-in-markdown-files). Restart your server and navigate to `localhost:8000/content-page` to see it working.
+Now create the `src/content/` directory and add an MDX file with some [frontmatter](https://www.gatsbyjs.org/docs/adding-markdown-pages/#frontmatter-for-metadata-in-markdown-files).
 
 <NewMdxPage />
+
+Restart your server and navigate to [localhost:8000/content-page](http://localhost:8000/content-page) to see it working.
 
 [7a466a8](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/7a466a813bf089c61292e1c25d14745c0853ff54)
 
 ## Display content in your components
 
-We're now creating pages from React components and MDX files within the content directory (and sub-directories) 🎉! However, we don't have a way to interact with those pages from our components. Adding this feature is useful for creating things like a list of recent blog posts.
+We're now creating pages from React components and MDX files within the content directory (and sub-directories)! 🎉 However, we don't have a way to interact with those pages from our components. Adding this feature is useful for creating things like a list of recent blog posts.
 
-To accomplish this, we will use [gatsby-source-filesystem](https://www.gatsbyjs.org/pac[kages/gatsby-source-filesystem/) to provide our application with data about our files, and a [Gatsby Page Query](https://www.gatsbyjs.org/docs/page-query/) to provide data to our component.
+We'll use [gatsby-source-filesystem](https://www.gatsbyjs.org/pac[kages/gatsby-source-filesystem/) to provide our application with data about our files, and a [Gatsby Page Query](https://www.gatsbyjs.org/docs/page-query/) to provide data to our component.
 
 First, let's tell our Gatsby app about the content folder by adding this object to our plugins array:
 
 <ContentSource />
 
-
 Next, create a new page, `content.js`. We'll use this to display a list of all of our content pages.
 
-```jsx
-// src/pages/content.js
-
-import React from 'react'
-
-export default (props) => {
-  return (
-    <>
-      <h1>Content</h1>
-      <ul>
-        <li>Content placeholder</li>
-      </ul>
-    </>
-  )
-}
-```
+<CreateContentPage />
 
 To supply this component with information about our MDX content, we need to create a page query. Gatsby automatically looks for a single exported `graphql` string in page components and passes the result of the GraphQL query to your page component as a prop named `data`.
 
@@ -161,7 +127,7 @@ We'll hook in to the [onCreateNode](https://www.gatsbyjs.org/docs/node-apis/#onC
 
 <OnCreateNode />
 
-Now that each MDX node has its own slug, we'll need to update the GraphQL page query to query for the slug field.
+Now that each MDX node has its own slug, update the GraphQL page query with the slug field.
 
 <GraphqlSlug />
 
