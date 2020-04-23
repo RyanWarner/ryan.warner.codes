@@ -23,6 +23,8 @@ import { graphql } from 'gatsby'
 
 export default ({ data }) => {
   console.log('data', data)
+  const { edges } = data.allMdx
+
   return (
     <>
       <h1>Content</h1>
@@ -34,6 +36,7 @@ export default ({ data }) => {
     </>
   )
 }
+
 export const pageQuery = graphql\`
   query ContentIndex {
     allMdx(

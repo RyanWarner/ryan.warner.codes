@@ -87,13 +87,15 @@ Now create the `src/content/` directory and add an MDX file with some [frontmatt
 
 <NewMdxPage />
 
-Restart your server and navigate to [localhost:8000/post](http://localhost:8000/content-page) to see it working.
+Restart your server and navigate to [localhost:8000/post](http://localhost:8000/post) to see it working.
+
+This also works with nested directories. If you create the file `src/content/case-studies/projects.mdx`, Gatsby will create a page at [localhost:8000/case-studies/project](http://localhost:8000/case-studies/project)
 
 [7a466a8](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/7a466a813bf089c61292e1c25d14745c0853ff54)
 
 ## Display content in your components
 
-We're now creating pages from React components and MDX files within the content directory (and sub-directories)! 🎉
+We're now creating pages from MDX files within the content directory (and sub-directories)! 🎉
 
 However, we don't have a way to interact with those pages from our components. Adding this feature is useful for creating things like a list of recent blog posts.
 
@@ -111,7 +113,7 @@ To supply this component with information about our MDX content, we need to crea
 
 <AddGraphql />
 
-Restart your development server, and observe the output of the console log. We then use this data to render a list of content pages.
+Restart your development server, and observe the output of the console log. We use this data to render a list of content pages.
 
 ## Add links to your content pages
 
