@@ -4,6 +4,7 @@ import { DiffViewer } from 'components'
 
 const oldCode = `
 import React from 'react'
+import { graphql } from 'gatsby'
 
 export default ({ data }) => {
   const { edges } = data.allMdx
@@ -23,7 +24,7 @@ export default ({ data }) => {
 
 const newValue = `
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 export default ({ data }) => {
   const { edges } = data.allMdx
