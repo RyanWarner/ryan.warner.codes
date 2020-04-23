@@ -22,18 +22,18 @@ import ContentSource from './Diffs/ContentSource'
 import OnCreateNode from './Diffs/OnCreateNode'
 import CreateContentPage from './Diffs/CreateContentPage'
 import GatsbyConfigPages from './Diffs/GatsbyConfigPages'
+import MdxTestPage from './Diffs/MdxTestPage'
 
 Gatsby is a static site generator built on React that provides a delightful developer experience. Using Gatsby with MDX allows us to create rich content using familiar, readable syntax stored right in our source code.
 
 ## Initializing a new, default Gatsby site
 
-Start by creating a new GitHub repository and cloning it locally (Optional).
-
-Next, install Gatsby CLI and use it to initialize a new Gatsby site with the [default starter](https://github.com/gatsbyjs/gatsby-starter-default). These steps are adapted from the official [Gatsby Quick Start](https://www.gatsbyjs.org/docs/quick-start).
+Install the Gatsby CLI and use it to initialize a new Gatsby site with the [default starter](https://github.com/gatsbyjs/gatsby-starter-default). These steps are adapted from the official [Gatsby Quick Start](https://www.gatsbyjs.org/docs/quick-start).
 
 ```bash
 npm install -g gatsby-cli
 gatsby new gatsby-site
+cd gatsby-site
 npm start
 ```
 
@@ -61,19 +61,11 @@ Add ``gatsby-plugin-mdx`` to the plugins array found in `gatsby-config.js`.
 
 [db1ebc8](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/db1ebc87c74c90d45c36c66badfbccbe48860790)
 
-You can now create MDX pages. To test this out, change the file extension of `src/pages/page-2.js` to `page-2.mdx`. Then, replace the content with markdown.
+You can now create MDX pages. To test this out, create a new MDX file, `page-3.mdx` inside the pages directory with some markdown. With the power of MDX, you could also add your own React components right next to your markdown.
 
-<DiffViewer
-  language='markdown'
-  splitView={false}
-  leftTitle='src/pages/page-2.mdx'
-  hideLineNumbers
-  newValue={`
-# Page 2
-  `}
-/>
+<MdxTestPage />
 
-Restart your server (`CTRL+C` then `npm start`) and navigate to [http://localhost:8000/page-2](http://localhost:8000/page-2) to observe the MDX page working.
+Restart your server (`CTRL+C` then `npm start`) and navigate to [http://localhost:8000/page-3](http://localhost:8000/page-2) to observe the MDX page working.
 
 [039bb6d](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/039bb6da6b4fec403b07cee33a456ed61d66b656)
 
@@ -95,13 +87,15 @@ Now create the `src/content/` directory and add an MDX file with some [frontmatt
 
 <NewMdxPage />
 
-Restart your server and navigate to [localhost:8000/content-page](http://localhost:8000/content-page) to see it working.
+Restart your server and navigate to [localhost:8000/post](http://localhost:8000/content-page) to see it working.
 
 [7a466a8](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/7a466a813bf089c61292e1c25d14745c0853ff54)
 
 ## Display content in your components
 
-We're now creating pages from React components and MDX files within the content directory (and sub-directories)! 🎉 However, we don't have a way to interact with those pages from our components. Adding this feature is useful for creating things like a list of recent blog posts.
+We're now creating pages from React components and MDX files within the content directory (and sub-directories)! 🎉
+
+However, we don't have a way to interact with those pages from our components. Adding this feature is useful for creating things like a list of recent blog posts.
 
 We'll use [gatsby-source-filesystem](https://www.gatsbyjs.org/pac[kages/gatsby-source-filesystem/) to provide our application with data about our files, and a [Gatsby Page Query](https://www.gatsbyjs.org/docs/page-query/) to provide data to our component.
 

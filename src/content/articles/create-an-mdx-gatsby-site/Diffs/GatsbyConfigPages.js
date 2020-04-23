@@ -24,7 +24,7 @@ module.exports = {
       options: {
         path: \`\${__dirname}/src/content\`
       }
-    }
+    },
     \`gatsby-plugin-mdx\`,
     \`gatsby-plugin-react-helmet\`,
     {

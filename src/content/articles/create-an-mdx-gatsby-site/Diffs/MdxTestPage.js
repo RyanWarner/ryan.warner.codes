@@ -3,18 +3,20 @@ import React from 'react'
 import { DiffViewer } from 'components'
 
 const newValue = `
----
-title: Post 1
----
+# Page 3
 
-This is a post.
+MDX is working!
+
+\`\`\`
+Some code
+\`\`\`
 `
 
 export default () =>
   <DiffViewer
     language='markdown'
     splitView={false}
-    leftTitle='src/content/post.mdx'
+    leftTitle='src/pages/page-2.mdx'
     hideLineNumbers
     newValue={newValue}
   />
