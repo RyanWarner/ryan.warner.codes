@@ -16,7 +16,7 @@ export default () =>
   <DiffViewer
     language='markdown'
     splitView={false}
-    leftTitle='src/pages/page-2.mdx'
+    leftTitle='src/pages/page-3.mdx'
     hideLineNumbers
     newValue={newValue}
   />
