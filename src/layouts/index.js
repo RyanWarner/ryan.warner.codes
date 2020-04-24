@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { MDXProvider } from '@mdx-js/react'
+import { Link } from 'gatsby'
 
 import { CodeBlock, Header, Seo, Footer } from 'components'
 import 'styles/FontFaces.css'
@@ -9,11 +10,26 @@ import { GlobalType } from 'styles/Type'
 import { GlobalStyle } from 'styles/Global'
 import { StateProvider } from '../components/store.js'
 
+import slugify from 'slugify'
+
+const heading = Tag => props => {
+  console.log('props', props)
+  const El = S[Tag]
+  const slug = slugify(props.children).toLowerCase()
+  return (
+    <El {...props} id={slug}>
+      <a href={`#${slug}`}>
+        {props.children}
+      </a>
+    </El>
+  )
+}
+
 const components = {
   p: S.P,
   // img: S.Img,
   h1: S.H1,
-  h2: S.H2,
+  h2: heading('H2'),
   h3: S.H3,
   code: CodeBlock,
   a: props => <S.A {...props} />,

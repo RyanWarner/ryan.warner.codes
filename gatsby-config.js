@@ -1,3 +1,5 @@
+const remarkSlug = require('remark-slug')
+
 const paths = require('./src/config/paths')
 require('dotenv').config({
   path: `${paths.dotenv}.${process.env.DEPLOY_ENV || 'local'}`
@@ -28,7 +30,10 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 1080
+              maxWidth: 1080,
+              remarkPlugins: [
+                remarkSlug,
+              ]
             }
           }
         ]
