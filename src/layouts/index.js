@@ -13,14 +13,14 @@ import { StateProvider } from '../components/store.js'
 import slugify from 'slugify'
 
 const heading = Tag => props => {
-  console.log('props', props)
   const El = S[Tag]
-  const slug = slugify(props.children).toLowerCase()
+  const slug = slugify(props.children.toString()).toLowerCase()
+
   return (
     <El {...props} id={slug}>
-      <a href={`#${slug}`}>
+      <Link to={`#${slug}`}>
         {props.children}
-      </a>
+      </Link>
     </El>
   )
 }
