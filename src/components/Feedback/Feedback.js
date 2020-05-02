@@ -5,6 +5,8 @@ import * as S from './styles'
 import withStripe from '../withStripe/withStripe'
 
 const SKU_FEEDBACK = process.env.SKU_FEEDBACK
+const successUrl = `${process.env.URL}/feedback-success`
+const cancelUrl = `${process.env.URL}/feedback`
 
 const Feedback = props => {
   const stripe = useStripe()
@@ -12,10 +14,11 @@ const Feedback = props => {
   const checkout = async () => {
     const { error } = await stripe.redirectToCheckout({
       items: [{
-        sku: SKU_FEEDBACK, quantity: 1
+        sku: SKU_FEEDBACK,
+        quantity: 1
       }],
-      successUrl: 'http://localhost:8000/page-2/',
-      cancelUrl: 'http://localhost:8000/'
+      successUrl,
+      cancelUrl
     })
 
     if (error) {
