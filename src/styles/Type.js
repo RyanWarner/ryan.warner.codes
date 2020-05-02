@@ -70,7 +70,7 @@ export const capsTitle = css`
 
   @media(min-width: ${Breakpoints.mobile}) {
     font-size: 17px;
-  letter-spacing: 0.18rem;
+    letter-spacing: 0.18rem;
   }
 `
 
