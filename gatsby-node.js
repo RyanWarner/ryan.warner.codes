@@ -2,6 +2,10 @@
 
 const { createFilePath } = require('gatsby-source-filesystem')
 const path = require('path')
+const Dotenv = require('dotenv-webpack')
+
+const paths = require('./src/config/paths')
+const deployEnv = process.env.DEPLOY_ENV || 'local'
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -10,7 +14,12 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       alias: {
         '@': path.resolve(__dirname, 'src')
       }
-    }
+    },
+    plugins: [
+      new Dotenv({
+        path: `${paths.dotenv}.${deployEnv}`
+      })
+    ]
   })
 }
 
