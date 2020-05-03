@@ -74,6 +74,15 @@ export const capsTitle = css`
   }
 `
 
+export const price = css`
+  font-weight: ${fontWeights.medium};
+  font-size: 50px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    font-size: 60px;
+  }
+`
+
 export const GlobalType = createGlobalStyle`
   body {
     ${body};

@@ -2,6 +2,8 @@ import React from 'react'
 import { useStripe } from '@stripe/react-stripe-js'
 
 import * as S from './styles'
+import copy from './feedbackData'
+import { FeedbackPricing } from 'components'
 import withStripe from '../withStripe/withStripe'
 
 const SKU_FEEDBACK = process.env.SKU_FEEDBACK
@@ -28,6 +30,15 @@ const Feedback = props => {
 
   return (
     <S.FeedbackComponent>
+      <S.Header>
+        <S.Title>
+          {copy.title}
+        </S.Title>
+        <S.Description>
+          {copy.description}
+        </S.Description>
+      </S.Header>
+      <FeedbackPricing />
       <button onClick={checkout}>
         Buy
       </button>
