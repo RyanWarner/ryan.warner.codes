@@ -9,7 +9,7 @@ export default {
     cta: 'Buy Feedback'
   },
   medium: {
-    title: 'Indie hacker',
+    title: 'Indie devs',
     amount: '197',
     features: [
       'Screencast video',
@@ -20,7 +20,7 @@ export default {
     cta: 'Buy Feedback'
   },
   large: {
-    title: 'Startups',
+    title: 'Businesses',
     amount: 'Custom',
     features: [
       'Ongoing feedback',

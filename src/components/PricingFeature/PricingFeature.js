@@ -2,7 +2,8 @@ import React from 'react'
 
 import * as S from './styles'
 
-export default props =>
+export default ({ feature }) =>
   <S.PricingFeatureComponent>
-    PricingFeature
+    <S.StyledCheck />
+    <S.Feature>{feature}</S.Feature>
   </S.PricingFeatureComponent>

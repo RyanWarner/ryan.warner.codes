@@ -4,7 +4,7 @@ import { Colors, Type } from 'styles'
 
 export const filter = css`
   font-size: 18px;
-  font-family: ${Type.fontFace};
+  font-family: ${Type.fontFamily};
   border: 2px solid transparent;
   border-radius: 6px;
   height: 33px;

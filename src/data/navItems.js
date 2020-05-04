@@ -11,16 +11,16 @@ export default {
     url: '/resources',
     color: Colors.rainbowOrange
   },
-  courses: {
-    title: 'Courses',
-    url: '/courses',
-    color: Colors.rainbowYellow
-  },
-  workshops: {
-    title: 'Workshops',
-    url: '/workshops',
-    color: Colors.rainbowGreen
-  },
+  // courses: {
+  //   title: 'Courses',
+  //   url: '/courses',
+  //   color: Colors.rainbowYellow
+  // },
+  // workshops: {
+  //   title: 'Workshops',
+  //   url: '/workshops',
+  //   color: Colors.rainbowGreen
+  // },
   feedback: {
     title: 'Feedback',
     url: '/feedback',

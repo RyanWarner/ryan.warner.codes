@@ -9,25 +9,37 @@ export default function FeedbackTier({
   cta,
   onCtaClick,
   hideCurrency,
+  large,
   ...rest
 }) {
   return (
-    <S.FeedbackTierComponent {...rest}>
+    <S.FeedbackTierComponent large={large} {...rest}>
       <S.Title>{title}</S.Title>
       <S.Price>
         {!hideCurrency && <S.Dollar>$</S.Dollar>}
-        <S.Amount>{amount}</S.Amount>
+        <S.Amount hideCurrency={hideCurrency}>
+          {amount}
+        </S.Amount>
         {!hideCurrency && <S.Currency>USD</S.Currency>}
       </S.Price>
       <S.Features>
         {features.map((item, index) => (
-          <S.StyledPricingFeature {...item} key={index} />
+          <S.StyledPricingFeature feature={item} key={index} />
         ))}
       </S.Features>
 
-      <S.Cta onClick={onCtaClick}>
-        {cta}
-      </S.Cta>
+      {large
+        ? (
+          <S.Cta onClick={onCtaClick}>
+            {cta}
+          </S.Cta>
+        )
+        : (
+          <S.SecondaryCta onClick={onCtaClick}>
+            {cta}
+          </S.SecondaryCta>
+        )
+      }
 
     </S.FeedbackTierComponent>
   )

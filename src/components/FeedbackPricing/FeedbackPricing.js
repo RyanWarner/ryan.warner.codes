@@ -7,7 +7,9 @@ import { FeedbackTier } from 'components'
 const FeedbackPricing = props =>
   <S.FeedbackPricingComponent>
     <FeedbackTier {...pricingData.small} />
-    <S.StyledFeedbackTier {...pricingData.medium} />
+    <S.StyledFeedbackTier>
+      <FeedbackTier {...pricingData.medium} large />
+    </S.StyledFeedbackTier>
     <FeedbackTier
       {...pricingData.large}
       hideCurrency
