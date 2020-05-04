@@ -1,7 +1,7 @@
 import React from 'react'
 
 import * as S from './styles'
-import { Nav, SecondaryNav, Width } from '../'
+import { Nav, SecondaryNav, MobileNavButton, Width } from '../'
 
 export default ({ location }) =>
   <S.Background>
@@ -14,6 +14,7 @@ export default ({ location }) =>
           <Nav location={location} />
         </S.MainNav>
         <SecondaryNav location={location} />
+        <MobileNavButton location={location} />
       </S.Header>
     </Width>
   </S.Background>

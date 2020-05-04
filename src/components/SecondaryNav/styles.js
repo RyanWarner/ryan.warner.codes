@@ -1,12 +1,16 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 
-import { Breakpoints, Colors, Type, Sizes } from '../../styles'
+import { Breakpoints, Colors, Type, Sizes } from 'styles'
 
 export const Nav = styled.nav`
   position: relative;
   display: flex;
   right: -10px;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    display: none;
+  }
 `
 
 export const NavItem = styled.div`
