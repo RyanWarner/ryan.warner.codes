@@ -10,6 +10,7 @@ export default function FeedbackTier({
   onCtaClick,
   hideCurrency,
   large,
+  sku,
   ...rest
 }) {
   return (
@@ -30,12 +31,12 @@ export default function FeedbackTier({
 
       {large
         ? (
-          <S.Cta onClick={onCtaClick}>
+          <S.Cta onClick={() => onCtaClick(sku)}>
             {cta}
           </S.Cta>
         )
         : (
-          <S.SecondaryCta onClick={onCtaClick}>
+          <S.SecondaryCta onClick={() => onCtaClick(sku)}>
             {cta}
           </S.SecondaryCta>
         )

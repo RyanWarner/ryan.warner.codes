@@ -83,6 +83,15 @@ export const price = css`
   }
 `
 
+export const price00 = css`
+  font-weight: ${fontWeights.medium};
+  font-size: 44px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    font-size: 54px;
+  }
+`
+
 export const GlobalType = createGlobalStyle`
   body {
     ${body};

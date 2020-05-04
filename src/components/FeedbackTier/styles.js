@@ -24,7 +24,7 @@ export const FeedbackTierComponent = styled.div`
   padding: 38px 44px 27px 44px;
   box-sizing: border-box;
   position: relative;
-  background: ${Colors.blue20}; 
+  background: ${Colors.blue20};
   width: ${props => props.large ? '410px' : '322px'};
   height: ${props => props.large ? '596px' : '500px'};
   border-radius: var(--borderWidth);
@@ -33,13 +33,7 @@ export const FeedbackTierComponent = styled.div`
   flex-direction: column;
 
   ${props => props.large && css`
-    &:hover {
-      :after {
-        opacity: 1;
-      }
-    }
     :after {
-      opacity: 0;
       content: '';
       position: absolute;
       top: -2px;

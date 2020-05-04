@@ -2,12 +2,14 @@ const SKU_FEEDBACK = process.env.SKU_FEEDBACK
 
 export default {
   small: {
-    title: '',
-    amount: '99',
+    title: 'Indie devs+',
+    amount: '297',
     sku: SKU_FEEDBACK,
     features: [
+      '60 minute video chat',
       'Actionable written notes',
-      'Discord invite'
+      'Discord invite',
+      'Livestream shoutout'
     ],
     cta: 'Buy Feedback'
   },

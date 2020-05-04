@@ -44,5 +44,9 @@ export const Wordmark = styled(Link)`
 `
 
 export const StyledHeart = styled(Heart)`
-  width: 20px;
+  width: 16px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 20px;
+  }
 `

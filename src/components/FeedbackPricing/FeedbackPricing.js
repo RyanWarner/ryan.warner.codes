@@ -13,10 +13,10 @@ const cancelUrl = `${process.env.URL}/feedback`
 const FeedbackPricing = props => {
   const stripe = useStripe()
 
-  const checkout = async () => {
+  const checkout = async (sku) => {
     const { error } = await stripe.redirectToCheckout({
       items: [{
-        sku: SKU_FEEDBACK,
+        sku,
         quantity: 1
       }],
       successUrl,

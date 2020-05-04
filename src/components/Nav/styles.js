@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 
-import { Breakpoints, Colors, Type, Sizes } from '../../styles'
+import { Breakpoints, Colors, Type, Sizes } from 'styles'
 
 export const Nav = styled.nav`
   position: relative;
   display: flex;
-  right: -10px;
 `
 
 export const NavItem = styled.div`
@@ -14,7 +13,6 @@ export const NavItem = styled.div`
   align-items: center;
   height: ${Sizes.navHeightMobile};
   position: relative;
-  margin-left: 10px;
 
   &:after {
     content: '';
@@ -35,6 +33,7 @@ export const NavItem = styled.div`
 
   @media(min-width: ${Breakpoints.mobile}) {
     height: ${Sizes.navHeight};
+    margin-left: 10px;
   }
 `
 
