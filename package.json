@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "author": "Ryan Warner <ryan@warner.codes>",
   "dependencies": {
-    "@mdx-js/mdx": "1.5.8",
-    "@mdx-js/react": "1.5.8",
+    "@mdx-js/mdx": "1.6.1",
+    "@mdx-js/react": "1.6.1",
     "@stripe/react-stripe-js": "^1.1.2",
     "@stripe/stripe-js": "^1.5.0",
     "amplitude-js": "6.2.0",
@@ -80,7 +80,7 @@
     "eslint-plugin-standard": "4.0.1",
     "firebase-tools": "8.2.0",
     "hygen": "5.0.3",
-    "prettier": "2.0.2"
+    "prettier": "2.0.5"
   },
   "repository": {
     "type": "git",
