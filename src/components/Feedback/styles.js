@@ -1,7 +1,7 @@
 
 import styled from 'styled-components'
 
-import { Colors, Type } from 'styles'
+import { Breakpoints, Colors, Type } from 'styles'
 
 export const FeedbackComponent = styled.div`
   display: flex;
@@ -10,8 +10,12 @@ export const FeedbackComponent = styled.div`
 `
 
 export const Header = styled.div`
-  margin: 80px 0 80px 0;
+  margin: 60px 00;
   max-width: 640px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    margin: 100px 0;
+  }
 `
 
 export const Title = styled.h1`

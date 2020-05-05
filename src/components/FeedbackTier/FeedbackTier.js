@@ -18,7 +18,7 @@ export default function FeedbackTier({
       <S.Title>{title}</S.Title>
       <S.Price>
         {!hideCurrency && <S.Dollar>$</S.Dollar>}
-        <S.Amount hideCurrency={hideCurrency}>
+        <S.Amount large={large}>
           {amount}
         </S.Amount>
         {!hideCurrency && <S.Currency>USD</S.Currency>}

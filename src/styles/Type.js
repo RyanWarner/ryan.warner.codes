@@ -76,10 +76,10 @@ export const capsTitle = css`
 
 export const price = css`
   font-weight: ${fontWeights.medium};
-  font-size: ${props => props.hideCurrency ? '40px' : '50px'};
+  font-size: ${props => !props.large ? '40px' : '50px'};
 
   @media(min-width: ${Breakpoints.mobile}) {
-    font-size: ${props => props.hideCurrency ? '50px' : '60px'};
+    font-size: ${props => !props.large ? '50px' : '60px'};
   }
 `
 

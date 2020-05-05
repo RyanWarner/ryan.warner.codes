@@ -12,6 +12,7 @@ export const MobileNavButtonComponent = styled.button`
   background-color: transparent;
   color: ${Colors.text20};
   border: 0;
+  cursor: pointer;
 
   @media(min-width: ${Breakpoints.mobile}) {
     display: none;

@@ -35,10 +35,17 @@ export const TutorialsComponent = styled.div`
 
 export const Tutorials = styled.div`
   width: 100%;
+  margin-bottom: 80px;
 `
 
 export const Filters = styled.div`
-  width: 320px;
-  flex-shrink: 100%;
-  margin-right: 40px;
+  width: 100%;
+  flex-shrink: 0;
+  margin-right: 0;
+  margin-bottom: 40px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 320px;
+    margin-right: 40px;
+  }
 `
