@@ -1,4 +1,4 @@
-export default {
+const config = {
   alpha: {
     start: 1,
     end: 0
@@ -45,3 +45,27 @@ export default {
   particleSpacing: 0,
   angleStart: 0
 }
+
+const clickConfig = {
+  ...config,
+  emitterLifetime: 0.5,
+  frequency: 0.01,
+  lifetime: {
+    min: 1,
+    max: 5
+  },
+  speed: {
+    start: 100,
+    end: 1,
+    minimumSpeedMultiplier: 1
+  },
+  spawnType: 'ring',
+  spawnCircle: {
+    x: 0,
+    y: 0,
+    r: 40,
+    minR: 40
+  }
+}
+
+export { config, clickConfig }

@@ -1,4 +1,4 @@
-import config from './emitterOptions'
+import { config, clickConfig } from './emitterOptions'
 
 import bigHeart from '../../images/heartEmitter/bigHeart.png'
 import red from '../../images/heartEmitter/red.png'
@@ -25,35 +25,13 @@ export default class Particles {
   static handleHeartClick = () => {
     const { particles, CONTAINER, ART } = this
 
-    const clickEmitterConfig = {
-      ...config,
-      emitterLifetime: 0.5,
-      frequency: 0.01,
-      lifetime: {
-        min: 1,
-        max: 5
-      },
-      speed: {
-        start: 100,
-        end: 1,
-        minimumSpeedMultiplier: 1
-      },
-      spawnType: 'ring',
-      spawnCircle: {
-        x: 0,
-        y: 0,
-        r: 40,
-        minR: 40
-      }
-    }
-
     const clickEmitter = new particles.Emitter(
       CONTAINER,
       ART,
-      clickEmitterConfig
+      clickConfig
     )
-    clickEmitter.updateOwnerPos(this.stageWidth / 2, this.stageHeight / 2)
 
+    clickEmitter.updateOwnerPos(this.stageWidth / 2, this.stageHeight / 2)
     clickEmitter.playOnceAndDestroy()
   }
 
@@ -120,12 +98,6 @@ export default class Particles {
       clickableHeart.y = app.renderer.screen.height / 2 - (clickableHeart.height / 2)
       clickableHeart.zIndex = 2
 
-      // emitterContainer.addChild(clickableHeart)
-
-      clickableHeart.on('mouseup', () => {
-
-      })
-
       app.stage.addChild(emitterContainer)
 
       emitter = new particles.Emitter(
@@ -136,6 +108,13 @@ export default class Particles {
 
       // Center on the stage
       emitter.updateOwnerPos(this.stageWidth / 2, this.stageHeight / 2)
+
+      window.addEventListener('resize', () => {
+        console.log('resize')
+        this.stageWidth = element.offsetWidth
+        this.stageHeight = element.offsetHeight
+        emitter.updateOwnerPos(this.stageWidth / 2, this.stageHeight / 2)
+      })
     })
   }
 }
