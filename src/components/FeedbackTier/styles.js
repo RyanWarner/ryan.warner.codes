@@ -27,7 +27,7 @@ export const FeedbackTierComponent = styled.div`
   background: ${Colors.blue20};
   width: ${props => props.large ? '370px' : '320px'};
   height: ${props => props.large ? '550px' : '500px'};
-  border-radius: var(--borderWidth);
+  border-radius: 7px;
   box-shadow: 4px 4px 44px rgba(0, 0, 0, 0.25), 3px 3px 13px rgba(0, 0, 0, 0.2), -1px -1px 0px #21383D;
   display: flex;
   flex-direction: column;

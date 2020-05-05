@@ -110,7 +110,6 @@ export default class Particles {
       emitter.updateOwnerPos(this.stageWidth / 2, this.stageHeight / 2)
 
       window.addEventListener('resize', () => {
-        console.log('resize')
         this.stageWidth = element.offsetWidth
         this.stageHeight = element.offsetHeight
         emitter.updateOwnerPos(this.stageWidth / 2, this.stageHeight / 2)
