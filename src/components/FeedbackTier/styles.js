@@ -29,12 +29,14 @@ export const FeedbackTierComponent = styled.div`
   max-width: 370px;
   height: auto;
   border-radius: 7px;
-  box-shadow: 4px 4px 44px rgba(0, 0, 0, 0.25), 3px 3px 13px rgba(0, 0, 0, 0.2), -1px -1px 0px #21383D;
+  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.2), -1px -1px 0px #21383D;
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
 
   ${props => props.large && css`
+    box-shadow: none;
+
     :after {
       content: '';
       position: absolute;
@@ -48,6 +50,7 @@ export const FeedbackTierComponent = styled.div`
       animation: ${animatedGradients} 7s ease alternate infinite;
       background-size: 300% 300%;
       transition: opacity 1s ease;
+      box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.5);
     }
   `}
 

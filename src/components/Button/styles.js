@@ -1,5 +1,5 @@
 
-import styled, { keyframes, css } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { motion } from 'framer-motion'
 
 import { Buttons, Colors, Type } from 'styles'
@@ -29,7 +29,7 @@ export const ButtonComponent = styled(motion.button)`
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px ${Colors.glow20};
+    box-shadow: 0 0 0 4px ${Colors.rainbowBlue};
   }
 
   &:focus:not(.focus-visible) {

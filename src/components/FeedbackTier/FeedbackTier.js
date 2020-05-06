@@ -39,9 +39,7 @@ export default function FeedbackTier({
           <S.SecondaryCta onClick={() => onCtaClick(sku)}>
             {cta}
           </S.SecondaryCta>
-        )
-      }
-
+        )}
     </S.FeedbackTierComponent>
   )
 }

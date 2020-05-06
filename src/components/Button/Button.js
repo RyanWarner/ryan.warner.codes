@@ -9,7 +9,7 @@ const Button = ({ children, ...rest }) =>
     whileHover={{
       scale: 1.07,
       boxShadow: '0 4px 10px rgba(0, 0, 0, 0.5)',
-      transition: { duration: 0.08 }
+      transition: { duration: 0.07 }
     }}
     whileTap={{
       scale: 0.95,
