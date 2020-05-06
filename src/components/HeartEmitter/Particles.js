@@ -95,7 +95,7 @@ export default class Particles {
 
       app.stage.addChild(emitterContainer)
 
-      const responsiveConfig = this.stageWidth <= 767
+      const responsiveConfig = this.windowWidth <= 767
         ? mobileConfig
         : config
 

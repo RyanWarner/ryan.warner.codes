@@ -5,7 +5,7 @@ import { price } from 'styles/Type'
 import PricingFeature from 'components/PricingFeature/PricingFeature'
 import Button from 'components/Button/Button'
 import ButtonSecondary from 'components/ButtonSecondary/ButtonSecondary'
-import { Colors, Type } from 'styles'
+import { Breakpoints, Colors, Type } from 'styles'
 
 const animatedGradients = keyframes`
   0% {
@@ -25,12 +25,14 @@ export const FeedbackTierComponent = styled.div`
   box-sizing: border-box;
   position: relative;
   background: ${Colors.blue20};
-  width: ${props => props.large ? '370px' : '320px'};
-  height: ${props => props.large ? '550px' : '500px'};
+  width: 100%;
+  max-width: 370px;
+  height: auto;
   border-radius: 7px;
   box-shadow: 4px 4px 44px rgba(0, 0, 0, 0.25), 3px 3px 13px rgba(0, 0, 0, 0.2), -1px -1px 0px #21383D;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
 
   ${props => props.large && css`
     :after {
@@ -48,6 +50,13 @@ export const FeedbackTierComponent = styled.div`
       transition: opacity 1s ease;
     }
   `}
+
+  @media(min-width: ${Breakpoints.pricingTiers}) {
+    width: ${props => props.large ? '370px' : '320px'};
+    height: ${props => props.large ? '550px' : '500px'};
+    padding: 38px 44px 27px 44px;
+    margin-bottom: 0;
+  }
 `
 
 export const Title = styled.h2`
@@ -83,7 +92,10 @@ export const Currency = styled.p`
   font-size: 20px;
   font-weight: ${Type.fontWeights.medium};
 `
-export const Features = styled.div``
+export const Features = styled.div`
+  margin-bottom: 40px;
+`
+
 export const Cta = styled(Button)`
   margin-top: auto;
 `

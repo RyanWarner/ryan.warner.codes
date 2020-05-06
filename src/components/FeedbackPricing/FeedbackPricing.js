@@ -6,7 +6,6 @@ import pricingData from './pricingData'
 import { FeedbackTier } from 'components'
 import withStripe from '../withStripe/withStripe'
 
-const SKU_FEEDBACK = process.env.SKU_FEEDBACK
 const successUrl = `${process.env.URL}/feedback-success`
 const cancelUrl = `${process.env.URL}/feedback`
 

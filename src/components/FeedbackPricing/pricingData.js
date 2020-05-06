@@ -1,10 +1,11 @@
 const SKU_FEEDBACK = process.env.SKU_FEEDBACK
+const SKU_FEEDBACK_VIDEO = process.env.SKU_FEEDBACK_VIDEO
 
 export default {
   small: {
     title: 'Indie devs+',
     amount: '297',
-    sku: SKU_FEEDBACK,
+    sku: SKU_FEEDBACK_VIDEO,
     features: [
       '60 minute video chat',
       'Actionable written notes',

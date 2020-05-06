@@ -19,13 +19,22 @@ export const Header = styled.div`
 `
 
 export const Title = styled.h1`
-  text-align: center;
+  text-align: left;
   margin: 0 0 16px 0;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    text-align: center;
+  }
 `
 
 export const Description = styled.p`
-  text-align: center;
+  text-align: left;
   font-size: 18px;
-  font-weight: ${Type.fontWeights.medium};
+  font-weight: ${Type.fontWeights.regular};
   color: ${Colors.text20};
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    text-align: center;
+    font-weight: ${Type.fontWeights.medium};
+  }
 `
