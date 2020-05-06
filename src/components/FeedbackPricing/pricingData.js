@@ -7,7 +7,7 @@ export default {
     amount: '297',
     sku: SKU_FEEDBACK_VIDEO,
     features: [
-      '60 minute video chat',
+      '60 minute video call',
       'Actionable written notes',
       'Discord invite',
       'Livestream shoutout'

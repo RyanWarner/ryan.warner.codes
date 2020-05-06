@@ -42,10 +42,10 @@ export const FeedbackTierComponent = styled.div`
       left: -2px;
       height: calc(100% + 4px);
       width: calc(100% + 4px);
-      background: linear-gradient(-60deg, ${Colors.rainbowGreen}, ${Colors.rainbowBlue}, ${Colors.rainbowIndigo}, ${Colors.rainbowViolet});
+      background: linear-gradient(60deg, ${Colors.rainbowGreen}, ${Colors.rainbowBlue}, ${Colors.rainbowIndigo}, ${Colors.rainbowViolet});
       border-radius: calc(1.5 * var(--borderWidth));
       z-index: -1;
-      animation: ${animatedGradients} 5s ease alternate infinite;
+      animation: ${animatedGradients} 7s ease alternate infinite;
       background-size: 300% 300%;
       transition: opacity 1s ease;
     }
