@@ -13,6 +13,7 @@ export const Hero = styled.div`
   @media(max-width: ${Breakpoints.mobile}) {
     flex-direction: column;
     padding-top: 0;
+    align-items: flex-start;
   }
 `
 
@@ -32,8 +33,14 @@ export const H1 = styled.h1`
     -webkit-text-fill-color: initial;
   }
 
+  @media(max-width: ${Breakpoints.w1024}) {
+    font-size: 3.72vw;
+  }
+
   @media(max-width: ${Breakpoints.mobile}) {
     margin: 0 0 20px 0;
+    font-size: 28px;
+    max-width: 450px;
   }
 `
 
@@ -46,6 +53,7 @@ export const SubHeader = styled.p`
   @media(max-width: ${Breakpoints.mobile}) {
     font-size: 16px;
     line-height: 180%;
+    max-width: 450px;
   }
 `
 
@@ -102,7 +110,13 @@ export const Dribbble = styled(Link)`
   }
 `
 
-export const Copy = styled.div``
+export const Copy = styled.div`
+  padding-right: 300px;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    padding-right: 0;
+  }
+`
 
 export const StyledHeartEmitter = styled(HeartEmitter)`
   position: absolute;
@@ -111,5 +125,7 @@ export const StyledHeartEmitter = styled(HeartEmitter)`
   @media(max-width: ${Breakpoints.mobile}) {
     position: relative;
     right: 0;
+    margin-bottom: -40px;
+    margin-top: -36px;
   }
 `

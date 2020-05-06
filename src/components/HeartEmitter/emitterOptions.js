@@ -68,4 +68,34 @@ const clickConfig = {
   }
 }
 
-export { config, clickConfig }
+const mobileClickConfig = {
+  ...config,
+  emitterLifetime: 0.5,
+  frequency: 0.01,
+  lifetime: {
+    min: 1,
+    max: 5
+  },
+  speed: {
+    start: 70,
+    end: 1,
+    minimumSpeedMultiplier: 1
+  },
+  spawnType: 'ring',
+  spawnCircle: {
+    x: 0,
+    y: 0,
+    r: 18,
+    minR: 18
+  }
+}
+
+const mobileConfig = {
+  ...config,
+  lifetime: {
+    min: 0.2,
+    max: 10
+  }
+}
+
+export { config, clickConfig, mobileConfig, mobileClickConfig }

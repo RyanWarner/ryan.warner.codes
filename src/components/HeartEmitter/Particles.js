@@ -1,4 +1,4 @@
-import { config, clickConfig } from './emitterOptions'
+import { config, clickConfig, mobileConfig, mobileClickConfig } from './emitterOptions'
 
 import bigHeart from '../../images/heartEmitter/bigHeart.png'
 import red from '../../images/heartEmitter/red.png'
@@ -25,10 +25,14 @@ export default class Particles {
   static handleHeartClick = () => {
     const { particles, CONTAINER, ART } = this
 
+    const responsiveConfig = this.stageWidth <= 767
+      ? mobileClickConfig
+      : clickConfig
+
     const clickEmitter = new particles.Emitter(
       CONTAINER,
       ART,
-      clickConfig
+      responsiveConfig
     )
 
     clickEmitter.updateOwnerPos(this.stageWidth / 2, this.stageHeight / 2)
@@ -49,6 +53,9 @@ export default class Particles {
     const element = document.querySelector('#heartEmitter')
     this.stageWidth = element.offsetWidth
     this.stageHeight = element.offsetHeight
+
+    this.windowWidth = window.innerWidth
+    this.prevWindowWidth = window.innerWidth
 
     app.renderer.resize(this.stageWidth, this.stageHeight)
     element.appendChild(app.view)
@@ -100,10 +107,14 @@ export default class Particles {
 
       app.stage.addChild(emitterContainer)
 
+      const responsiveConfig = this.stageWidth <= 767
+        ? mobileConfig
+        : config
+
       emitter = new particles.Emitter(
         emitterContainer,
         art,
-        config
+        responsiveConfig
       )
 
       // Center on the stage
@@ -112,6 +123,32 @@ export default class Particles {
       window.addEventListener('resize', () => {
         this.stageWidth = element.offsetWidth
         this.stageHeight = element.offsetHeight
+
+        this.windowWidth = window.innerWidth
+
+        if (this.windowWidth <= 767 && this.prevWindowWidth > 767) {
+          emitter.cleanup()
+
+          emitter = new particles.Emitter(
+            emitterContainer,
+            art,
+            mobileConfig
+          )
+        }
+
+        if (this.windowWidth > 767 && this.prevWindowWidth <= 767) {
+          emitter.cleanup()
+
+          emitter = new particles.Emitter(
+            emitterContainer,
+            art,
+            config
+          )
+        }
+
+        this.prevWindowWidth = window.innerWidth
+
+        app.renderer.resize(this.stageWidth, this.stageHeight)
         emitter.updateOwnerPos(this.stageWidth / 2, this.stageHeight / 2)
       })
     })
