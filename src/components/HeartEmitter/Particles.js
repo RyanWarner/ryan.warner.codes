@@ -1,6 +1,5 @@
 import { config, clickConfig, mobileConfig, mobileClickConfig } from './emitterOptions'
 
-import bigHeart from '../../images/heartEmitter/bigHeart.png'
 import red from '../../images/heartEmitter/red.png'
 import orange from '../../images/heartEmitter/orange.png'
 import yellow from '../../images/heartEmitter/yellow.png'
@@ -93,17 +92,6 @@ export default class Particles {
       // Create the new emitter and attach it to the stage
       const emitterContainer = new PIXI.Container({ sortableChildren: true })
       this.CONTAINER = emitterContainer
-
-      // Add clickable heart
-      const greenHeart = PIXI.Texture.from(bigHeart)
-      const clickableHeart = new PIXI.Sprite(greenHeart)
-
-      clickableHeart.width = 268
-      clickableHeart.height = 245
-      clickableHeart.interactive = true
-      clickableHeart.x = app.renderer.screen.width / 2 - (clickableHeart.width / 2)
-      clickableHeart.y = app.renderer.screen.height / 2 - (clickableHeart.height / 2)
-      clickableHeart.zIndex = 2
 
       app.stage.addChild(emitterContainer)
 
