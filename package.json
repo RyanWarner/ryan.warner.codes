@@ -40,7 +40,7 @@
     "react-dom": "16.13.1",
     "react-feather": "2.0.4",
     "react-helmet": "6.0.0",
-    "react-player": "1.15.3",
+    "react-player": "2.0.1",
     "remark-slug": "^6.0.0",
     "slugify": "^1.4.0",
     "styled-components": "5.1.0"
