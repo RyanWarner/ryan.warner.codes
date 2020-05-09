@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { Breakpoints, Colors } from 'styles'
+import { Breakpoints, Colors, Mixins } from 'styles'
 
 export const A = styled.a`
   text-decoration: underline;
@@ -25,20 +25,21 @@ export const Li = styled.li`
 `
 
 export const P = styled.p`
-font-size: 16px;
-margin-bottom: 2rem;
-color: ${Colors.text20};
+  ${Mixins.articleMaxWidth};
+  font-size: 16px;
+  margin-bottom: 2rem;
+  color: ${Colors.text20};
 
-@media (min-width: ${Breakpoints.mobile}) {
-  font-size: 18px;
-}
+  @media (min-width: ${Breakpoints.mobile}) {
+    font-size: 18px;
+  }
 
-code {
-  font-size: 15px;
-  background-color: ${Colors.blue00};
-  padding: 3px 6px;
-  border-radius: 2px;
-}
+  code {
+    font-size: 15px;
+    background-color: ${Colors.blue00};
+    padding: 3px 6px;
+    border-radius: 2px;
+  }
 `
 
 export const Img = styled.img`
@@ -48,6 +49,7 @@ export const Img = styled.img`
 `
 
 export const Pre = styled.pre`
+  ${Mixins.articleMaxWidth};
   margin: 3rem 0;
 `
 
@@ -56,6 +58,7 @@ export const H1 = styled.h1`
 `
 
 export const H2 = styled.h2`
+  ${Mixins.articleMaxWidth};
   margin: 3rem 0 1rem 0;
 
   @media (min-width: ${Breakpoints.mobile}) {

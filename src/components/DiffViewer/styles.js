@@ -1,21 +1,21 @@
 
 import styled, { css } from 'styled-components'
 
-import { Sizes, Shadows } from 'styles'
+import { Mixins, Shadows, Sizes } from 'styles'
 
 export const DiffViewerComponent = styled.div`
-  width: ${Sizes.maxWidth};
-  max-width: 100vw;
-  padding: 0 ${Sizes.xPadding};
   box-sizing: border-box;
-  margin-left: calc(-640px + 350px);
   margin-top: 3rem;
   margin-bottom: 3rem;
+  max-width: ${Sizes.maxWidth};
+
+  @media(max-width: ${Sizes.maxArticleWidth}) {
+    ${Mixins.articleMaxWidth};
+  }
 
   ${props => !props.splitView && css`
-    width: auto;
     margin-left: 0;
-    padding: 0;
+    ${Mixins.articleMaxWidth};
   `}
 `
 
@@ -23,7 +23,7 @@ export const DiffViewerWrap = styled.div`
   font-size: 15px;
   box-shadow: ${Shadows.code};
   border-radius: 6px;
-  overflow: hidden;
+  overflow: scroll;
 
   table pre {
     line-height: 22px;

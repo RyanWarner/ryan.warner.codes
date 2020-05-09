@@ -1,17 +1,21 @@
 import styled from 'styled-components'
 
-import { Breakpoints, Colors } from 'styles'
+import { Breakpoints, Colors, Mixins } from 'styles'
 import ryan from 'images/ryan-warner.png'
 
 export const Content = styled.article`
   margin-top: 70px;
   margin-bottom: 106px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const Title = styled.h1`
   margin-bottom: 24px;
   font-size: 26px;
   line-height: 34px;
+  ${Mixins.articleMaxWidth};
 
   @media(min-width: ${Breakpoints.mobile}) {
     font-size: 36px;
@@ -22,6 +26,7 @@ export const Title = styled.h1`
 export const Meta = styled.div`
   margin-bottom: 35px;
   display: flex;
+  ${Mixins.articleMaxWidth};
 
   @media(min-width: ${Breakpoints.mobile}) {
     margin-bottom: 60px;

@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
-import { Shadows } from 'styles'
+import { Shadows, Mixins } from 'styles'
 
 export const Pre = styled.pre`
+${Mixins.articleMaxWidth};
   overflow-x: scroll;
   border-radius: 6px;
   line-height: 150%;
