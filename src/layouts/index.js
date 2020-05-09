@@ -1,44 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { MDXProvider } from '@mdx-js/react'
-import { Link } from 'gatsby'
 
-import { CodeBlock, Header, Seo, Footer } from 'components'
+import { Header, Seo, Footer } from 'components'
 import 'styles/FontFaces.css'
 import * as S from './styles'
 import { GlobalType } from 'styles/Type'
 import { GlobalStyle } from 'styles/Global'
 import { StateProvider } from '../components/store.js'
-
-import slugify from 'slugify'
-import { useLocation } from '@reach/router'
-
-const heading = Tag => props => {
-  const El = S[Tag]
-  const slug = slugify(props.children.toString()).toLowerCase()
-  const location = useLocation()
-
-  return (
-    <El {...props} id={slug}>
-      <Link to={`${location.pathname}#${slug}`}>
-        {props.children}
-      </Link>
-    </El>
-  )
-}
-
-const components = {
-  p: S.P,
-  // img: S.Img,
-  h1: S.H1,
-  h2: heading('H2'),
-  h3: S.H3,
-  code: CodeBlock,
-  a: props => <S.A {...props} />,
-  li: props => <S.Li {...props} />,
-  hr: S.Hr,
-  pre: S.Pre
-}
+import components from 'components/mdxComponents'
 
 const Blank = props => (
   <StateProvider>
