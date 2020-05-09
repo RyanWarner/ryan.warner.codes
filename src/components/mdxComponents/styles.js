@@ -1,5 +1,6 @@
 
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 import { Breakpoints, Colors } from 'styles'
 
@@ -9,14 +10,18 @@ export const A = styled.a`
   text-decoration-color: ${Colors.blue60};
 `
 
-export const Li = styled.li`
-font-size: 16px;
-margin-bottom: 1rem;
-color: ${Colors.text20};
+export const StyledLink = styled(Link)`
+  color: ${Colors.text20};
+`
 
-@media (min-width: ${Breakpoints.mobile}) {
-  font-size: 18px;
-}
+export const Li = styled.li`
+  font-size: 16px;
+  margin-bottom: 1rem;
+  color: ${Colors.text20};
+
+  @media (min-width: ${Breakpoints.mobile}) {
+    font-size: 18px;
+  }
 `
 
 export const P = styled.p`
@@ -37,25 +42,25 @@ code {
 `
 
 export const Img = styled.img`
-max-width: 80%;
-margin: 4rem auto;
-display: block;
+  max-width: 80%;
+  margin: 4rem auto;
+  display: block;
 `
 
 export const Pre = styled.pre`
-margin: 3rem 0;
+  margin: 3rem 0;
 `
 
 export const H1 = styled.h1`
-color: ${Colors.text20};
+  color: ${Colors.text20};
 `
 
 export const H2 = styled.h2`
-margin: 3rem 0 1rem 0;
+  margin: 3rem 0 1rem 0;
 
-@media (min-width: ${Breakpoints.mobile}) {
-  margin: 6rem 0 2rem 0;
-}
+  @media (min-width: ${Breakpoints.mobile}) {
+    margin: 6rem 0 2rem 0;
+  }
 `
 
 export const H3 = styled.h3`

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import slugify from 'slugify'
 import { useLocation } from '@reach/router'
 
@@ -13,9 +12,9 @@ const heading = Tag => props => {
 
   return (
     <El {...props} id={slug}>
-      <Link to={`${location.pathname}#${slug}`}>
+      <S.StyledLink to={`${location.pathname}#${slug}`}>
         {props.children}
-      </Link>
+      </S.StyledLink>
     </El>
   )
 }
