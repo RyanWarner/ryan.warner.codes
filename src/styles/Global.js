@@ -16,7 +16,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     max-width: 100vw;
     background-color: ${Colors.blue15};
-    ${'' /* background: linear-gradient(145.87deg, #1C2A34 10.36%, #111A20 49.58%, #111A20 49.58%); */}
     color: ${Colors.text10};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

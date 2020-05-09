@@ -6,14 +6,16 @@ exports.onRouteUpdate = ({ location }) => scrollToAnchor(location)
  * @param {Object} location -
  * @param {Number} [mainNavHeight] - the height of any persistent nav -> document.querySelector(`nav`)
  */
-function scrollToAnchor (location, mainNavHeight = 80) {
+function scrollToAnchor(location, mainNavHeight = 80) {
   // Check for location so build does not fail
   if (location && location.hash) {
     const offset = 30
-    const item = document.querySelector(`${location.hash}`).offsetTop
+    const item = document.querySelector(`${location.hash}`)
+
+    if (!item) return
 
     window.scrollTo({
-      top: item - mainNavHeight - offset
+      top: item.offsetTop - mainNavHeight - offset
     })
   }
 

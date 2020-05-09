@@ -11,14 +11,16 @@ import { GlobalStyle } from 'styles/Global'
 import { StateProvider } from '../components/store.js'
 
 import slugify from 'slugify'
+import { useLocation } from '@reach/router'
 
 const heading = Tag => props => {
   const El = S[Tag]
   const slug = slugify(props.children.toString()).toLowerCase()
+  const location = useLocation()
 
   return (
     <El {...props} id={slug}>
-      <Link to={`#${slug}`}>
+      <Link to={`${location.pathname}#${slug}`}>
         {props.children}
       </Link>
     </El>
