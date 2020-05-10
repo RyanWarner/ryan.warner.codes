@@ -1,6 +1,4 @@
 const functions = require('firebase-functions')
+const stripe = require('./stripe')
 
-exports.feedbackPurchase = functions.https.onRequest(async (req, res) => {
-  console.log('Feedback Purchase')
-  res.send({ message: 'success' })
-})
+exports.stripe = functions.https.onRequest(stripe)

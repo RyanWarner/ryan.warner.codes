@@ -16,7 +16,6 @@
     "firebase-admin": "8.12.1",
     "firebase-functions": "3.6.1",
     "history": "4.10.1",
-    "js-cookie": "2.2.1",
     "lodash": "4.17.15",
     "slack-notify": "0.1.7"
   },
