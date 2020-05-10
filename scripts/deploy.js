@@ -33,7 +33,7 @@ const firebaseDeploy = async () => {
   console.log(chalk.hex(chalkColor).bold(message))
 
   try {
-    const deployTargets = 'hosting'
+    const deployTargets = 'functions,hosting'
 
     const { stdout, stderr } = await exec(`${firebase} deploy --only ${deployTargets} ${token}`)
     if (stdout) console.log('stdout', stdout)

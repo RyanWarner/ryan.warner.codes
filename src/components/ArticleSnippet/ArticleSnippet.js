@@ -6,11 +6,12 @@ import * as S from './styles'
 const iconMap = {
   default: <S.StyledHeart />,
   react: <S.StyledReactLogo />,
-  vscode: <S.StyledVSCode />
+  vscode: <S.StyledVSCode />,
+  gatsby: <S.StyledGatsby />
 }
 
 export default ({ article }) =>
-  <S.ArticleSnippet to={`/articles${article.fields.slug}`}>
+  <S.ArticleSnippet to={article.fields.slug}>
     <S.Icon>
       {iconMap[article.frontmatter.icon || 'default']}
     </S.Icon>

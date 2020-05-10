@@ -16,7 +16,7 @@ export default ({ fields, frontmatter, excerpt, body }) =>
     <S.Date datetime={frontmatter.date}>
       {dayjs.unix(frontmatter.date).format('MMMM DD, YYYY')}
     </S.Date>
-    <S.StyledLink to={`notes/${fields.slug}`}>
+    <S.StyledLink to={fields.slug}>
       <S.Title>{frontmatter.title}</S.Title>
     </S.StyledLink>
     <S.Description>

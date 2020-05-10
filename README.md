@@ -2,6 +2,8 @@
 
 [https://warner.ryan.codes](https://warner.ryan.codes)
 
+This repo holds the code for my personal site. This site is a playground. I often try new things, implement half baked ideas, and ignore tech debt. You may find code smells, mistakes, or other issues.
+
 ### Running locally
 
 1. `git clone git@github.com:RyanWarner/ryan.warner.codes.git`
@@ -44,11 +46,8 @@ Code style is enforced by ESLint and follows the [Standard](https://standardjs.c
 
 ### Todo
 
-- [ ] Social share images
-- [ ] Better styling solution. [Theme UI](https://theme-ui.com/)? [Styled System](https://styled-system.com/)?
+- [ ] Dynamic social share images
 - [ ] Abstract into a Gatsby starter
 - [ ] Add Storybook
-- [ ] Add Cypress
 - [ ] Searchable tags
-- [ ] Use a form instead of a `mailto` link
-- [ ] Add a resume?
+- [ ] Add a resume

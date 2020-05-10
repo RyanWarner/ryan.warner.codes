@@ -2,26 +2,24 @@ import styled from 'styled-components'
 import { ChevronsRight } from 'react-feather'
 
 import { Link } from '../'
-import { Breakpoints, Colors } from 'styles'
+import { Colors, ZIndex, Mixins } from 'styles'
 
 export const LatestArticles = styled.div`
-  margin: 70px 0;
+  max-width: 737px;
+  width: 100%;
+  margin-right: 60px;
+  z-index: ${ZIndex.z2};
+`
 
-  @media(min-width: ${Breakpoints.mobile}) {
-    margin: 106px 0;
-  }
+export const Articles = styled.div`
+  ${Mixins.outlineContainer};
 `
 
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 32px;
-`
-
-export const Title = styled.h3`
-  margin: 0;
-  color: ${Colors.text10};
 `
 
 export const Chevrons = styled(ChevronsRight)`
@@ -30,11 +28,13 @@ export const Chevrons = styled(ChevronsRight)`
   transition: all 200ms ease;
 `
 
-export const AllArticles = styled(Link)`
+export const All = styled(Link)`
   color: ${Colors.text10};
   display: flex;
   align-items: center;
-  padding: 6px 8px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.2ch;
 
   &:hover {
     ${Chevrons} {

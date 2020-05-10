@@ -2,12 +2,22 @@ import styled, { css } from 'styled-components'
 
 import { Breakpoints, Colors, Type } from 'styles'
 import Link from '../Link/Link'
+import HeartEmitter from '../HeartEmitter/HeartEmitter'
 
 export const Hero = styled.div`
-  margin-top: 38px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 100px 0 110px 0;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    flex-direction: column;
+    padding-top: 0;
+    align-items: flex-start;
+  }
 `
 
-const maxWidth = '656px'
+const maxWidth = '756px'
 
 export const H1 = styled.h1`
   background: linear-gradient(${Colors.glow10}, ${Colors.glow20});
@@ -16,14 +26,21 @@ export const H1 = styled.h1`
   max-width: ${maxWidth};
   margin: 0 0 32px 0;
   letter-spacing: 1px;
+  color: ${Colors.glow20};
 
   &::selection {
     -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;
   }
 
+  @media(max-width: ${Breakpoints.w1024}) {
+    font-size: 3.72vw;
+  }
+
   @media(max-width: ${Breakpoints.mobile}) {
     margin: 0 0 20px 0;
+    font-size: 28px;
+    max-width: 450px;
   }
 `
 
@@ -36,6 +53,7 @@ export const SubHeader = styled.p`
   @media(max-width: ${Breakpoints.mobile}) {
     font-size: 16px;
     line-height: 180%;
+    max-width: 450px;
   }
 `
 
@@ -89,5 +107,25 @@ export const Dribbble = styled(Link)`
   &:after {
     ${underline};
     background-color: ${Colors.dribbble};
+  }
+`
+
+export const Copy = styled.div`
+  padding-right: 300px;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    padding-right: 0;
+  }
+`
+
+export const StyledHeartEmitter = styled(HeartEmitter)`
+  position: absolute;
+  right: -122px;
+
+  @media(max-width: ${Breakpoints.mobile}) {
+    position: relative;
+    right: 0;
+    margin-bottom: -40px;
+    margin-top: -36px;
   }
 `

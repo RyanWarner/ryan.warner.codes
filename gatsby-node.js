@@ -2,6 +2,10 @@
 
 const { createFilePath } = require('gatsby-source-filesystem')
 const path = require('path')
+const Dotenv = require('dotenv-webpack')
+
+const paths = require('./src/config/paths')
+const deployEnv = process.env.DEPLOY_ENV || 'local'
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -10,7 +14,12 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       alias: {
         '@': path.resolve(__dirname, 'src')
       }
-    }
+    },
+    plugins: [
+      new Dotenv({
+        path: `${paths.dotenv}.${deployEnv}`
+      })
+    ]
   })
 }
 
@@ -78,7 +87,7 @@ const createPagesForMdxForDirectory = async ({ directory, graphql, reporter, act
 
   mdx.forEach(({ node }, index) => {
     createPage({
-      path: `${directory}${node.fields.slug}`,
+      path: `${node.fields.slug}`,
       // This component will wrap our MDX content
       component: path.resolve('./src/components/ArticleLayout/ArticleLayout.js'),
       // You can use the values in this context in
@@ -91,6 +100,15 @@ const createPagesForMdxForDirectory = async ({ directory, graphql, reporter, act
 // https://www.gatsbyjs.org/docs/node-apis/#createPages
 // Destructure the createPage function from the actions object
 exports.createPages = async args => {
-  await createPagesForMdxForDirectory({ directory: 'articles', ...args })
-  await createPagesForMdxForDirectory({ directory: 'notes', ...args })
+  const mdxSourceDirectories = [
+    'articles',
+    'resources',
+    'notes'
+  ]
+
+  const promises = mdxSourceDirectories.map(directory => {
+    return createPagesForMdxForDirectory({ directory, ...args })
+  })
+
+  await Promise.all(promises)
 }

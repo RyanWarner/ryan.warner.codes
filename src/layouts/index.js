@@ -2,24 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { MDXProvider } from '@mdx-js/react'
 
-import { CodeBlock, Header, Seo, Footer } from 'components'
+import { Header, Seo, Footer } from 'components'
 import 'styles/FontFaces.css'
 import * as S from './styles'
 import { GlobalType } from 'styles/Type'
 import { GlobalStyle } from 'styles/Global'
 import { StateProvider } from '../components/store.js'
-
-const components = {
-  p: S.P,
-  img: S.Img,
-  h1: S.H1,
-  h2: S.H2,
-  h3: S.H3,
-  code: CodeBlock,
-  a: props => <S.A {...props} />,
-  li: props => <S.Li {...props} />,
-  hr: S.Hr
-}
+import components from 'components/mdxComponents'
 
 const Blank = props => (
   <StateProvider>
@@ -58,7 +47,7 @@ const MdxPage = props => {
       <S.Wrap>
         <MDXProvider components={components}>
           <Header location={props.location} />
-          <S.StyledWidth>{props.children}</S.StyledWidth>
+          {props.children}
           <Footer />
         </MDXProvider>
       </S.Wrap>

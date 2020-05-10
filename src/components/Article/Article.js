@@ -1,17 +1,19 @@
 import React from 'react'
-import dayjs from 'dayjs'
 
 import * as S from './styles'
-import { ReadMore } from '../'
 
-export default ({ fields, frontmatter, excerpt }) =>
+const iconMap = {
+  video: <S.StyledYoutube />,
+  article: <S.StyledFileText />
+}
+
+export default ({ title, slug, excerpt, type, description }) =>
   <S.ArticleComponent>
-    <S.StyledLink to={`/articles${fields.slug}`}>
-      <S.Date datetime={frontmatter.date}>
-        {dayjs.unix(frontmatter.date).format('MMMM DD, YYYY')}
-      </S.Date>
-      <S.Title>{frontmatter.title}</S.Title>
-      <S.Description>{excerpt}</S.Description>
-      <ReadMore>Read more...</ReadMore>
+    <S.Icon>
+      {iconMap[type] || iconMap.article}
+    </S.Icon>
+    <S.StyledLink to={slug}>
+      <S.Title>{title}</S.Title>
+      <S.Description>{description || excerpt}</S.Description>
     </S.StyledLink>
   </S.ArticleComponent>

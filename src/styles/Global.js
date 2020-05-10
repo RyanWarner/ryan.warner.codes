@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: ${Colors.blue10};
+    max-width: 100vw;
   }
 
   body {
@@ -14,9 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     max-width: 100vw;
-    overflow-x: hidden;
-    background-color: ${Colors.blue10};
-    background: linear-gradient(145.87deg, #1C2A34 10.36%, #111A20 49.58%, #111A20 49.58%);
+    background-color: ${Colors.blue15};
     color: ${Colors.text10};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

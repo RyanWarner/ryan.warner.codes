@@ -24,7 +24,7 @@ const commands = {
 
 ComfyJS.Init(twitchChannel)
 
-let lasers = []
+const lasers = []
 
 const createLaser = (image) =>
   new Fireball({
@@ -50,7 +50,7 @@ const addNew = (image, message) => {
 }
 
 const startGame = () => {
-  function gameLoop() {
+  function gameLoop () {
     for (var i = 0; i < lasers.length; i++) {
       var laser = lasers[i]
       const doMovement = laser.doMovement()

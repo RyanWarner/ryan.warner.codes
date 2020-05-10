@@ -1,10 +1,13 @@
 
 import styled from 'styled-components'
+import { FileText, Youtube } from 'react-feather'
 
-import { Colors } from 'styles'
+import { Breakpoints, Colors, Type } from 'styles'
 import { Link } from '../'
 
 export const ArticleComponent = styled.div`
+  display: flex;
+  align-items: center;
   max-width: 630px;
 
   a {
@@ -17,10 +20,15 @@ export const ArticleComponent = styled.div`
 `
 
 export const Title = styled.h2`
-  margin-bottom: 14px;
-  margin-top: 10px;
+  margin: 0 0 8px 0;
+  font-size: 18px;
   color: ${Colors.text10};
-  transition: color 175ms ease;
+  font-weight: ${Type.fontWeights.bold};
+  min-height: 30px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    font-size: 20px;
+  }
 `
 
 export const StyledLink = styled(Link)`
@@ -35,13 +43,26 @@ export const StyledLink = styled(Link)`
   }
 `
 
-export const Date = styled.time`
-  font-size: 14px;
-  color: ${Colors.blue50};
-  margin-top: 3px;
-  display: block;
-`
-
 export const Description = styled.p`
   color: ${Colors.text20};
+`
+
+export const Icon = styled.div`
+  padding: 25px;
+`
+
+export const StyledFileText = styled(FileText)`
+  line, polyline, path {
+    stroke: ${Colors.blue50};
+  }
+`
+
+export const StyledYoutube = styled(Youtube)`
+  line, polygon, path {
+    stroke: ${Colors.blue50};
+  }
+
+  polygon {
+    fill: ${Colors.blue50};
+  }
 `

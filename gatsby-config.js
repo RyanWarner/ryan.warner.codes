@@ -1,3 +1,5 @@
+const remarkSlug = require('remark-slug')
+
 const paths = require('./src/config/paths')
 require('dotenv').config({
   path: `${paths.dotenv}.${process.env.DEPLOY_ENV || 'local'}`
@@ -13,14 +15,30 @@ module.exports = {
     author: '@ryanwarnercodes',
     twitterUsername: '@ryanwarnercodes',
     siteUrl: 'https://ryan.warner.codes',
-    image: '/images/ogImage.png',
+    image: '/images/ogImage2.png',
     twitterImage: '/images/twitterImage.png',
     logo: '/images/logo.jpg'
   },
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-layout',
-    'gatsby-plugin-mdx',
+    'gatsby-remark-images',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1080,
+              remarkPlugins: [
+                remarkSlug,
+              ]
+            }
+          }
+        ]
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     {
@@ -46,6 +64,12 @@ module.exports = {
       options: {
         name: 'articles',
         path: `${__dirname}/src/content/notes`
+      }
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'resources',
+        path: `${__dirname}/src/content/resources`
       }
     },
     'gatsby-transformer-sharp',

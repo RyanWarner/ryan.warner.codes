@@ -5,7 +5,7 @@ import { Width } from 'components'
 
 export const Footer = styled.footer`
   width: 100vw;
-  background-color: ${props => props.disableBackground ? 'transparent' : Colors.blue20};
+  background-color: ${props => props.disableBackground ? 'transparent' : Colors.blue00};
   display: flex;
   justify-content: center;
   margin-top: auto;
