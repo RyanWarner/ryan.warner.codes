@@ -12,6 +12,10 @@ const app = module.exports = express()
 app.use(cors({ origin: true }))
 app.use(bodyParser.json())
 
+function insertDecimal(num) {
+  return Number((num / 100).toFixed(2));
+}
+
 app.post('/', async (req, res) => {
   const { body } = req
   const { email } = body.data.object.billing_details
@@ -20,7 +24,7 @@ app.post('/', async (req, res) => {
   hook.send(`
 :heart: **New Feedback Purchased!**
 **Email:** ${email}
-**Amount:** ${amount}
+**Amount:** $${insertDecimal(amount)}
 **Description:** ${description}
   `)
 

@@ -14,14 +14,8 @@ export const StyledLink = styled(Link)`
   color: ${Colors.text20};
 `
 
-export const Li = styled.li`
-  font-size: 16px;
-  margin-bottom: 1rem;
-  color: ${Colors.text20};
-
-  @media (min-width: ${Breakpoints.mobile}) {
-    font-size: 18px;
-  }
+export const Ul = styled.ul`
+  ${Mixins.articleMaxWidth};
 `
 
 export const P = styled.p`
@@ -44,8 +38,7 @@ export const P = styled.p`
 `
 
 export const Img = styled.img`
-  max-width: 80%;
-  margin: 4rem auto;
+  max-width: 100%;
   display: block;
 `
 
@@ -54,7 +47,22 @@ export const Pre = styled.pre`
   margin: 0 0 3rem 0;
 `
 
+export const Li = styled.li`
+  font-size: 16px;
+  margin-bottom: 1rem;
+  color: ${Colors.text20};
+
+  @media (min-width: ${Breakpoints.mobile}) {
+    font-size: 18px;
+  }
+
+  p, ${Pre} {
+    padding: 0;
+  }
+`
+
 export const H1 = styled.h1`
+  ${Mixins.articleMaxWidth};
   color: ${Colors.text20};
 `
 

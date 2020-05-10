@@ -31,11 +31,11 @@ export default {
   //   url: '/mentorship',
   // color: Colors.rainbowIndigo
   // },
-  live: {
-    title: 'Live',
-    url: '/live',
-    color: Colors.rainbowViolet
-  }
+  // live: {
+  //   title: 'Live',
+  //   url: '/live',
+  //   color: Colors.rainbowViolet
+  // }
 }
 
 const secondaryNavItems = {

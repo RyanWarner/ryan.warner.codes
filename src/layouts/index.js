@@ -47,7 +47,7 @@ const MdxPage = props => {
       <S.Wrap>
         <MDXProvider components={components}>
           <Header location={props.location} />
-          <S.StyledWidth>{props.children}</S.StyledWidth>
+          {props.children}
           <Footer />
         </MDXProvider>
       </S.Wrap>

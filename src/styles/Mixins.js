@@ -10,7 +10,8 @@ export const outlineContainer = css`
 export const articleMaxWidth = css`
   width: 100%;
   max-width: ${Sizes.maxArticleWidth};
-  padding: 0 80px;
+  padding-left: 80px;
+  padding-right: 80px;
   box-sizing: border-box;
 
   @media(max-width: ${Sizes.maxArticleWidth}) {

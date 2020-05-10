@@ -21,13 +21,14 @@ const heading = Tag => props => {
 
 const components = {
   p: S.P,
-  // img: S.Img,
+  img: S.Img,
   h1: S.H1,
   h2: heading('H2'),
   h3: S.H3,
   code: CodeBlock,
   a: props => <S.A {...props} />,
   li: props => <S.Li {...props} />,
+  ul: props => <S.Ul {...props} />,
   hr: S.Hr,
   pre: S.Pre
 }
