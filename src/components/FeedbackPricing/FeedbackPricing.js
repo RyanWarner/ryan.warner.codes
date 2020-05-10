@@ -35,6 +35,7 @@ const FeedbackPricing = props => {
       <FeedbackTier
         {...pricingData.large}
         hideCurrency
+        onCtaClick={() => { }}
       />
     </S.FeedbackPricingComponent>
   )

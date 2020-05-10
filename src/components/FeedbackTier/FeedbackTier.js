@@ -11,6 +11,7 @@ export default function FeedbackTier({
   hideCurrency,
   large,
   sku,
+  disabled,
   ...rest
 }) {
   return (

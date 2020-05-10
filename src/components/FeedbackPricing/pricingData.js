@@ -29,12 +29,13 @@ export default {
   large: {
     title: 'Businesses',
     amount: 'Custom',
+    disabled: true,
     features: [
       'Ongoing feedback',
       'Video calls',
       'Actionable written notes',
       'Discord invite'
     ],
-    cta: 'Contact me'
+    cta: 'Coming soon'
   }
 }
