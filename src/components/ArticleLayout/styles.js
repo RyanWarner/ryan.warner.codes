@@ -16,7 +16,7 @@ export const Content = styled.article`
 `
 
 export const Title = styled.h1`
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   font-size: 26px;
   line-height: 34px;
   ${Mixins.articleMaxWidth};
@@ -37,29 +37,10 @@ export const Meta = styled.div`
   }
 `
 
-export const Text = styled.div``
-
-export const Image = styled.div`
-  width: 45px;
-  height: 45px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 25px;
-  margin-right: 15px;
-  background-image: url(${ryan});
-  background-size: cover;
-  background-position: center;
-
-  @media(max-width: ${Breakpoints.mobile}) {
-    width: 35px;
-    height: 35px;
-  }
-`
-
 export const Author = styled.div``
 
 export const Date = styled.time`
-  font-size: 14px;
+  font-size: 16px;
   color: ${Colors.blue50};
-  margin-top: 1px;
   display: block;
 `

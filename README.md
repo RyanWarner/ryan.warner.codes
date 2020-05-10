@@ -2,7 +2,7 @@
 
 [https://warner.ryan.codes](https://warner.ryan.codes)
 
-This repo holds the code for my personal site. This site is a playground. I often try new things, implement half baked ideas, and ignore tech debt.
+This repo holds the code for my personal site. This site is a playground. I often try new things, implement half baked ideas, and ignore tech debt. You may find code smells, mistakes, or other issues.
 
 ### Running locally
 

@@ -17,13 +17,9 @@ export default function PageTemplate({ data: { mdx } }) {
       <S.Content>
         <S.Title>{mdx.frontmatter.title}</S.Title>
         <S.Meta>
-          <S.Image />
-          <S.Text>
-            <S.Author>Written by Ryan Warner</S.Author>
-            <S.Date datetime={mdx.frontmatter.date}>
-              {dayjs.unix(mdx.frontmatter.date).format('MMMM DD, YYYY')}
-            </S.Date>
-          </S.Text>
+          <S.Date datetime={mdx.frontmatter.date}>
+            Last updated on {dayjs.unix(mdx.frontmatter.date).format('MMMM DD, YYYY')}
+          </S.Date>
         </S.Meta>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </S.Content>
