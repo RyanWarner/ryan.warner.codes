@@ -22,6 +22,17 @@ export const body = css`
   }
 `
 
+export const body10 = css`
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: ${fontWeights.medium};
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    font-size: 18px;
+    line-height: 34px;
+  }
+`
+
 export const header1 = css`
   font-size: 50px;
   line-height: 152%;
