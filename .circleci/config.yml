@@ -20,6 +20,7 @@ jobs:
             - v1-dependencies-
 
       - run: npm install
+      - run: cd functions && npm install
 
       - run:
           name: Build
