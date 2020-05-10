@@ -2,12 +2,10 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-const { IncomingWebhook } = require('@slack/webhook')
-const slackWebhookUrl = 'https://hooks.slack.com/services/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'
-
-const webhook = new IncomingWebhook(slackWebhookUrl, {
-  icon_emoji: ':moneybag:',
-})
+const Discord = require('discord.js')
+const webhookId = '709104591282896936'
+const webhookToken = 'R8Rh0RmRLuEzJPfRBaal6rUULO76RV_cbFbCnlSz-iWl5dL70plLWDRd81QfPudlhK4q'
+const hook = new Discord.WebhookClient(webhookId, webhookToken);
 
 const app = module.exports = express()
 
@@ -16,28 +14,15 @@ app.use(bodyParser.json())
 
 app.post('/', async (req, res) => {
   const { body } = req
-  const email = body.data.object.billing_details.email
-  console.info('req.stripeEventType', body.type)
-  console.info('email', email)
+  const { email } = body.data.object.billing_details
+  const { amount, description } = body.data.object
 
-  await webhook.send({
-    blocks: [
-      {
-        type: 'section',
-        text: {
-          type: 'mrkdwn',
-          text: 'New Feedback purchase'
-        }
-      },
-      {
-        type: 'section',
-        text: {
-          type: 'mrkdwn',
-          text: `*Email*\n${email}`
-        }
-      },
-    ]
-  })
+  hook.send(`
+:heart: **New Feedback Purchased!**
+**Email:** ${email}
+**Amount:** ${amount}
+**Description:** ${description}
+  `)
 
   res.send({ message: req.body.type })
 })
