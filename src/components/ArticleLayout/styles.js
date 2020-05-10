@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import { Breakpoints, Colors, Mixins } from 'styles'
-import ryan from 'images/ryan-warner.png'
 
 export const Content = styled.article`
   margin-top: 20px;
