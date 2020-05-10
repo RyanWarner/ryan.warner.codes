@@ -3,7 +3,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 const { IncomingWebhook } = require('@slack/webhook')
-const slackWebhookUrl = 'https://hooks.slack.com/services/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'
+const slackWebhookUrl = 'https://hooks.slack.com/services/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'
 
 const webhook = new IncomingWebhook(slackWebhookUrl, {
   icon_emoji: ':moneybag:',
