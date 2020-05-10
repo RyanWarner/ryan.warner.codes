@@ -1,0 +1,26 @@
+{
+  "name": "ryan-warner-codes",
+  "version": "1.0.0",
+  "author": "Ryan Warner (https://github.com/RyanWarner)",
+  "engines": {
+    "node": "10"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "cookie-parser": "1.4.5",
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "express-manifest-helpers": "0.6.0",
+    "firebase": "7.14.3",
+    "firebase-admin": "8.12.1",
+    "firebase-functions": "3.6.1",
+    "history": "4.10.1",
+    "js-cookie": "2.2.1",
+    "lodash": "4.17.15",
+    "slack-notify": "0.1.7"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "0.1.7"
+  }
+}
