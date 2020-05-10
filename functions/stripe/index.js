@@ -20,19 +20,19 @@ app.post('/', async (req, res) => {
   const email = body.data.object.billing_details.email
 
   await webhook.send({
-    "blocks": [
+    blocks: [
       {
-        "type": "section",
-        "text": {
-          "type": "mrkdwn",
-          "text": "New Feedback purchase"
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: 'New Feedback purchase'
         }
       },
       {
-        "type": "section",
-        "text": {
-          "type": "mrkdwn",
-          "text": `*Email*\n${email}`
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: `*Email*\n${email}`
         }
       },
     ]
