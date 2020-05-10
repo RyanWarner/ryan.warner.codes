@@ -6,6 +6,7 @@
     "node": "10"
   },
   "dependencies": {
+    "@slack/webhook": "^5.0.3",
     "body-parser": "1.19.0",
     "cookie-parser": "1.4.5",
     "cors": "2.8.5",
@@ -16,8 +17,7 @@
     "firebase-admin": "8.12.1",
     "firebase-functions": "3.6.1",
     "history": "4.10.1",
-    "lodash": "4.17.15",
-    "slack-notify": "0.1.7"
+    "lodash": "4.17.15"
   },
   "devDependencies": {
     "firebase-functions-test": "0.1.7"
