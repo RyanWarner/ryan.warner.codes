@@ -4,11 +4,15 @@ import { Breakpoints, Colors, Mixins } from 'styles'
 import ryan from 'images/ryan-warner.png'
 
 export const Content = styled.article`
-  margin-top: 70px;
+  margin-top: 20px;
   margin-bottom: 106px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    margin-top: 70px;
+  }
 `
 
 export const Title = styled.h1`

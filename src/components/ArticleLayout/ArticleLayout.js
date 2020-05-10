@@ -4,7 +4,7 @@ import dayjs from 'dayjs'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import * as S from './styles'
-import { ArticleWidth, Footer, Seo } from 'components'
+import { Footer, Seo } from 'components'
 
 export default function PageTemplate({ data: { mdx } }) {
   return (

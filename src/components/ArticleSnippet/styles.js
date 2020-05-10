@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Breakpoints, Colors, Type } from '../../styles'
 import { Link } from '../'
-import { ReactLogo, Heart, VSCode } from 'components/Icons'
+import { ReactLogo, Heart, VSCode, Gatsby } from 'components/Icons'
 
 export const ArticleSnippet = styled(Link)`
   padding: 20px 20px 20px 0;
@@ -99,5 +99,15 @@ export const StyledVSCode = styled(VSCode)`
   @media(min-width: ${Breakpoints.mobile}) {
     width: 28px;
     height: 28px;
+  }
+`
+
+export const StyledGatsby = styled(Gatsby)`
+  width: 18px;
+  height: 18px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 22px;
+    height: 22px;
   }
 `
