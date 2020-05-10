@@ -18,7 +18,7 @@ const LatestArticles = ({ data }) => {
     <S.LatestArticles>
       <S.Header>
         <CapsTitle>Latest Tutorials</CapsTitle>
-        <S.All to='/articles'>
+        <S.All to='/tutorials'>
           View all
           <S.Chevrons color={Colors.blue50} />
         </S.All>
