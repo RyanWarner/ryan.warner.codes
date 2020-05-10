@@ -5,7 +5,7 @@ import { Mixins, Shadows, Sizes } from 'styles'
 
 export const DiffViewerComponent = styled.div`
   box-sizing: border-box;
-  margin-top: 3rem;
+  margin-top: 0;
   margin-bottom: 3rem;
   max-width: ${Sizes.maxWidth};
 

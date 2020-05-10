@@ -32,6 +32,7 @@ export const P = styled.p`
 
   @media (min-width: ${Breakpoints.mobile}) {
     font-size: 18px;
+    line-height: 28px;
   }
 
   code {
@@ -50,7 +51,7 @@ export const Img = styled.img`
 
 export const Pre = styled.pre`
   ${Mixins.articleMaxWidth};
-  margin: 3rem 0;
+  margin: 0 0 3rem 0;
 `
 
 export const H1 = styled.h1`
@@ -62,23 +63,21 @@ export const H2 = styled.h2`
   margin: 3rem 0 1rem 0;
 
   @media (min-width: ${Breakpoints.mobile}) {
-    margin: 6rem 0 2rem 0;
+    margin: 4rem 0 2rem 0;
   }
 `
 
 export const H3 = styled.h3`
-margin-top: 3rem;
+  margin-top: 3rem;
 
-@media (min-width: ${Breakpoints.mobile}) {
-  margin-top: 6rem;
-}
+  @media (min-width: ${Breakpoints.mobile}) {
+    margin-top: 6rem;
+  }
 `
 
-
-
 export const Hr = styled.hr`
-background-color: ${Colors.blue30};
-border: 0;
-height: 1px;
-margin: 60px 0;
+  background-color: ${Colors.blue30};
+  border: 0;
+  height: 1px;
+  margin: 60px 0;
 `

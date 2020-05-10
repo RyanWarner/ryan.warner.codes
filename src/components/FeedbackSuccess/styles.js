@@ -1,8 +1,7 @@
 
 import styled from 'styled-components'
 
-import { Type, Buttons } from 'styles'
-import Link from 'components/Link/Link'
+import { Type } from 'styles'
 import ButtonSecondary from 'components/ButtonSecondary/ButtonSecondary'
 
 export const FeedbackSuccessComponent = styled.div`
