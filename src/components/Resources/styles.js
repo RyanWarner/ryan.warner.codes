@@ -8,7 +8,7 @@ export const TutorialsComponent = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media(min-width: ${Breakpoints.mobile}) {
+  @media(min-width: ${Breakpoints.w1024}) {
     flex-direction: row;
   }
 
@@ -16,9 +16,14 @@ export const TutorialsComponent = styled.div`
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 48% 48%;
-    grid-column-gap: 4%;
+    grid-template-columns: 100%;
     grid-row-gap: 4%;
+    margin-bottom: 40px;
+
+    @media(min-width: ${Breakpoints.w650}) {
+      grid-column-gap: 4%;
+      grid-template-columns: 48% 48%;
+    }
   }
 
   li {
