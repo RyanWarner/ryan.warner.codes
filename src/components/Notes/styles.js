@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import { Breakpoints, Colors } from 'styles'
 
 export const ArticlesComponent = styled.div`
+  margin-top: 40px;
+
   ul {
     margin: 0;
     padding: 0;

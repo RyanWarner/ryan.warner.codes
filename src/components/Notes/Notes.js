@@ -1,14 +1,14 @@
 import React from 'react'
 
 import * as S from './styles'
-import { Note, Footer, Width } from 'components'
+import { Note, Footer, ArticleWidth } from 'components'
 
 export default ({ data }) => {
   const { edges: articles } = data.allMdx
 
   return (
     <>
-      <Width>
+      <ArticleWidth>
         <S.ArticlesComponent>
           <S.Title>Notes</S.Title>
           <ul>
@@ -19,7 +19,7 @@ export default ({ data }) => {
             )}
           </ul>
         </S.ArticlesComponent>
-      </Width>
+      </ArticleWidth>
       <Footer />
     </>
   )

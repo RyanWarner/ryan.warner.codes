@@ -31,7 +31,7 @@ export default ({ fields, frontmatter, excerpt, body }) =>
         )}
     </S.Description>
     {frontmatter.description &&
-      <S.StyledLink to={`notes/${fields.slug}`}>
+      <S.StyledLink to={`/${fields.slug}`}>
         <ReadMore>Read more...</ReadMore>
       </S.StyledLink>}
   </S.NoteComponent>
