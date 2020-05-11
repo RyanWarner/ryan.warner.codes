@@ -61,6 +61,7 @@
     "build:staging": "DEPLOY_ENV=staging gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
+    "start-functions": "firebase emulators:start --only functions",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:fix": "eslint src/components/** --fix"
