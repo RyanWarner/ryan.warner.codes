@@ -41,6 +41,7 @@ export const HeartContainer = styled.div`
 
 export const StyledHeartClicker = styled(HeartClicker)`
   cursor: pointer;
+  user-select: none;
 
   @media(max-width: ${Breakpoints.mobile}) {
     width: 100px;
