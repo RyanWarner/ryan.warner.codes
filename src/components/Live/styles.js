@@ -1,9 +1,9 @@
 
 import styled from 'styled-components'
 
-import { Mixins } from 'styles'
+import { Colors, Mixins } from 'styles'
 
-export const LiveComponent = styled.div`
+export const LiveComponent = styled.a`
   width: 100%;
   margin-bottom: 80px;
 `
@@ -14,6 +14,7 @@ export const Stream = styled.div`
 
 export const StreamTitle = styled.div`
   padding: 16px;
+  color: ${Colors.text10};
 `
 
 export const Img = styled.img`
