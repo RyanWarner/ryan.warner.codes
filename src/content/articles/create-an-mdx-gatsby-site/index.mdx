@@ -43,7 +43,7 @@ You should see the site running at [`localhost:8000`](http://localhost:8000).
 
 Let's get familiar with the project structure by making a small change. Open the project in your code editor, and navigate to `src/pages/index.js`. Change the `<h1>` text to something else, like "Hello world". Save, and observe your changes in the browser.
 
-[582737a](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/582737aa360a6a6aebb8b77c0b8676d5333b6520)
+[7f49e8d](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/commit/7f49e8d91b100745e62575d8547e3606aa5ea398)
 
 ## Adding MDX support
 
@@ -59,7 +59,7 @@ Add ``gatsby-plugin-mdx`` to the plugins array found in `gatsby-config.js`.
 
 <MdxPluginDiff />
 
-[db1ebc8](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/db1ebc87c74c90d45c36c66badfbccbe48860790)
+[04b5d73](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/commit/04b5d732efb43fabf5297ec14032af94a155070e)
 
 You can now create MDX pages. To test this out, create a new MDX file, `page-3.mdx` inside the pages directory with some markdown. With the power of MDX, you could also add your own React components right next to your markdown.
 
@@ -67,7 +67,7 @@ You can now create MDX pages. To test this out, create a new MDX file, `page-3.m
 
 Restart your server (`CTRL+C` then `npm start`) and navigate to [http://localhost:8000/page-3](http://localhost:8000/page-2) to observe the MDX page working.
 
-[039bb6d](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/039bb6da6b4fec403b07cee33a456ed61d66b656)
+[eb52289](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/commit/eb52289b564d550d4107673d779aeda91a8974e8)
 
 ## Create pages from content
 
@@ -91,7 +91,7 @@ Restart your server and navigate to [localhost:8000/post](http://localhost:8000/
 
 This also works with nested directories. If you create the file `src/content/case-studies/projects.mdx`, Gatsby will create a page at [localhost:8000/case-studies/project](http://localhost:8000/case-studies/project)
 
-[7a466a8](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/pull/1/commits/7a466a813bf089c61292e1c25d14745c0853ff54)
+[599d27d](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/commit/599d27d736e520a2a38e17fae15958f1a1274924)
 
 ## Display content in your components
 
@@ -115,6 +115,8 @@ To supply this component with information about our MDX content, we need to crea
 
 Restart your development server, and observe the output of the console log. We use this data to render a list of content pages.
 
+[6b03abf](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/commit/6b03abf75a53e39acabdbfeedcbeea4d0bd82d1e)
+
 ## Add links to your content pages
 
 During the Gatsby build process, we need to add some extra data to each MDX node, specifically the slug used for the URL. This will eventually get passed to our component and used to link to each page.
@@ -131,6 +133,8 @@ With this new data, update the content component to include a link to each page.
 
 <ContentDiff />
 
+[af6558a](https://github.com/RyanWarner/gatsby-starter-mdx-theme-ui/commit/af6558a7ec303ceb1b6a50aa989229b0f8702b0c)
+
 Restart your server, and try it out! Here's how mine turned out.
 
 ![Content page with page links](./content-page.png)
@@ -139,4 +143,4 @@ Restart your server, and try it out! Here's how mine turned out.
 
 You now have the ground work laid for an MDX powered Gatsby site. By configuring Gatsby to create pages out of your MDX files, and then rendering that content in your components, you have a powerful starting point for creating amazing content.
 
-Thanks Tony and [Prince](https://prince.dev) for proofreading 
+Thank you [Tony](https://twitter.com/3_Alves) and [Prince](https://prince.dev) for proofreading and encouraging me.
