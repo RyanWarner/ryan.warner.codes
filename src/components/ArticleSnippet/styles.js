@@ -102,6 +102,17 @@ export const StyledVSCode = styled(VSCode)`
   }
 `
 
+
+export const ScreenFlow = styled.img`
+  width: 18px;
+  height: 18px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 24px;
+    height: 24px;
+  }
+`
+
 export const StyledGatsby = styled(Gatsby)`
   width: 18px;
   height: 18px;

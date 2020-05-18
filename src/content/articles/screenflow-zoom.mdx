@@ -1,0 +1,40 @@
+---
+title: 'ScreenFlow Tutorial: Zoom In and Out'
+date: 1589816245
+description: Help guide your viewers' eyes by zooming in on specific parts of a video.
+ogImage: 'screenflow-zoom.png'
+icon: 'screenflow'
+type: video
+tags:
+  - screenflow
+---
+
+import Video from 'components/Video/Video'
+
+Help guide your viewers' eyes by zooming in on specific parts of a video. In this tutorial, you'll learn how to zoom in using a video action, then zoom back out using a snapback action, as well as add animation easing effects.
+
+<Video
+  url='https://www.youtube.com/watch?v=azolc30C28w'
+/>
+
+## Transcript
+
+[0:01](https://youtu.be/azolc30C28w?t=1): In this tutorial we're going to look at zooming in to a specific part of the screen using ScreenFlow.
+
+[0:06](https://youtu.be/azolc30C28w?t=6): I've recorded some demo footage here. Example footage that we'll use to demonstrate the zoom in effect. So I'm going to play it real quick.
+
+[0:16](https://youtu.be/azolc30C28w?t=16): I've got VS Code open and my mouse goes over to the extensions tab and clicks it. So what we're going to do here is zoom in on the left hand menu as the mouse gets closer to the icon we want to hit.
+
+[0:31](https://youtu.be/azolc30C28w?t=31): I'm going to move the scrubber to around the point where I want to start this animation. Next, I'm going to select the video tab in the top right and make sure that our screen recording is selected.
+
+[0:46](https://youtu.be/azolc30C28w?t=46): Now that it's selected we have a bunch of options lighting up here, one of those is the action button. So we're going to click this, and you'll notice we get a litte yellow piece on our screen recording. So what I'm going to do is move this to the start of our playhead, so this is where our animation is going to start.
+
+[1:08](https://youtu.be/azolc30C28w?t=68): And then I'm going to move our playhead to the end of this animation and now I'm going to scale the video by dragging the handles, or by dragging the scale slider in the right. So I want the left hand side to get bigger and zoomed in so I'm going to tweak this just a bit. And now screenflow does some automatic tweening between these two states. So you'll notice as I drag the playhead over the video, the animation is nice and smooth for us.
+
+[1:41](https://youtu.be/azolc30C28w?t=102): So let's play that from the beginning and see how we like it. Not too bad, I think it would look better with some easing. So I'm going to right click and we have an option here. Right clicking on this action comes up with the curve type. You'll see that the default is linear. I'm going to click ease in and ease out, but feel free to choose one that you like. So let's try that again. It feels like a much more natural movement.
+
+[2:13](https://youtu.be/azolc30C28w?t=133): So now that we've got the zoom in effect we want to zoom back out. To do that, I'm going to drag the playhead around here. This is where we want the zoom out effect to happen. To do this, I could create a new action and drag the handles back to our original zoom percentage. However, ScreenFlow offers a handy function for this.
+
+[2:40](https://youtu.be/azolc30C28w?t=160): So you'll notice I'm bringing up my menu in the top here and we're going to insert a snapback action. Oops, we need to make sure our screen recoding is selected when we do that so, select that, then Add Snapback Action -> Video or `OPTION + COMMAND + K` as our hotkey.
+
+[3:04](https://youtu.be/azolc30C28w?t=184): So what this does is it automatically snaps back our video to the original state or the default state. So you can see here as we're scrubbing over it our video zooms back to our original state. Now again, we want some easing here to make it feel like a more natural movement. So I'm going to right click and add some easing. Now let's take a look. It zooms in nicely, and zooms right back out.

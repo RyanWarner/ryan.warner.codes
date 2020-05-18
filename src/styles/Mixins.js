@@ -8,7 +8,7 @@ export const outlineContainer = css`
 `
 
 export const articleMaxWidth = css`
-  width: 100%;
+  width: 100vw;
   max-width: ${Sizes.maxArticleWidth};
   padding-left: 80px;
   padding-right: 80px;

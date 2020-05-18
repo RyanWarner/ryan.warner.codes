@@ -2,12 +2,14 @@ import React from 'react'
 import dayjs from 'dayjs'
 
 import * as S from './styles'
+import screenflowIcon from 'images/ScreenFlow-Icon.png'
 
 const iconMap = {
   default: <S.StyledHeart />,
   react: <S.StyledReactLogo />,
   vscode: <S.StyledVSCode />,
-  gatsby: <S.StyledGatsby />
+  gatsby: <S.StyledGatsby />,
+  screenflow: <S.ScreenFlow src={screenflowIcon} alt='ScreenFlow Icon' />
 }
 
 export default ({ article }) =>
