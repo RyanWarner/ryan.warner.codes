@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { Breakpoints, Colors, Mixins } from 'styles'
+import { Breakpoints, Colors, Mixins, Type } from 'styles'
 
 export const A = styled.a`
   text-decoration: underline;
@@ -88,4 +88,29 @@ export const Hr = styled.hr`
   border: 0;
   height: 1px;
   margin: 60px 0;
+`
+
+export const Summary = styled.summary`
+  ${Mixins.articleMaxWidth};
+  margin-bottom: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  font-weight: ${Type.fontWeights.medium};
+
+  &:hover {
+    color: ${Colors.glow20};
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px ${Colors.glow20};
+    border-radius: 4px;
+  }
+
+  &:focus:not(.focus-visible) {
+    outline: none;
+    box-shadow: none;
+  }
 `

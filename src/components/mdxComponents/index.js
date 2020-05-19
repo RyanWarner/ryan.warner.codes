@@ -30,7 +30,8 @@ const components = {
   li: props => <S.Li {...props} />,
   ul: props => <S.Ul {...props} />,
   hr: S.Hr,
-  pre: S.Pre
+  pre: S.Pre,
+  summary: S.Summary
 }
 
 export default components
