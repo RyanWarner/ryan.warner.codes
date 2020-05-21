@@ -6,7 +6,7 @@ import { Timer, IconCard } from '../'
 import { Time } from '../Icons'
 import hearts from './hearts'
 
-const title = 'Figma, hanging out & chatting'
+const title = 'Content planning and prioritization'
 const date = dayjs().format('dddd, MMM DD YYYY')
 
 export default () => {
@@ -15,26 +15,28 @@ export default () => {
     hearts.start()
   }, [])
 
-  return <S.StreamStarting>
-    <S.Date>{date}</S.Date>
-    <S.Title>{title}</S.Title>
-    <S.IconCards>
-      <a href='https://twitter.com/RyanWarnerCodes'>
-        <S.StyledIconCard
-          icon={<S.StyledTwitter />}
-          text='@RyanWarnerCodes'
-        />
-      </a>
-      <a href='https://rw.codes'>
-        <S.StyledIconCard
-          icon={<S.StyledLinkIcon />}
-          text='https://rw.codes'
-        />
-      </a>
-    </S.IconCards>
-    <S.TimeWrap>
-      <Time />
-      <Timer />
-    </S.TimeWrap>
-  </S.StreamStarting>
+  return (
+    <S.StreamStarting>
+      <S.Date>{date}</S.Date>
+      <S.Title>{title}</S.Title>
+      <S.IconCards>
+        <a href='https://twitter.com/RyanWarnerCodes'>
+          <S.StyledIconCard
+            icon={<S.StyledTwitter />}
+            text='@RyanWarnerCodes'
+          />
+        </a>
+        <a href='https://rw.codes'>
+          <S.StyledIconCard
+            icon={<S.StyledLinkIcon />}
+            text='https://rw.codes'
+          />
+        </a>
+      </S.IconCards>
+      <S.TimeWrap>
+        <Time />
+        <Timer />
+      </S.TimeWrap>
+    </S.StreamStarting>
+  )
 }
