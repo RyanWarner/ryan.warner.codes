@@ -5,7 +5,7 @@ import { Breakpoints, Sizes, ZIndex } from 'styles'
 import { Heart } from 'components/Icons'
 
 export const Background = styled.div`
-  width: 100vw;
+  width: 100%;
   height: ${Sizes.navHeightMobile};
   background-color: rgba(13, 21, 26, 0.78);
   backdrop-filter: blur(5px);
