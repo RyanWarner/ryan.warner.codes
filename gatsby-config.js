@@ -32,8 +32,9 @@ module.exports = {
             options: {
               maxWidth: 1080,
               quality: 70,
+              backgroundColor: 'none',
               remarkPlugins: [
-                remarkSlug,
+                remarkSlug
               ]
             }
           }

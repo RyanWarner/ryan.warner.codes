@@ -16,6 +16,14 @@ export const StyledLink = styled(Link)`
 
 export const Ul = styled.ul`
   ${Mixins.articleMaxWidth};
+
+  padding-left: 130px;
+`
+
+export const Ol = styled.ol`
+  ${Mixins.articleMaxWidth};
+
+  padding-left: 130px;
 `
 
 export const P = styled.p`
@@ -40,6 +48,7 @@ export const P = styled.p`
 export const Img = styled.img`
   max-width: 100%;
   display: block;
+  box-shadow: none !important;
 `
 
 export const Pre = styled.pre`

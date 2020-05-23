@@ -9,7 +9,8 @@ const iconMap = {
   react: <S.StyledReactLogo />,
   vscode: <S.StyledVSCode />,
   gatsby: <S.StyledGatsby />,
-  screenflow: <S.ScreenFlow src={screenflowIcon} alt='ScreenFlow Icon' />
+  screenflow: <S.ScreenFlow src={screenflowIcon} alt='ScreenFlow Icon' />,
+  twitch: <S.StyledTwitch />
 }
 
 export default ({ article }) =>

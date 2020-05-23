@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Breakpoints, Colors, Type } from '../../styles'
 import { Link } from '../'
-import { ReactLogo, Heart, VSCode, Gatsby } from 'components/Icons'
+import { ReactLogo, Heart, VSCode, Gatsby, Twitch } from 'components/Icons'
 
 export const ArticleSnippet = styled(Link)`
   padding: 20px 20px 20px 0;
@@ -114,6 +114,16 @@ export const ScreenFlow = styled.img`
 `
 
 export const StyledGatsby = styled(Gatsby)`
+  width: 18px;
+  height: 18px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 22px;
+    height: 22px;
+  }
+`
+
+export const StyledTwitch = styled(Twitch)`
   width: 18px;
   height: 18px;
 

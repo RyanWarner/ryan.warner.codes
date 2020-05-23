@@ -29,6 +29,7 @@ const components = {
   a: props => <S.A {...props} />,
   li: props => <S.Li {...props} />,
   ul: props => <S.Ul {...props} />,
+  ol: props => <S.Ol {...props} />,
   hr: S.Hr,
   pre: S.Pre,
   summary: S.Summary
