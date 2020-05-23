@@ -5,12 +5,11 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import * as S from './styles'
 import { ReadMore } from '../'
-import components from 'components/mdxComponents'
 
-// const components = {
-//   p: props => <S.P {...props} />,
-//   li: props => <S.Li {...props} />
-// }
+const components = {
+  p: props => <S.P {...props} />,
+  li: props => <S.Li {...props} />
+}
 
 export default ({ fields, frontmatter, excerpt, body }) =>
   <S.NoteComponent>
