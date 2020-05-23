@@ -15,12 +15,15 @@ export const pageQuery = graphql`
         node {
           id
           excerpt
+          timeToRead
           frontmatter {
             title
             date
             tags
             type
+            icon
             description
+            videoLength
           }
           fields {
             slug

@@ -36,7 +36,7 @@ export const latestArticlesQuery = graphql`
   query latestArticles {
     allMdx(
       filter: {fileAbsolutePath: {glob: "**/articles/**"}}
-      limit: 5
+      limit: 7
       sort: {
         fields: [frontmatter___date]
         order: DESC
@@ -46,10 +46,12 @@ export const latestArticlesQuery = graphql`
         node {
           id
           excerpt
+          timeToRead
           frontmatter {
             title
             date
             icon
+            videoLength
           }
           fields {
             slug

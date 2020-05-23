@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import * as S from './styles'
-import { Article, Footer, Width, Filter } from 'components'
+import { ArticleSnippet, Footer, Width, Filter } from 'components'
 
 export default ({ data }) => {
   const { edges } = data.allMdx
@@ -13,7 +13,8 @@ export default ({ data }) => {
     excerpt: item.node.excerpt,
     tags: item.node.frontmatter.tags,
     slug: item.node.fields.slug,
-    type: item.node.frontmatter.type
+    type: item.node.frontmatter.type,
+    ...item.node
   }))
 
   const [filteredData, setFilteredData] = useState(articles)
@@ -32,9 +33,7 @@ export default ({ data }) => {
           <S.Tutorials>
             <ul>
               {filteredData.map((article) =>
-                <li key={article.id}>
-                  <Article {...article} />
-                </li>
+                <ArticleSnippet article={article} key={article.id} />
               )}
             </ul>
           </S.Tutorials>

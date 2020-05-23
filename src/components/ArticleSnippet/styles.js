@@ -2,17 +2,21 @@ import styled from 'styled-components'
 
 import { Breakpoints, Colors, Type } from '../../styles'
 import { Link } from '../'
-import { ReactLogo, Heart, VSCode, Gatsby, Twitch } from 'components/Icons'
+import { Clock, PlayCircle } from 'react-feather'
 
 export const ArticleSnippet = styled(Link)`
-  padding: 20px 20px 20px 0;
-  margin-bottom: 6px;
+  padding: 24px 20px 24px 0;
   width: 100%;
   display: flex;
   cursor: pointer;
   transition: background .2s ease-in-out;
   position: relative;
   box-sizing: border-box;
+  border-bottom: 1px solid ${Colors.blue20};
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover {
     background-color: ${Colors.glowOpacity};
@@ -32,8 +36,7 @@ export const ArticleSnippet = styled(Link)`
   }
 
   @media(min-width: ${Breakpoints.mobile}) {
-    padding: 26px 26px 26px 0;
-  margin-bottom: 16px;
+    padding: 32px 26px 32px 0;
   }
 `
 
@@ -54,8 +57,8 @@ export const Title = styled.h4`
 export const Date = styled.time`
   font-size: 12px;
   color: ${Colors.blue50};
-  margin-top: 3px;
   display: block;
+  font-weight: ${Type.fontWeights.medium};
 `
 
 export const Icon = styled.div`
@@ -72,63 +75,49 @@ export const Icon = styled.div`
   }
 `
 
-export const StyledReactLogo = styled(ReactLogo)`
-  width: 22px;
-  height: 22px;
+export const StyledFileText = styled(Clock)`
+  height: 12px;
+  width: 12px;
+  margin-right: 6px;
 
-  @media(min-width: ${Breakpoints.mobile}) {
-    width: 28px;
-    height: 28px;
+  line, polyline, path, circle {
+    stroke: ${Colors.blue50};
   }
 `
 
-export const StyledHeart = styled(Heart)`
-  width: 16px;
-  height: 16px;
+export const StyledPlayCircle = styled(PlayCircle)`
+  height: 12px;
+  width: 12px;
+  margin-right: 6px;
 
-  @media(min-width: ${Breakpoints.mobile}) {
-    width: 22px;
-    height: 22px;
+  line, polygon, path, circle {
+    stroke: ${Colors.blue50};
+  }
+
+  polygon {
+    fill: ${Colors.blue50};
   }
 `
 
-export const StyledVSCode = styled(VSCode)`
-  width: 22px;
-  height: 22px;
-
-  @media(min-width: ${Breakpoints.mobile}) {
-    width: 28px;
-    height: 28px;
-  }
+export const Meta = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
 `
 
-
-export const ScreenFlow = styled.img`
-  width: 18px;
-  height: 18px;
-
-  @media(min-width: ${Breakpoints.mobile}) {
-    width: 24px;
-    height: 24px;
-  }
+export const ContentMeta = styled.div`
+  display: flex;
+  align-items: center;
 `
 
-export const StyledGatsby = styled(Gatsby)`
-  width: 18px;
-  height: 18px;
-
-  @media(min-width: ${Breakpoints.mobile}) {
-    width: 22px;
-    height: 22px;
-  }
+export const Length = styled.p`
+  font-size: 12px;
+  font-weight: ${Type.fontWeights.medium};
+  color: ${Colors.blue50};
 `
 
-export const StyledTwitch = styled(Twitch)`
-  width: 18px;
-  height: 18px;
-
-  @media(min-width: ${Breakpoints.mobile}) {
-    width: 22px;
-    height: 22px;
-  }
+export const Emdot = styled.p`
+  color: ${Colors.blue30};
+  margin: 0 7px;
+  font-size: 12px;
 `

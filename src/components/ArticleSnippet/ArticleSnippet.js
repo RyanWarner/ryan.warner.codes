@@ -2,16 +2,7 @@ import React from 'react'
 import dayjs from 'dayjs'
 
 import * as S from './styles'
-import screenflowIcon from 'images/ScreenFlow-Icon.png'
-
-const iconMap = {
-  default: <S.StyledHeart />,
-  react: <S.StyledReactLogo />,
-  vscode: <S.StyledVSCode />,
-  gatsby: <S.StyledGatsby />,
-  screenflow: <S.ScreenFlow src={screenflowIcon} alt='ScreenFlow Icon' />,
-  twitch: <S.StyledTwitch />
-}
+import iconMap from './iconMap'
 
 export default ({ article }) =>
   <S.ArticleSnippet to={article.fields.slug}>
@@ -20,8 +11,24 @@ export default ({ article }) =>
     </S.Icon>
     <S.Content>
       <S.Title>{article.frontmatter.title}</S.Title>
-      <S.Date datetime={article.frontmatter.date}>
-        {dayjs.unix(article.frontmatter.date).format('MMMM DD, YYYY')}
-      </S.Date>
+      <S.Meta>
+        <S.Date datetime={article.frontmatter.date}>
+          {dayjs.unix(article.frontmatter.date).format('MMM DD, YYYY')}
+        </S.Date>
+        <S.Emdot>•</S.Emdot>
+        <S.ContentMeta>
+          <S.StyledFileText />
+          <S.Length>{article.timeToRead} min</S.Length>
+        </S.ContentMeta>
+        {article.frontmatter.videoLength && (
+          <>
+            <S.Emdot>•</S.Emdot>
+            <S.ContentMeta>
+              <S.StyledPlayCircle />
+              <S.Length>{article.frontmatter.videoLength}</S.Length>
+            </S.ContentMeta>
+          </>
+        )}
+      </S.Meta>
     </S.Content>
   </S.ArticleSnippet>
