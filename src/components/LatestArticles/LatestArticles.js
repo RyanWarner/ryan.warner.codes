@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
 import * as S from './styles'
-import { ArticleSnippet, CapsTitle } from '../'
+import { TutorialSnippet, CapsTitle } from '../'
 import { Colors } from 'styles'
 
 export default () => (
@@ -25,7 +25,7 @@ const LatestArticles = ({ data }) => {
       </S.Header>
       <S.Articles>
         {articles.map(item =>
-          <ArticleSnippet article={item.node} key={item.node.id} />
+          <TutorialSnippet article={item.node} key={item.node.id} />
         )}
       </S.Articles>
     </S.LatestArticles>

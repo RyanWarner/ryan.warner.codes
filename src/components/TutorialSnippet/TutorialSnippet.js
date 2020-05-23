@@ -5,7 +5,7 @@ import * as S from './styles'
 import iconMap from './iconMap'
 
 export default ({ article }) =>
-  <S.ArticleSnippet to={article.fields.slug}>
+  <S.TutorialSnippet to={article.fields.slug}>
     <S.Icon>
       {iconMap[article.frontmatter.icon || 'default']}
     </S.Icon>
@@ -29,4 +29,4 @@ export default ({ article }) =>
         )}
       </S.Meta>
     </S.Content>
-  </S.ArticleSnippet>
+  </S.TutorialSnippet>

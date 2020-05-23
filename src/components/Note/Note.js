@@ -4,11 +4,14 @@ import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import * as S from './styles'
+import { CodeBlock } from 'components'
 import { ReadMore } from '../'
 
 const components = {
   p: props => <S.P {...props} />,
-  li: props => <S.Li {...props} />
+  li: props => <S.Li {...props} />,
+  code: props => <CodeBlock {...props} noWrap />,
+  h2: props => <h2 {...props} />
 }
 
 export default ({ fields, frontmatter, excerpt, body }) =>

@@ -4,7 +4,7 @@ import { Breakpoints, Colors, Type } from '../../styles'
 import { Link } from '../'
 import { Clock, PlayCircle } from 'react-feather'
 
-export const ArticleSnippet = styled(Link)`
+export const TutorialSnippet = styled(Link)`
   padding: 24px 20px 24px 0;
   width: 100%;
   display: flex;

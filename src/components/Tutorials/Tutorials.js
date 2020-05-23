@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import * as S from './styles'
-import { ArticleSnippet, Footer, Width, Filter } from 'components'
+import { TutorialSnippet, Footer, Width, Filter } from 'components'
 
 export default ({ data }) => {
   const { edges } = data.allMdx
@@ -33,7 +33,7 @@ export default ({ data }) => {
           <S.Tutorials>
             <ul>
               {filteredData.map((article) =>
-                <ArticleSnippet article={article} key={article.id} />
+                <TutorialSnippet article={article} key={article.id} />
               )}
             </ul>
           </S.Tutorials>
