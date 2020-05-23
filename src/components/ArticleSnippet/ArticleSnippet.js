@@ -18,14 +18,14 @@ export default ({ article }) =>
         <S.Emdot>•</S.Emdot>
         <S.ContentMeta>
           <S.StyledFileText />
-          <S.Length>{article.timeToRead} min</S.Length>
+          <S.Length>{article.timeToRead} min read</S.Length>
         </S.ContentMeta>
         {article.frontmatter.videoLength && (
           <>
             <S.Emdot>•</S.Emdot>
             <S.ContentMeta>
               <S.StyledPlayCircle />
-              <S.Length>{article.frontmatter.videoLength}</S.Length>
+              <S.Length>{article.frontmatter.videoLength} watch</S.Length>
             </S.ContentMeta>
           </>
         )}
