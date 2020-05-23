@@ -75,30 +75,6 @@ export const Icon = styled.div`
   }
 `
 
-export const StyledFileText = styled(Clock)`
-  height: 12px;
-  width: 12px;
-  margin-right: 6px;
-
-  line, polyline, path, circle {
-    stroke: ${Colors.blue50};
-  }
-`
-
-export const StyledPlayCircle = styled(PlayCircle)`
-  height: 12px;
-  width: 12px;
-  margin-right: 6px;
-
-  line, polygon, path, circle {
-    stroke: ${Colors.blue50};
-  }
-
-  polygon {
-    fill: ${Colors.blue50};
-  }
-`
-
 export const Meta = styled.div`
   display: flex;
   align-items: center;
@@ -117,7 +93,7 @@ export const Length = styled.p`
 `
 
 export const Emdot = styled.p`
-  color: ${Colors.blue30};
+  color: ${Colors.blue40};
   margin: 0 7px;
   font-size: 12px;
 `
