@@ -14,7 +14,7 @@ export const ContentWrap = styled.div`
   margin: 0 0 70px 0;
   flex-direction: column;
   
-  @media(min-width: ${Breakpoints.mobile}) {
+  @media(min-width: ${Breakpoints.w980}) {
     flex-direction: row;
     margin: 0 0 106px 0;
   }
@@ -24,9 +24,15 @@ export const RightCol = styled.div`
   width: 100%;
   flex-shrink: 0;
   margin-top: 80px;
+  min-width: 244px;
   
   @media(min-width: ${Breakpoints.mobile}) {
     width: 323px;
     margin-top: 0;
+    flex-shrink: 1;
+  }
+
+  @media(min-width: ${Breakpoints.pricingTiers}) {
+    flex-shrink: 0;
   }
 `

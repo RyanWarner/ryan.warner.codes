@@ -17,7 +17,7 @@ export default ({ article }) =>
         </S.Date>
         <S.Emdot>•</S.Emdot>
         <S.ContentMeta>
-          <S.Length>{article.timeToRead} min read</S.Length>
+          <S.Length>{article.timeToRead + 1} min read</S.Length>
         </S.ContentMeta>
         {article.frontmatter.videoLength && (
           <>
