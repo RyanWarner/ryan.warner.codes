@@ -8,11 +8,12 @@ export const Hero = styled.div`
   display: flex;
   position: relative;
   align-items: center;
-  padding: 100px 0 110px 0;
+  padding: 100px 0 160px 0;
 
   @media(max-width: ${Breakpoints.mobile}) {
     flex-direction: column;
     padding-top: 0;
+    padding-bottom: 100px;
     align-items: flex-start;
   }
 `
