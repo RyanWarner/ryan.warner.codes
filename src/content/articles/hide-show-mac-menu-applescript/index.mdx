@@ -10,7 +10,7 @@ tags:
   - automation
 ---
 
-Open the Script Editor application, and type in this AppleScript:
+Open the [Script Editor](https://en.wikipedia.org/wiki/AppleScript_Editor) application, and type in this AppleScript (adapted from this [StackOverflow](https://apple.stackexchange.com/questions/283633/can-a-shortcut-be-created-to-toggle-menubar-visibility-that-would-persist-as-t) quesiton):
 
 ```
 tell application "System Preferences"
@@ -32,7 +32,7 @@ This AppleScript will toggle automatically hiding and showing of the menu bar. Y
 
 You may need to allow Script Editor permissions to control your computer.
 
-You can do this by going to `System Preferences → Security & Privacy`, select the **Privacy** tab at the top, then select **Accessibility** in the left hand menu.
+You can do this by going to `System Preferences → Security & Privacy`, select the **Privacy** tab at the top, then select **Accessibility** in the left-hand menu.
 
 Click the lock and input your password to make changes, then check the box next to Script Editor. If Script Editor is not in the list, add it using the plus button.
 
@@ -53,3 +53,7 @@ alias hidemenu="osascript /path/to/HideMacMenu.scpt"
 ```
 
 Restart your terminal or source your `.bash_profile` and type `hidemenu` to test it out. You may need to allow your terminal application permissions to control System Events.
+
+## Conclusion
+
+Using AppleScript, we can automate common tasks like adjusting system settings. I find this task especially useful when preparing for live streaming or screen recording. In the future, I'd love to bundle this up with other screen recording setup, like adjusting my screen resolution and then creating a custom hotkey to execute all of the commands in one go.
