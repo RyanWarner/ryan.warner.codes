@@ -5,6 +5,7 @@ import screenflowIcon from 'images/ScreenFlow-Icon.png'
 
 const iconMap = {
   default: <S.StyledHeart />,
+  apple: <S.StyledApple />,
   react: <S.StyledReactLogo />,
   vscode: <S.StyledVSCode />,
   gatsby: <S.StyledGatsby />,

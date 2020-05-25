@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { Breakpoints } from '../../styles'
-import { ReactLogo, Heart, VSCode, Gatsby, Twitch } from 'components/Icons'
+import { ReactLogo, Heart, VSCode, Gatsby, Twitch, Apple } from 'components/Icons'
 
 export const StyledReactLogo = styled(ReactLogo)`
   width: 22px;
@@ -55,6 +55,16 @@ export const StyledGatsby = styled(Gatsby)`
 `
 
 export const StyledTwitch = styled(Twitch)`
+  width: 18px;
+  height: 18px;
+
+  @media(min-width: ${Breakpoints.mobile}) {
+    width: 22px;
+    height: 22px;
+  }
+`
+
+export const StyledApple = styled(Apple)`
   width: 18px;
   height: 18px;
 

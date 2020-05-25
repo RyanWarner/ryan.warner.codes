@@ -11,7 +11,7 @@ export const Pre = styled.pre`
 `
 
 export const Wrap = styled.div`
-  ${props => props.noWrap ? null : Mixins.articleMaxWidt}
+  ${props => props.noWrap ? null : Mixins.articleMaxWidth};
 `
 
 export const Code = styled.code`
