@@ -6,7 +6,7 @@ import { Timer, IconCard } from '../'
 import { Time } from '../Icons'
 import hearts from './hearts'
 
-const title = 'Content planning and prioritization'
+const title = 'Building a Gatsby + MDX site from scratch'
 const date = dayjs().format('dddd, MMM DD YYYY')
 
 export default () => {
