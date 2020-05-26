@@ -21,7 +21,6 @@ export const DiffViewerComponent = styled.div`
 
 export const DiffViewerWrap = styled.div`
   font-size: 15px;
-  box-shadow: ${Shadows.code};
   border-radius: 6px;
   overflow: scroll;
 

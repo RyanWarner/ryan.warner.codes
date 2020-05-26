@@ -16,14 +16,22 @@ export const StyledLink = styled(Link)`
 
 export const Ul = styled.ul`
   ${Mixins.articleMaxWidth};
-
+  margin-top: 0;
   padding-left: 130px;
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    padding: 0 6vw 0 17vw;
+  }
 `
 
 export const Ol = styled.ol`
   ${Mixins.articleMaxWidth};
-
+  margin-top: 0;
   padding-left: 130px;
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    padding: 0 6vw 0 17vw;
+  }
 `
 
 export const P = styled.p`
@@ -52,8 +60,7 @@ export const Img = styled.img`
 `
 
 export const Pre = styled.pre`
-  ${Mixins.articleMaxWidth};
-  margin: 0 0 3rem 0;
+  margin-top: 0;
 `
 
 export const Li = styled.li`

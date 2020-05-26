@@ -31,7 +31,7 @@ const components = {
   ul: props => <S.Ul {...props} />,
   ol: props => <S.Ol {...props} />,
   hr: S.Hr,
-  // pre: S.Pre,
+  pre: S.Pre,
   summary: S.Summary
 }
 

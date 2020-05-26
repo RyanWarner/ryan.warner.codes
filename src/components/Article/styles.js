@@ -20,7 +20,7 @@ export const ArticleComponent = styled.div`
 `
 
 export const Title = styled.h2`
-  margin: 0 0 8px 0;
+  margin: 0 0 20px 0;
   font-size: 18px;
   color: ${Colors.text10};
   font-weight: ${Type.fontWeights.bold};
