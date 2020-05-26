@@ -64,6 +64,10 @@ export default class Hearts {
         warpSpeed = 1
       }
 
+      if (command === 'corgispeed') {
+        warpSpeed = 1
+      }
+
       if (command === 'chillspeed') {
         warpSpeed = 0
       }
