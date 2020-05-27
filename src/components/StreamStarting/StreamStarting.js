@@ -6,7 +6,7 @@ import { Timer } from '../'
 import { Time } from '../Icons'
 import hearts from './hearts'
 
-const title = 'Continuing work on the All Turtles Gatsby site (morning stream)'
+const title = 'Continuing work on the All Turtles Gatsby site (afternoon stream)'
 const date = dayjs().format('dddd, MMM DD YYYY')
 
 export default () => {
