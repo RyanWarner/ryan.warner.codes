@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import dayjs from 'dayjs'
 
 import * as S from './styles'
-import { Timer, IconCard } from '../'
+import { Timer } from '../'
 import { Time } from '../Icons'
 import hearts from './hearts'
 
-const title = 'Building a Gatsby + MDX site from scratch'
+const title = 'Continuing work on the All Turtles Gatsby site (morning stream)'
 const date = dayjs().format('dddd, MMM DD YYYY')
 
 export default () => {
