@@ -10,6 +10,7 @@ import Fireball from './Fireball'
 import { store } from '../store.js'
 
 const twitchChannel = 'RyanWarnerCodes'
+const MAX_PARTICLES = 100
 
 const commands = {
   test: 'test',
@@ -40,7 +41,7 @@ const addNew = (image, message) => {
   const laser = createLaser(image)
   const number = parseInt(message)
 
-  if (number && number <= 10) {
+  if (number && number <= MAX_PARTICLES) {
     for (let i = 1; i < number; i++) {
       const laser = createLaser(image)
       lasers.push(laser)
@@ -50,7 +51,7 @@ const addNew = (image, message) => {
 }
 
 const startGame = () => {
-  function gameLoop () {
+  function gameLoop() {
     for (var i = 0; i < lasers.length; i++) {
       var laser = lasers[i]
       const doMovement = laser.doMovement()
