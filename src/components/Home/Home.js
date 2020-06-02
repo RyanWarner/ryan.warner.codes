@@ -7,7 +7,8 @@ import {
   Hero,
   LatestArticles,
   ResourcesPreview,
-  Width
+  Width,
+  BLM
 } from '../../components'
 
 export default () =>
