@@ -67,8 +67,8 @@
     "lint:fix": "eslint src/components/** --fix"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-export-default-from": "7.8.3",
-    "@babel/plugin-proposal-export-namespace-from": "7.8.3",
+    "@babel/plugin-proposal-export-default-from": "7.10.1",
+    "@babel/plugin-proposal-export-namespace-from": "7.10.1",
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
     "chalk": "4.0.0",
     "cross-env": "7.0.2",
