@@ -43,7 +43,7 @@
     "react-player": "2.0.1",
     "remark-slug": "^6.0.0",
     "slugify": "^1.4.0",
-    "styled-components": "5.1.0"
+    "styled-components": "5.1.1"
   },
   "keywords": [
     "gatsby",
