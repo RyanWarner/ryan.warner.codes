@@ -7,7 +7,6 @@ export const BLMComponent = styled.div`
   justify-content: center;
   background-color: black;
   color: white;
-  padding: 0 60px;
   box-sizing: border-box;
   padding-top: 100px;
 `
