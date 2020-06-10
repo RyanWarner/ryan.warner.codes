@@ -9,6 +9,7 @@ export const Hero = styled.div`
   position: relative;
   align-items: center;
   padding: 100px 0 160px 0;
+  overflow: hidden;
 
   @media(max-width: ${Breakpoints.mobile}) {
     flex-direction: column;
