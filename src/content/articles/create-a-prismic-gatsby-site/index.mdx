@@ -11,9 +11,30 @@ tags:
   - cms
 ---
 
-- Create a Prismic account
-- Create a new repository
-- Create a custom type
+## Getting started with Prismic
+
+[Prismic](https://prismic.io/) is a headless content management system.
+
+### Create a Prismic account
+
+The first step is to create a Prismic account. Navigate to [prismic.io](https://prismic.io/) and click "Create a Project" in the top right.
+
+![Prismic home page](./images/prismic-site.png)
+
+Fill out the form and click "Create Account".
+
+![Create Prismic Account](./images/prismic-create-account.png)
+
+
+### Create a new repository
+
+A Prismic repository is where your content will be stored. Click "Create repository" in the top right.
+
+![Create a Prismic repository](./images/prismic-create-repository.png)
+
+Choose a unique repository name, select your plan (I'm using the single user free plan) and click "Create this repository" at the bottom.
+
+## Create a custom type
   - Add title
   - Slug
   - Image
@@ -35,7 +56,7 @@ You should see the site running at [`localhost:8000`](http://localhost:8000).
 
 At the time of my writing (Wednesday, June 10th 2020), there are two Gatsby plugins for sourcing your Prismic data.
 
-- [gatsby-source-prismic-graphql] (https://github.com/birkir/gatsby-source-prismic-graphql)
+- [gatsby-source-prismic-graphql](https://github.com/birkir/gatsby-source-prismic-graphql)
 - [gatsby-source-prismic](https://github.com/angeloashmore/gatsby-source-prismic)
 
 In this tutorial, we are going to use `gatsby-source-prismic`.
@@ -45,3 +66,7 @@ There are pros and cons to each of these source plugins. (This issue)[https://gi
 I chose `gatsby-source-prismic` because it is lightweight (creating pages are not a feature of this plugin) and appears to have less developer experience issues (I formed this opinion based on some light reading through each repo's issues). I anticiapte these plugins changing and will revisit this tutorial in the future.
 
 ## Set up gatsby-source-prismic
+
+![Prismic JSON editor](./images/prismic-json-editor.png)
+
+## Create pages from Prismic data

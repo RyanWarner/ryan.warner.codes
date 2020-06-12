@@ -92,10 +92,11 @@ export const H2 = styled.h2`
 `
 
 export const H3 = styled.h3`
-  margin-top: 3rem;
+  ${Mixins.articleMaxWidth};
+  margin: 2rem 0 0.5rem 0;
 
   @media (min-width: ${Breakpoints.mobile}) {
-    margin-top: 6rem;
+    margin: 2rem 0 1rem 0;
   }
 `
 
