@@ -11,6 +11,8 @@ tags:
   - cms
 ---
 
+import AddPlugin from './diffs/AddPlugin'
+
 ## Getting started with Prismic
 
 [Prismic](https://prismic.io/) is a headless content management system.
@@ -21,7 +23,7 @@ The first step is to create a Prismic account. Navigate to [prismic.io](https://
 
 ![Prismic home page](./images/prismic-site.png)
 
-Fill out the form and click "Create Account".
+Fill out the sign up form and click "Create Account".
 
 ![Create Prismic Account](./images/prismic-create-account.png)
 
@@ -39,7 +41,9 @@ Choose a unique repository name, select your plan (I'm using the single user fre
   - Slug
   - Image
 
-## Initialize a new, default Gatsby site
+## Create some sample post content
+
+## Create a new Gatsby site
 
 Install the Gatsby CLI and use it to initialize a new Gatsby site with the [default starter](https://github.com/gatsbyjs/gatsby-starter-default). These steps are adapted from the official [Gatsby Quick Start](https://www.gatsbyjs.org/docs/quick-start).
 
@@ -52,21 +56,42 @@ npm start
 
 You should see the site running at [`localhost:8000`](http://localhost:8000).
 
-## Choose a Prismic data source plugin
-
-At the time of my writing (Wednesday, June 10th 2020), there are two Gatsby plugins for sourcing your Prismic data.
-
-- [gatsby-source-prismic-graphql](https://github.com/birkir/gatsby-source-prismic-graphql)
-- [gatsby-source-prismic](https://github.com/angeloashmore/gatsby-source-prismic)
-
-In this tutorial, we are going to use `gatsby-source-prismic`.
-
-There are pros and cons to each of these source plugins. (This issue)[https://github.com/angeloashmore/gatsby-source-prismic/issues/217] and the comments within give a great overview of the current state of things.
-
-I chose `gatsby-source-prismic` because it is lightweight (creating pages are not a feature of this plugin) and appears to have less developer experience issues (I formed this opinion based on some light reading through each repo's issues). I anticiapte these plugins changing and will revisit this tutorial in the future.
-
 ## Set up gatsby-source-prismic
+
+[Read my reasoning behind choosing this package](/why-gatsby-source-prismic).
+
+The following instructions are adapted and simplified version of the [official documentation](https://github.com/angeloashmore/gatsby-source-prismic).
+
+Install the package
+
+`npm install --save gatsby-source-prismic`
+
+Add the plugin to your Gatsby plugins array.
+
+<AddPlugin />
+
+There are a lot more options available (see the full list [in the docs](https://github.com/angeloashmore/gatsby-source-prismic#how-to-use)) but we're going to start simple.
+
+The schema definition does not yet exist in our code base. To add this, create the file `src/schemas/post.json`.
+
+Grab the JSON genereted by Prismic by navigating to your custom `post` type, and then click on the "JSON editor" tab on the right.
 
 ![Prismic JSON editor](./images/prismic-json-editor.png)
 
+Copy and paste this JSON into your `src/schemas/post.json` file.
+
+Restart your development server.
+
+## View your Prismic content in the GraphQL explorer
+
+Open the GraphQL explorer ([http://localhost:8000/___graphq](http://localhost:8000/___graphq) to see your Prismic post content! Expand `allPrismicPost → edges → data → title → text` and press the Execute Query (play) button (CTRL + Enter) to see the post content you entered in the Prismic UI.
+
+![GraphQL explorer with Prismic content](./images/prismic-graphql-explorer.png)
+
 ## Create pages from Prismic data
+
+Todo
+
+## Display post content
+
+Todo
