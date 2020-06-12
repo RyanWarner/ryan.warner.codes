@@ -1,10 +1,42 @@
 ---
 title: Create a Prismic powered Gatsby site from scratch
 description: Description
-date: 1567987200
+date: 1591800392
 icon: gatsby
 type: article
 ogImage: ''
 tags:
-  - react
+  - gatsby
+  - prismic
+  - cms
 ---
+
+## Create a Prismic account
+
+## Initialize a new, default Gatsby site
+
+Install the Gatsby CLI and use it to initialize a new Gatsby site with the [default starter](https://github.com/gatsbyjs/gatsby-starter-default). These steps are adapted from the official [Gatsby Quick Start](https://www.gatsbyjs.org/docs/quick-start).
+
+```bash
+npm install -g gatsby-cli
+gatsby new gatsby-site
+cd gatsby-site
+npm start
+```
+
+You should see the site running at [`localhost:8000`](http://localhost:8000).
+
+## Choose a Prismic data source plugin
+
+At the time of my writing (Wednesday, June 10th 2020), there are two Gatsby plugins for sourcing your Prismic data.
+
+- [gatsby-source-prismic-graphql] (https://github.com/birkir/gatsby-source-prismic-graphql)
+- [gatsby-source-prismic](https://github.com/angeloashmore/gatsby-source-prismic)
+
+In this tutorial, we are going to use `gatsby-source-prismic`.
+
+There are pros and cons to each of these source plugins. (This issue)[https://github.com/angeloashmore/gatsby-source-prismic/issues/217] and the comments within give a great overview of the current state of things.
+
+I chose `gatsby-source-prismic` because it is lightweight (creating pages are not a feature of this plugin) and appears to have less developer experience issues (I formed this opinion based on some light reading through each repo's issues). I anticiapte these plugins changing in the future and will revisit this tutorial in the future.
+
+## Set up gatsby-source-prismic
