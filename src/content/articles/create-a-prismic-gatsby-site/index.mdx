@@ -12,10 +12,11 @@ tags:
 ---
 
 import AddPlugin from './diffs/AddPlugin'
+import CreatePages from './diffs/CreatePages'
 
 ## Getting started with Prismic
 
-[Prismic](https://prismic.io/) is a headless content management system.
+[Prismic](https://prismic.io/) is a headless content management system. In this tutorial, we'll create a Prismic account with some sample blog posts and integrate the post content into a brand new Gatsby site.
 
 ### Create a Prismic account
 
@@ -37,11 +38,26 @@ A Prismic repository is where your content will be stored. Click "Create reposit
 Choose a unique repository name, select your plan (I'm using the single user free plan) and click "Create this repository" at the bottom.
 
 ## Create a custom type
-  - Add title
+
+Create a custom, repeatable type called "post". This defines the type of content our post will contain.
+
+Drag and drop content types from the left. FOr our example blog posts, we'll add the following types:
+
+  - Title
   - Slug
   - Image
+  - Rich text
 
 ## Create some sample post content
+
+![Create a new Prismic post](./images/prismic-create-content.png)
+
+Select the content tab in the top left, then click the green pencil icon in the top right to create a new post.
+
+![New Prismic post](./images/prismic-create-post.png)
+
+Fill out the post with some sample content, then click the "Save" button in the top right. The save button should now become "Publish" — click this to make the content live.
+
 
 ## Create a new Gatsby site
 
@@ -62,7 +78,7 @@ You should see the site running at [`localhost:8000`](http://localhost:8000).
 
 The following instructions are adapted and simplified version of the [official documentation](https://github.com/angeloashmore/gatsby-source-prismic).
 
-Install the package
+Install the package.
 
 `npm install --save gatsby-source-prismic`
 
@@ -70,7 +86,7 @@ Add the plugin to your Gatsby plugins array.
 
 <AddPlugin />
 
-There are a lot more options available (see the full list [in the docs](https://github.com/angeloashmore/gatsby-source-prismic#how-to-use)) but we're going to start simple.
+There are a lot of other options available (see the full list [in the docs](https://github.com/angeloashmore/gatsby-source-prismic#how-to-use)) but we're going to start simple.
 
 The schema definition does not yet exist in our code base. To add this, create the file `src/schemas/post.json`.
 
@@ -84,14 +100,55 @@ Restart your development server.
 
 ## View your Prismic content in the GraphQL explorer
 
-Open the GraphQL explorer ([http://localhost:8000/___graphq](http://localhost:8000/___graphq) to see your Prismic post content! Expand `allPrismicPost → edges → data → title → text` and press the Execute Query (play) button (CTRL + Enter) to see the post content you entered in the Prismic UI.
+Open the GraphQL explorer ([http://localhost:8000/___graphq](http://localhost:8000/___graphql) to see your Prismic post content! Expand `allPrismicPost → edges → data → title → text` and press the Execute Query (play) button (CTRL + Enter) to see the post content you entered in the Prismic UI.
+
+We'll also want some other data such as the `id`, `uid`, and `content`.
 
 ![GraphQL explorer with Prismic content](./images/prismic-graphql-explorer.png)
 
 ## Create pages from Prismic data
 
-Todo
+Now that we're getting our content from the Prismic API, we want to use this content to create pages on our site.
+
+Using the Gatsby docs on [createPages](https://www.gatsbyjs.org/docs/node-apis/#createPages) as well as the [example](https://github.com/angeloashmore/gatsby-source-prismic#sites-gatsby-nodejs-example) given in the `gatsby-source-prismic` readme as reference, let's create pages from our Prismic posts.
+
+<CreatePages />
+
+Write a GraphQL query to get our post data from Prismic (this is the same query we constructed in the GraphQL explorer).
+
+We'll then loop through each post and call `createPage` passing in the `uid` as our path, a component (we'll create this in the next step), as well as the Prisimic data as context.
 
 ## Display post content
 
-Todo
+Create a new component file, `src/components/PostTemplate/PostTemplate.js`.
+
+```jsx
+import React from "react"
+
+const PostLayout = props => {
+  return (
+    <>
+      <h1>{props.pageContext.data.title.text}</h1>
+      <div
+        dangerouslySetInnerHTML={
+          { __html: props.pageContext.data.content.html }
+        }
+      />
+    </>
+  )
+}
+
+export default PostLayout
+```
+
+This is the component we passed to `createPages` in the previous step. This component renders the Prismic data we passed in as `pageContext` in `gatsby-node.js`.
+
+Navigate to your post in the browser (in my case, [`http://localhost:8000/my-first-post`](http://localhost:8000/sample-blog-post)) to see your post content!
+
+## Conclusion
+
+We started by creating a Prismic account and creating a custom repeatable type called "post". We then initialized a new Gatsby site, and added the `gatsby-source-prismic` plugin. Lastly, we created pages and rendered the blog post content.
+
+## Next steps
+
+There's a lot more functionality we could add or explore. Prismic slices, images, and previews are all important features that I will explore in future posts.
