@@ -4,7 +4,7 @@ description: Description
 date: 1591800392
 icon: gatsby
 type: article
-ogImage: ''
+ogImage: 'create-a-prismic-gatsby-site.png'
 tags:
   - gatsby
   - prismic
@@ -82,9 +82,13 @@ Install the package.
 
 `npm install --save gatsby-source-prismic`
 
+[0564785](https://github.com/RyanWarner/gatsby-starter-prismic/commit/0564785d0e83d230cedb44a332cc6ea4500cc572)
+
 Add the plugin to your Gatsby plugins array.
 
 <AddPlugin />
+
+[bbd02f2](https://github.com/RyanWarner/gatsby-starter-prismic/commit/bbd02f21238fdaf18892ffb399157fd4edc5039c)
 
 There are a lot of other options available (see the full list [in the docs](https://github.com/angeloashmore/gatsby-source-prismic#how-to-use)) but we're going to start simple.
 
@@ -113,6 +117,8 @@ Now that we're getting our content from the Prismic API, we want to use this con
 Using the Gatsby docs on [createPages](https://www.gatsbyjs.org/docs/node-apis/#createPages) as well as the [example](https://github.com/angeloashmore/gatsby-source-prismic#sites-gatsby-nodejs-example) given in the `gatsby-source-prismic` readme as reference, let's create pages from our Prismic posts.
 
 <CreatePages />
+
+[23a2694](https://github.com/RyanWarner/gatsby-starter-prismic/commit/23a2694c590535ba866702d6d6d742ff4d782519)
 
 Write a GraphQL query to get our post data from Prismic (this is the same query we constructed in the GraphQL explorer).
 
@@ -151,4 +157,4 @@ We started by creating a Prismic account and creating a custom repeatable type c
 
 ## Next steps
 
-There's a lot more functionality we could add or explore. Prismic slices, images, and previews are all important features that I will explore in future posts.
+There's a lot more functionality we could add or explore. Continuous Deployment, Prismic slices, images, and previews are all important features that I will explore in future posts.
