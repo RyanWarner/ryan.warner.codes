@@ -24,7 +24,7 @@ const components = {
   img: S.Img,
   h1: S.H1,
   h2: heading('H2'),
-  h3: S.H3,
+  h3: heading('H3'),
   code: CodeBlock,
   a: props => <S.A {...props} />,
   li: props => <S.Li {...props} />,
