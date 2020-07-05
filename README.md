@@ -15,7 +15,7 @@ This repo holds the code for my personal site. This site is a playground. I ofte
 
 Deployment is handled by [CircleCI](https://circleci.com/).
 
-Pushing to the branches `staging` or `master` will trigger deploys to the staging or production environment, respectively. See `.circleci/config.yml` to modify deployment steps.
+Pushing to the branches `staging` or `production` will trigger deploys to the staging or production environment, respectively. See `.circleci/config.yml` to modify deployment steps.
 
 ### Hosting
 

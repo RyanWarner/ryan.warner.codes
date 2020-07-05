@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Build
           command: |
-              if [ $CIRCLE_BRANCH = 'master' ]; then
+              if [ $CIRCLE_BRANCH = 'production' ]; then
                 npm run build:production
               fi
               if [ $CIRCLE_BRANCH = 'staging' ]; then
@@ -60,7 +60,7 @@ workflows:
             branches:
               only:
                 - staging
-                - master
+                - production
 
       - deploy:
           requires:
@@ -69,4 +69,4 @@ workflows:
             branches:
               only:
                 - staging
-                - master
+                - production

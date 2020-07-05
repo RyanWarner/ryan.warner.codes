@@ -6,7 +6,7 @@ const chalk = require('chalk')
 const chalkColor = '#3D87C9'
 
 const gitBranchToFirebaseMap = {
-  master: 'production',
+  production: 'production',
   staging: 'default'
 }
 
