@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { MDXProvider } from '@mdx-js/react'
 
-import { Header, Seo, Footer, BLM } from 'components'
+import { Header, Seo, Footer } from 'components'
 import 'styles/FontFaces.css'
 import * as S from './styles'
 import { GlobalType } from 'styles/Type'
@@ -23,7 +23,6 @@ const Default = props => (
     <Seo />
     <GlobalStyle />
     <GlobalType />
-    <BLM />
     <S.Wrap>
       <MDXProvider components={components}>
         <Header location={props.location} />
