@@ -36,7 +36,7 @@ const SEO = ({ description, lang, meta, keywords, title, siteUrl, image }) => {
               content: `${siteUrl}${ogImage}`
             }, {
               property: 'og:image:alt',
-              content: "Ryan Warner's tech blog and mentorship website"
+              content: "Ryan Warner's digital garden, tutorials, and resources."
             }, {
               property: 'og:logo',
               content: data.site.siteMetadata.logo
