@@ -6,7 +6,7 @@ import { Timer } from '../'
 import { Time } from '../Icons'
 import hearts from './hearts'
 
-const title = 'What is a Digital Garden?'
+const title = 'Morning design sesh'
 const date = dayjs().format('dddd, MMM DD YYYY')
 
 export default () => {
