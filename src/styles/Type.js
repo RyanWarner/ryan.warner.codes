@@ -5,7 +5,7 @@ import * as Breakpoints from './Breakpoints'
 import * as Colors from './Colors'
 
 const sansSerifFallback = "'-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Roboto', 'sans-serif'"
-export const fontFamily = `'Jost', ${sansSerifFallback}`
+export const fontFamily = `'ClearSans', ${sansSerifFallback}`
 export const monospace = "Menlo, Monaco, 'Courier New', monospace"
 
 export const fontWeights = {
