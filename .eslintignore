@@ -1,5 +1,0 @@
-**/node_modules
-**/public
-src/frontend/config/env.js
-**/build
-**/functions/**

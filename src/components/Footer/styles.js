@@ -1,49 +1,37 @@
 import styled from 'styled-components'
 
-import { Breakpoints, Colors } from 'styles'
-import { Width } from 'components'
+import Twitter from '../Twitter'
+import GitHub from '../GitHub'
 
 export const Footer = styled.footer`
-  width: 100%;
-  background-color: ${props => props.disableBackground ? 'transparent' : Colors.blue00};
+  height: 70px;
   display: flex;
-  justify-content: center;
-  margin-top: auto;
-
-  @media(max-width: ${Breakpoints.mobile}) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 55px 0;
-  }
-`
-
-export const Credits = styled.div`
-  @media(max-width: ${Breakpoints.mobile}) {
-    margin-bottom: 40px;
-  }
-
-  p {
-    font-size: 16px;
-    color: ${Colors.text20};
-    line-height: 180%;
-  }
-
-  a {
-    text-decoration: none;
-  }
-`
-
-export const StyledWidth = styled(Width)`
-  padding-top: 60px;
-  padding-bottom: 60px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  border-top: 1px solid ${props => props.theme.rule};
+`
 
-  @media(max-width: ${Breakpoints.mobile}) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 0;
-    padding-bottom: 0;
+export const Copyright = styled.p`
+  display: flex;
+  align-items: center;
+`
+
+export const Social = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+`
+
+export const StyledGitHub = styled(GitHub)`
+  margin-left: 12px;
+`
+
+export const StyledTwitter = styled(Twitter)``
+
+export const A = styled.a`
+  &:hover {
+    path {
+      fill: ${props => props.theme.green10};
+    }
   }
 `

@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { Colors } from './'
-
 export const GlobalStyle = createGlobalStyle`
   html {
     margin: 0;
     padding: 0;
-    background-color: ${Colors.blue10};
     max-width: 100vw;
+    background-color: ${props => props.theme.background};
+    color: ${props => props.theme.text10};
+    font-family: ${props => props.theme.fontFamily};
   }
 
   body {
@@ -15,8 +15,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     max-width: 100vw;
-    background-color: ${Colors.blue15};
-    color: ${Colors.text10};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -26,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: ${Colors.blue40};
-    color: ${Colors.text10};
+    background: ${props => props.theme.highlightBackground};
+    color: ${props => props.theme.text10};
   }
 `
