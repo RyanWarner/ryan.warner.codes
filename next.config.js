@@ -4,7 +4,13 @@ const withMDX = require('@next/mdx')({
   extension: /\.(md|mdx)$/
 })
 
-module.exports = (nextConfig = {}) => {
+const nextConfig = {
+  devIndicators: {
+    autoPrerender: false
+  }
+}
+
+module.exports = () => {
   return Object.assign({}, nextConfig, withMDX({
     pageExtensions: ['js', 'jsx', 'mdx'],
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {

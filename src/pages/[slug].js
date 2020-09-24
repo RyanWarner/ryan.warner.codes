@@ -29,6 +29,10 @@ export async function getStaticPaths() {
   }
 }
 
+import getShareImage from '@jlengstorf/get-share-image';
+
+
+
 export async function getStaticProps({ params: { slug } }) {
   const files = glob.sync(contentGlob)
 
@@ -47,10 +51,23 @@ export async function getStaticProps({ params: { slug } }) {
 
   const mdxHtml = await renderWithReact(content, { components })
 
+  const ogImage = getShareImage({
+    title: 'Deploy a Node.js App to DigitalOcean with SSL',
+    tagline: '#devops #nodejs #ssl',
+    cloudName: 'ryan-warner-codes',
+    imagePublicID: 'cloudinary_zlgvs6',
+    titleFont: 'ClearSans',
+    taglineFont: 'ClearSans',
+    textColor: '232129',
+  })
+
+  console.log({ ogImage })
+
   return {
     props: {
       mdxHtml,
-      frontMatter: data || {}
+      frontMatter: data || {},
+      ogImage
     }
   }
 }
