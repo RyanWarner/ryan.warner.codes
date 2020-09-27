@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import siteMetadata from 'siteMetadata'
 
-export default function SEO ({
+export default function Seo ({
   title,
   description,
   twitterHandle,
@@ -30,6 +30,6 @@ export default function SEO ({
   )
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   ...siteMetadata
 }

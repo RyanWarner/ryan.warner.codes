@@ -1,4 +1,4 @@
-export SEO from './SEO'
+export Seo from './Seo'
 export Width from './Width'
 export Header from './Header'
 export Footer from './Footer'

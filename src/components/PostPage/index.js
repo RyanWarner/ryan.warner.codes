@@ -1,11 +1,11 @@
 import * as S from './styles'
-import { SEO, Header } from 'components'
+import { Seo, Header } from 'components'
 
 const PostPage = ({ frontMatter, mdxHtml, ogImage }) => {
   return (
     <>
       <S.Wrap>
-        <SEO title={frontMatter.title} ogImage={ogImage} />
+        <Seo title={frontMatter.title} ogImage={ogImage} />
         <Header />
         <S.Main>
           <h1>{frontMatter.title}</h1>

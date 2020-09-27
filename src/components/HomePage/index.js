@@ -1,4 +1,4 @@
-import { SEO, PostSnippet, GitHub, Header } from 'components'
+import { Seo, PostSnippet, GitHub, Header } from 'components'
 import * as S from './styles'
 
 const githubUrl =
@@ -7,7 +7,7 @@ const githubUrl =
 export default function HomePage ({ allMdx }) {
   return (
     <S.Wrap>
-      <SEO />
+      <Seo />
       <Header />
       <S.Main>
         <S.H1>
