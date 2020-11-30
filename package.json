@@ -49,7 +49,7 @@
     "react-dom": "16.13.1",
     "react-feather": "2.0.8",
     "react-helmet": "6.1.0",
-    "react-player": "2.6.2",
+    "react-player": "2.7.0",
     "remark-slug": "6.0.0",
     "slugify": "1.4.6",
     "styled-components": "5.2.1"
