@@ -1,0 +1,118 @@
+---
+title: Query strings
+description: How to use query strings in JavaScript and React.
+date: 1615410213
+icon: react
+type: article
+tags:
+  - react
+  - javascript
+---
+
+# Query strings
+
+The query component (or query string) is a part of a URI that contains data in the form of key value pairs.
+
+![[Screen Shot 2021-03-10 at 12.23.43 PM.png]]
+
+```
+?foo=bar
+```
+
+The query string is also referred to as the "search string". There are a number of ways to interact with it using JavaScript.
+
+## Vanilla JS
+
+The [`Location`](https://developer.mozilla.org/en-US/docs/Web/API/Location) interface has a property called `search`.
+
+```js
+window.location.search // Returns ?q=123
+```
+
+You can then pass this string to the `URLSearchParams` to easily parse out the values in the query string.
+
+```js
+// mydomain.com?foo=bar
+
+const queryString = window.location.search
+const params = new URLSearchParams(queryString)
+const action = params.get('foo') // Returns "bar"
+```
+
+## The [query-string](https://github.com/sindresorhus/query-string) library
+
+We can abstract this away a little bit by introducing the `query-string` library by [@sindresorhus](https://twitter.com/sindresorhus).
+
+By passing the search string to query-string's `parse` method, we get back a familiar JavaScript object.
+
+```
+const parsed = queryString.parse(window.location.search)
+console.log(parsed.foo)
+// "bar"
+```
+
+This amazing library has a bunch of other useful functions as well, so I recommend reading the documentation to see other ways to use it.
+
+## React
+
+All of the above methods will also work in a React context, however, various React routers often provide their own convenience methods and hooks to interact with the query string.
+
+### NextJS
+
+{!} — This may need some more details, and might only work in SSR. There's also potentially other ways to do it. https://stackoverflow.com/questions/43862600/how-can-i-get-query-string-parameters-from-the-url-in-next-js
+
+The NextJS router offers a hook, `useRouter` that is a joy to use.
+
+```jsx
+// mysite.com?foo=bar
+
+import { useRouter } from 'next/router'
+
+export default function Page() {
+  const router = useRouter()
+  const foo = router.query.foo
+
+  return <span>{foo}</span> // Renders the text "bar"
+}
+
+```
+
+The [router object](https://nextjs.org/docs/api-reference/next/router#router-object) has a `query` property that returns the query string parsed to an object.
+
+## React router and Reach router
+React router and Reach router provide hooks for `location` but beyond that it's up to us to parse the search string.
+
+```jsx
+// mysite.com?foo=bar
+
+import { parse } from "query-string"
+import { useLocation } from "@reach/router"
+
+export default function Page() {
+  const location = useLocation()
+  const params = parse(location.search)
+
+  return <span>{params.foo}</span> // Renders the text "bar"
+}
+```
+
+## Not to be confused with route parameters (url parameters)
+
+Route params (also known as URL params) and query strings are not the same thing. Query strings are part of the standardized URI components, whereas url params are a JavaScript framework routing paradigm.
+
+It can be hard to filter through search results when looking for tutorials or information on these topics, so keep an eye on the wording.
+
+Here's an exampled of a route param, where `:invoiceId` is a dynamic path that changes.
+
+```
+path = "invoices/:invoiceId"
+```
+
+You can learn more about route params by reading the [Reach docs](https://reach.tech/router/tutorial/05-url-parameters).
+
+
+Sources:
+- https://stackoverflow.com/questions/58492797/how-to-get-parameters-on-reach-router
+- https://stackoverflow.com/questions/35352638/react-how-to-get-parameter-value-from-query-string
+- https://en.wikipedia.org/wiki/Query_string
+- https://tools.ietf.org/html/rfc3986#section-3.4
