@@ -1,6 +1,6 @@
 ---
 title: Query strings in JavaScript and React
-description: How to use query strings in JavaScript and React.
+description: Cheat sheet for query strings in JavaScript and React.
 date: 1615410213
 icon: react
 type: article
@@ -11,30 +11,31 @@ tags:
 
 The query component (or query string) is a part of a URI that contains data in the form of key value pairs.
 
-![[Screen Shot 2021-03-10 at 12.23.43 PM.png]]
+![URI Components](./query.png)
 
-```
-?foo=bar
-```
+The query string in this URI is `?format=full` (Image adapted from the URI syntax as written by [IETF](https://tools.ietf.org/html/rfc3986#section-3)).
 
-The query string is also referred to as the "search string". There are a number of ways to interact with it using JavaScript.
+
+The query string is also referred to as the "search string".
+
+There are a number of ways to interact with the query string using JavaScript, which are detailed below.
 
 ## Vanilla JS
 
 The [`Location`](https://developer.mozilla.org/en-US/docs/Web/API/Location) interface has a property called `search`.
 
 ```js
-window.location.search // Returns ?q=123
+window.location.search // Returns ?format=full
 ```
 
 You can then pass this string to the `URLSearchParams` to easily parse out the values in the query string.
 
 ```js
-// mydomain.com?foo=bar
+// https://rw.codes/tutorials?format=full
 
 const queryString = window.location.search
 const params = new URLSearchParams(queryString)
-const action = params.get('foo') // Returns "bar"
+const action = params.get('format') // Returns "full"
 ```
 
 ## The [query-string](https://github.com/sindresorhus/query-string) library
@@ -45,8 +46,8 @@ By passing the search string to query-string's `parse` method, we get back a fam
 
 ```
 const parsed = queryString.parse(window.location.search)
-console.log(parsed.foo)
-// "bar"
+console.log(parsed.format)
+// "full"
 ```
 
 This amazing library has a bunch of other useful functions as well, so I recommend reading the documentation to see other ways to use it.
@@ -66,15 +67,15 @@ https://github.com/pbeshai/use-query-params
 The NextJS router offers a hook, `useRouter` that is a joy to use.
 
 ```jsx
-// mysite.com?foo=bar
+// https://rw.codes/tutorials?format=full
 
 import { useRouter } from 'next/router'
 
 export default function Page() {
   const router = useRouter()
-  const foo = router.query.foo
+  const format = router.query.format
 
-  return <span>{foo}</span> // Renders the text "bar"
+  return <span>{format}</span> // Renders the text "full"
 }
 
 ```
@@ -85,7 +86,7 @@ The [router object](https://nextjs.org/docs/api-reference/next/router#router-obj
 React router and Reach router provide hooks for `location` but beyond that it's up to us to parse the search string.
 
 ```jsx
-// mysite.com?foo=bar
+// https://rw.codes/tutorials?format=full
 
 import { parse } from "query-string"
 import { useLocation } from "@reach/router"
@@ -94,7 +95,7 @@ export default function Page() {
   const location = useLocation()
   const params = parse(location.search)
 
-  return <span>{params.foo}</span> // Renders the text "bar"
+  return <span>{params.format}</span> // Renders the text "full"
 }
 ```
 
