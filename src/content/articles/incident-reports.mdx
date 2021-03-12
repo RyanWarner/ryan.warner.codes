@@ -1,0 +1,70 @@
+---
+title: Incident postmortem reports
+description: Cheat sheet for query strings in JavaScript and React.
+date: 1615567609
+icon: default
+type: article
+tags:
+  - process
+  - incident reports
+  - postmortem
+---
+
+An incident report provides documentation for an event that disrupts service in a production environment.
+
+Accidents happen, and we can use them as an opportunity to learn and improve our process and product moving forward.
+
+When a qualifying incident takes place, an incident report should be drafted within 48 hours.
+
+> Be blameless. Remember that everyone is doing their best and failure is an opportunity to learn — [Hannah Culver](https://dev.to/blameless/the-ultimate-free-incident-retrospective-template-48a6)
+
+Use the template below to create a markdown file and push it to this repository.
+
+## Situations in which you should create an incident report
+
+- **Security breach** — Sensitive or protected information has been exposed.
+- **Data loss** — Data on a production database has been lost.
+- **Downtime** — The app is unavailable for some amount of time.
+- **Bulk mailing** — Emails have been sent by mistake.
+- **Operation interruption** — A feature was broken or unusable.
+
+
+## Examples
+
+- https://blog.sentry.io/2016/06/14/security-incident-june-12-2016
+- https://www.atlassian.com/incident-management/postmortem/templates
+
+# Template
+
+Author:
+
+Date:
+
+## Summary
+
+A brief, 2-3 sentence overview of the incendent's contributing factors, customer impact, and resolution.
+
+## Customer impact
+
+How many customers were affected? What was their experience like?
+
+## Contributing factors
+
+What was the root cause of this incident? What sequence of events lead up to this event occurring?
+
+## Narrative
+
+A longer description of what exactly happened.
+
+## Follow-up actions
+
+How did we respond to the incident?
+
+What improvements and changes does the team plan to make going forward?
+
+Who is responsible for implementing these improvements and when will they be completed?
+
+### Sources and further reading
+- https://dev.to/blameless/the-ultimate-free-incident-retrospective-template-48a6
+- https://rubygarage.org/blog/incident-report-sample
+- https://www.atlassian.com/incident-management/postmortem/templates
